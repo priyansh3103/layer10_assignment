@@ -1,0 +1,365 @@
+[
+  {
+    "thread_id": "issue_4130",
+    "extracted": {
+      "entities": [
+        {
+          "id": "Auto-GPT",
+          "type": "Repository",
+          "name": "Auto-GPT",
+          "aliases": []
+        },
+        {
+          "id": "PR #757",
+          "type": "Issue",
+          "name": "PR #757",
+          "aliases": []
+        },
+        {
+          "id": "plugin support",
+          "type": "Repository",
+          "name": "plugin support",
+          "aliases": []
+        },
+        {
+          "id": "Vercel for Git",
+          "type": "Tool",
+          "name": "Vercel for Git",
+          "aliases": []
+        },
+        {
+          "id": "docs",
+          "type": "Component",
+          "name": "docs",
+          "aliases": []
+        }
+      ],
+      "claims": [
+        {
+          "id": "claim_1",
+          "subject_entity_id": "Auto-GPT",
+          "predicate": "proposes_feature",
+          "object_entity_id": "plugin support",
+          "valid_from": "2023-05-12T02:43:00Z",
+          "valid_to": null,
+          "confidence": 1.0,
+          "evidence": [
+            {
+              "id": "evidence_1",
+              "artifact_id": "issue_4130",
+              "excerpt": "We are expecting to ship plugin support within the week (PR #757).",
+              "char_start": null,
+              "char_end": null
+            }
+          ]
+        },
+        {
+          "id": "claim_2",
+          "subject_entity_id": "Auto-GPT",
+          "predicate": "reports_issue",
+          "object_entity_id": null,
+          "valid_from": "2023-05-12T02:43:00Z",
+          "valid_to": null,
+          "confidence": 1.0,
+          "evidence": [
+            {
+              "id": "evidence_2",
+              "artifact_id": "issue_4130",
+              "excerpt": "This pull request has conflicts with the base branch, please resolve those so we can evaluate the pull request.",
+              "char_start": null,
+              "char_end": null
+            }
+          ]
+        },
+        {
+          "id": "claim_3",
+          "subject_entity_id": "Auto-GPT",
+          "predicate": "reports_issue",
+          "object_entity_id": null,
+          "valid_from": "2023-05-12T02:43:00Z",
+          "valid_to": null,
+          "confidence": 1.0,
+          "evidence": [
+            {
+              "id": "evidence_3",
+              "artifact_id": "issue_4130",
+              "excerpt": "This PR exceeds the recommended size of 200 lines. Please make sure you are NOT addressing multiple issues with one PR. Note this PR might be rejected due to its size",
+              "char_start": null,
+              "char_end": null
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "thread_id": "issue_4128",
+    "extracted": {
+      "entities": [
+        {
+          "id": "feat: set max token limits for better user experience",
+          "type": "Issue",
+          "name": "feat: set max token limits for better user experience",
+          "aliases": []
+        },
+        {
+          "id": "Auto-GPT",
+          "type": "Repository",
+          "name": "Auto-GPT",
+          "aliases": []
+        },
+        {
+          "id": "BaseInfinity",
+          "type": "Person",
+          "name": "BaseInfinity",
+          "aliases": []
+        },
+        {
+          "id": "vercel[bot]",
+          "type": "Tool",
+          "name": "vercel[bot]",
+          "aliases": []
+        },
+        {
+          "id": "rihp",
+          "type": "Person",
+          "name": "rihp",
+          "aliases": []
+        },
+        {
+          "id": "Boostrix",
+          "type": "Person",
+          "name": "Boostrix",
+          "aliases": []
+        },
+        {
+          "id": "openai",
+          "type": "Component",
+          "name": "openai",
+          "aliases": []
+        }
+      ],
+      "claims": [
+        {
+          "id": "claim_1",
+          "subject_entity_id": "feat: set max token limits for better user experience",
+          "predicate": "proposes_feature",
+          "object_entity_id": null,
+          "valid_from": "2023-05-31T22:03:00Z",
+          "valid_to": null,
+          "confidence": 1.0,
+          "evidence": [
+            {
+              "id": "evidence_1",
+              "artifact_id": "issue_4128",
+              "excerpt": "feat: set max token limits for better user experience",
+              "char_start": null,
+              "char_end": null
+            }
+          ]
+        },
+        {
+          "id": "claim_2",
+          "subject_entity_id": "BaseInfinity",
+          "predicate": "suggests_change",
+          "object_entity_id": "feat: set max token limits for better user experience",
+          "valid_from": "2023-05-31T22:03:00Z",
+          "valid_to": null,
+          "confidence": 1.0,
+          "evidence": [
+            {
+              "id": "evidence_2",
+              "artifact_id": "issue_4128",
+              "excerpt": "I'm still letting people set custom limits in case they want to, I just make sure those custom limits are below a working threshold",
+              "char_start": null,
+              "char_end": null
+            }
+          ]
+        },
+        {
+          "id": "claim_3",
+          "subject_entity_id": "Boostrix",
+          "predicate": "suggests_change",
+          "object_entity_id": "feat: set max token limits for better user experience",
+          "valid_from": "2023-05-31T22:03:00Z",
+          "valid_to": null,
+          "confidence": 1.0,
+          "evidence": [
+            {
+              "id": "evidence_3",
+              "artifact_id": "issue_4128",
+              "excerpt": "FWIW, I actually exposed these limits via the command interface, so that the LLM can dynamically modify these once an error occurs.",
+              "char_start": null,
+              "char_end": null
+            }
+          ]
+        },
+        {
+          "id": "claim_4",
+          "subject_entity_id": "Boostrix",
+          "predicate": "suggests_change",
+          "object_entity_id": "feat: set max token limits for better user experience",
+          "valid_from": "2023-05-31T22:03:00Z",
+          "valid_to": null,
+          "confidence": 1.0,
+          "evidence": [
+            {
+              "id": "evidence_4",
+              "artifact_id": "issue_4128",
+              "excerpt": "in the light of the ongoing work to support multiple LLMs, it might make sense, to directly use a sub-dict named \"openai\" for these defaults so that other LLMs can be more easily supported in the future ?",
+              "char_start": null,
+              "char_end": null
+            }
+          ]
+        },
+        {
+          "id": "claim_5",
+          "subject_entity_id": "BaseInfinity",
+          "predicate": "agrees_with",
+          "object_entity_id": "Boostrix",
+          "valid_from": "2023-05-31T22:03:00Z",
+          "valid_to": null,
+          "confidence": 1.0,
+          "evidence": [
+            {
+              "id": "evidence_5",
+              "artifact_id": "issue_4128",
+              "excerpt": "Correct me if I'm wrong but your way sounds like a better solution and is more future proof, if that's the case then I'm okay with closing this.",
+              "char_start": null,
+              "char_end": null
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "thread_id": "issue_4122",
+    "extracted": {
+      "entities": [
+        {
+          "id": "get_hyperlinks",
+          "type": "Component",
+          "name": "get_hyperlinks",
+          "aliases": []
+        },
+        {
+          "id": "@sicongzhao",
+          "type": "Person",
+          "name": "@sicongzhao",
+          "aliases": []
+        },
+        {
+          "id": "@vercel[bot]",
+          "type": "Tool",
+          "name": "@vercel[bot]",
+          "aliases": []
+        },
+        {
+          "id": "@Boostrix",
+          "type": "Person",
+          "name": "@Boostrix",
+          "aliases": []
+        },
+        {
+          "id": "@codecov[bot]",
+          "type": "Tool",
+          "name": "@codecov[bot]",
+          "aliases": []
+        }
+      ],
+      "claims": [
+        {
+          "id": "claim_1",
+          "subject_entity_id": "get_hyperlinks",
+          "predicate": "proposes_change",
+          "object_entity_id": null,
+          "valid_from": "2023-05-23T13:41:00Z",
+          "valid_to": null,
+          "confidence": 1.0,
+          "evidence": [
+            {
+              "id": "evidence_1",
+              "artifact_id": "issue_4122",
+              "excerpt": "Update instruction for command 'get_hyperlinks'",
+              "char_start": null,
+              "char_end": null
+            }
+          ]
+        },
+        {
+          "id": "claim_2",
+          "subject_entity_id": "get_hyperlinks",
+          "predicate": "has_description",
+          "object_entity_id": "Get text summary",
+          "valid_from": "2023-05-23T13:41:00Z",
+          "valid_to": null,
+          "confidence": 1.0,
+          "evidence": [
+            {
+              "id": "evidence_2",
+              "artifact_id": "issue_4122",
+              "excerpt": "For command `get_hyperlinks`, the description was 'Get text summary.'",
+              "char_start": null,
+              "char_end": null
+            }
+          ]
+        },
+        {
+          "id": "claim_3",
+          "subject_entity_id": "get_hyperlinks",
+          "predicate": "has_description",
+          "object_entity_id": "Get hyperlinks",
+          "valid_from": "2023-05-23T13:41:00Z",
+          "valid_to": null,
+          "confidence": 1.0,
+          "evidence": [
+            {
+              "id": "evidence_3",
+              "artifact_id": "issue_4122",
+              "excerpt": "I just changed the description of command `get_hyperlinks` from `Get text summary` to `Get hyperlinks`.",
+              "char_start": null,
+              "char_end": null
+            }
+          ]
+        },
+        {
+          "id": "claim_4",
+          "subject_entity_id": "@sicongzhao",
+          "predicate": "proposes_change",
+          "object_entity_id": null,
+          "valid_from": "2023-05-23T13:41:00Z",
+          "valid_to": null,
+          "confidence": 1.0,
+          "evidence": [
+            {
+              "id": "evidence_4",
+              "artifact_id": "issue_4122",
+              "excerpt": "Update instruction for command 'get_hyperlinks'",
+              "char_start": null,
+              "char_end": null
+            }
+          ]
+        },
+        {
+          "id": "claim_5",
+          "subject_entity_id": "@Boostrix",
+          "predicate": "suggests_change",
+          "object_entity_id": null,
+          "valid_from": "2023-05-23T13:41:00Z",
+          "valid_to": null,
+          "confidence": 1.0,
+          "evidence": [
+            {
+              "id": "evidence_5",
+              "artifact_id": "issue_4122",
+              "excerpt": "actually, there's more stuff like this - I could reliably reproduce that whenever the LLM got stuck, it wants to \"analyse code\" - and that is, because it's focusing on \"analysis\" rather than on the code aspect - so, we should probably weigh things differently or at least reword the help string/description in some cases to get better behavior from the LLM ",
+              "char_start": null,
+              "char_end": null
+            }
+          ]
+        }
+      ]
+    }
+  }
+]

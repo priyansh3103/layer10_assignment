@@ -1,0 +1,332 @@
+{
+  "Who suggested configuration changes?": {
+    "entities": [
+      {
+        "id": "baseinfinity",
+        "type": "Person",
+        "name": "@BaseInfinity",
+        "aliases": [
+          "@BaseInfinity"
+        ]
+      },
+      {
+        "id": "boostrix",
+        "type": "Person",
+        "name": "Boostrix",
+        "aliases": [
+          "@Boostrix"
+        ]
+      },
+      {
+        "id": "issue_4128",
+        "type": "Issue",
+        "name": "4128",
+        "aliases": []
+      },
+      {
+        "id": "feat: set max token limits for better user experience",
+        "type": "Issue",
+        "name": "feat: set max token limits for better user experience",
+        "aliases": []
+      }
+    ],
+    "claims": [
+      {
+        "id": "claim1",
+        "subject_entity_id": "baseinfinity",
+        "predicate": "proposes_feature",
+        "object_entity_id": null,
+        "valid_from": "2023-05-11T23:27:30Z",
+        "valid_to": null,
+        "confidence": 1.0,
+        "evidence": [
+          {
+            "artifact": "issue_4128",
+            "quote": "set max token limits for better user experience"
+          },
+          {
+            "artifact": "comment_1544849505",
+            "quote": "Shouldnt you also remove the variable from the .env template? I might be wrong"
+          }
+        ],
+        "statement": "@BaseInfinity proposes_feature"
+      },
+      {
+        "id": "Claim_1",
+        "subject_entity_id": "issue_4128",
+        "predicate": "assigned_to",
+        "object_entity_id": "baseinfinity",
+        "valid_from": "2023-05-16T20:11:53Z",
+        "valid_to": null,
+        "confidence": 1.0,
+        "evidence": [
+          {
+            "artifact": "comment_1550297233",
+            "quote": "I'm not a fan of this change https://github.com/Significant-Gravitas/Auto-GPT/pull/4128/commits/31a3a477db4fb98464f5a8152a8dfc393ca57353 but I wasn't sure the best way to avoid a circular dependency without having to restructure things and since I'm new and wanting to keep this bitesized, I went for the above solution."
+          }
+        ],
+        "statement": "4128 assigned_to @BaseInfinity"
+      },
+      {
+        "id": "claim_1",
+        "subject_entity_id": "baseinfinity",
+        "predicate": "suggests_change",
+        "object_entity_id": null,
+        "valid_from": "2023-05-20T19:46:54Z",
+        "valid_to": null,
+        "confidence": 1.0,
+        "evidence": [
+          {
+            "artifact": "comment_1555980660",
+            "quote": "get to it before the end of the weekend"
+          },
+          {
+            "artifact": "comment_1566288460",
+            "quote": "I'll make suggested changes today and fix up the tests"
+          }
+        ],
+        "statement": "@BaseInfinity suggests_change"
+      },
+      {
+        "id": "claim_1",
+        "subject_entity_id": "baseinfinity",
+        "predicate": "reports_issue",
+        "object_entity_id": null,
+        "valid_from": "2023-05-23T00:20:47Z",
+        "valid_to": null,
+        "confidence": 1.0,
+        "evidence": [
+          {
+            "artifact": "comment_1558259962",
+            "quote": "Derp, my fault, ill fixie"
+          }
+        ],
+        "statement": "@BaseInfinity reports_issue"
+      },
+      {
+        "id": "claim_2",
+        "subject_entity_id": "baseinfinity",
+        "predicate": "suggests_change",
+        "object_entity_id": "feat: set max token limits for better user experience",
+        "valid_from": "2023-05-31T22:03:00Z",
+        "valid_to": null,
+        "confidence": 1.0,
+        "evidence": [
+          {
+            "artifact": "issue_4128",
+            "quote": "I'm still letting people set custom limits in case they want to, I just make sure those custom limits are below a working threshold"
+          }
+        ],
+        "statement": "@BaseInfinity suggests_change feat: set max token limits for better user experience"
+      },
+      {
+        "id": "claim_5",
+        "subject_entity_id": "baseinfinity",
+        "predicate": "agrees_with",
+        "object_entity_id": "boostrix",
+        "valid_from": "2023-05-31T22:03:00Z",
+        "valid_to": null,
+        "confidence": 1.0,
+        "evidence": [
+          {
+            "artifact": "issue_4128",
+            "quote": "Correct me if I'm wrong but your way sounds like a better solution and is more future proof, if that's the case then I'm okay with closing this."
+          }
+        ],
+        "statement": "@BaseInfinity agrees_with Boostrix"
+      }
+    ]
+  },
+  "What features were proposed?": {
+    "entities": [
+      {
+        "id": "baseinfinity",
+        "type": "Person",
+        "name": "@BaseInfinity",
+        "aliases": [
+          "@BaseInfinity"
+        ]
+      },
+      {
+        "id": "boostrix",
+        "type": "Person",
+        "name": "Boostrix",
+        "aliases": [
+          "@Boostrix"
+        ]
+      },
+      {
+        "id": "issue_4128",
+        "type": "Issue",
+        "name": "4128",
+        "aliases": []
+      },
+      {
+        "id": "feat: set max token limits for better user experience",
+        "type": "Issue",
+        "name": "feat: set max token limits for better user experience",
+        "aliases": []
+      }
+    ],
+    "claims": [
+      {
+        "id": "claim1",
+        "subject_entity_id": "baseinfinity",
+        "predicate": "proposes_feature",
+        "object_entity_id": null,
+        "valid_from": "2023-05-11T23:27:30Z",
+        "valid_to": null,
+        "confidence": 1.0,
+        "evidence": [
+          {
+            "artifact": "issue_4128",
+            "quote": "set max token limits for better user experience"
+          },
+          {
+            "artifact": "comment_1544849505",
+            "quote": "Shouldnt you also remove the variable from the .env template? I might be wrong"
+          }
+        ],
+        "statement": "@BaseInfinity proposes_feature"
+      },
+      {
+        "id": "Claim_1",
+        "subject_entity_id": "issue_4128",
+        "predicate": "assigned_to",
+        "object_entity_id": "baseinfinity",
+        "valid_from": "2023-05-16T20:11:53Z",
+        "valid_to": null,
+        "confidence": 1.0,
+        "evidence": [
+          {
+            "artifact": "comment_1550297233",
+            "quote": "I'm not a fan of this change https://github.com/Significant-Gravitas/Auto-GPT/pull/4128/commits/31a3a477db4fb98464f5a8152a8dfc393ca57353 but I wasn't sure the best way to avoid a circular dependency without having to restructure things and since I'm new and wanting to keep this bitesized, I went for the above solution."
+          }
+        ],
+        "statement": "4128 assigned_to @BaseInfinity"
+      },
+      {
+        "id": "claim_1",
+        "subject_entity_id": "baseinfinity",
+        "predicate": "suggests_change",
+        "object_entity_id": null,
+        "valid_from": "2023-05-20T19:46:54Z",
+        "valid_to": null,
+        "confidence": 1.0,
+        "evidence": [
+          {
+            "artifact": "comment_1555980660",
+            "quote": "get to it before the end of the weekend"
+          },
+          {
+            "artifact": "comment_1566288460",
+            "quote": "I'll make suggested changes today and fix up the tests"
+          }
+        ],
+        "statement": "@BaseInfinity suggests_change"
+      },
+      {
+        "id": "claim_1",
+        "subject_entity_id": "baseinfinity",
+        "predicate": "reports_issue",
+        "object_entity_id": null,
+        "valid_from": "2023-05-23T00:20:47Z",
+        "valid_to": null,
+        "confidence": 1.0,
+        "evidence": [
+          {
+            "artifact": "comment_1558259962",
+            "quote": "Derp, my fault, ill fixie"
+          }
+        ],
+        "statement": "@BaseInfinity reports_issue"
+      },
+      {
+        "id": "claim_2",
+        "subject_entity_id": "baseinfinity",
+        "predicate": "suggests_change",
+        "object_entity_id": "feat: set max token limits for better user experience",
+        "valid_from": "2023-05-31T22:03:00Z",
+        "valid_to": null,
+        "confidence": 1.0,
+        "evidence": [
+          {
+            "artifact": "issue_4128",
+            "quote": "I'm still letting people set custom limits in case they want to, I just make sure those custom limits are below a working threshold"
+          }
+        ],
+        "statement": "@BaseInfinity suggests_change feat: set max token limits for better user experience"
+      },
+      {
+        "id": "claim_5",
+        "subject_entity_id": "baseinfinity",
+        "predicate": "agrees_with",
+        "object_entity_id": "boostrix",
+        "valid_from": "2023-05-31T22:03:00Z",
+        "valid_to": null,
+        "confidence": 1.0,
+        "evidence": [
+          {
+            "artifact": "issue_4128",
+            "quote": "Correct me if I'm wrong but your way sounds like a better solution and is more future proof, if that's the case then I'm okay with closing this."
+          }
+        ],
+        "statement": "@BaseInfinity agrees_with Boostrix"
+      }
+    ]
+  },
+  "What issues were reported?": {
+    "entities": [
+      {
+        "id": "auto-gpt",
+        "type": "Repository",
+        "name": "Auto-GPT",
+        "aliases": []
+      },
+      {
+        "id": "plugin support",
+        "type": "Repository",
+        "name": "plugin support",
+        "aliases": []
+      }
+    ],
+    "claims": [
+      {
+        "id": "claim_1",
+        "subject_entity_id": "auto-gpt",
+        "predicate": "proposes_feature",
+        "object_entity_id": "plugin support",
+        "valid_from": "2023-05-12T02:43:00Z",
+        "valid_to": null,
+        "confidence": 1.0,
+        "evidence": [
+          {
+            "artifact": "issue_4130",
+            "quote": "We are expecting to ship plugin support within the week (PR #757)."
+          }
+        ],
+        "statement": "Auto-GPT proposes_feature plugin support"
+      },
+      {
+        "id": "claim_2",
+        "subject_entity_id": "auto-gpt",
+        "predicate": "reports_issue",
+        "object_entity_id": null,
+        "valid_from": "2023-05-12T02:43:00Z",
+        "valid_to": null,
+        "confidence": 1.0,
+        "evidence": [
+          {
+            "artifact": "issue_4130",
+            "quote": "This pull request has conflicts with the base branch, please resolve those so we can evaluate the pull request."
+          },
+          {
+            "artifact": "issue_4130",
+            "quote": "This PR exceeds the recommended size of 200 lines. Please make sure you are NOT addressing multiple issues with one PR. Note this PR might be rejected due to its size"
+          }
+        ],
+        "statement": "Auto-GPT reports_issue"
+      }
+    ]
+  }
+}

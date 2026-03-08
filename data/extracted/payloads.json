@@ -1,0 +1,716 @@
+[
+  {
+    "artifact_id": "issue_4130",
+    "extracted": {
+      "entities": [
+        {
+          "id": "@waynehamadi",
+          "type": "Person",
+          "name": "@waynehamadi",
+          "aliases": []
+        }
+      ],
+      "claims": [
+        {
+          "id": "claim_1",
+          "subject_entity_id": "entity_1",
+          "predicate": "authored",
+          "object_entity_id": null,
+          "valid_from": "2023-05-12T02:42:33Z",
+          "valid_to": null,
+          "confidence": 1.0,
+          "evidence": [
+            {
+              "id": "evidence_1",
+              "artifact_id": "issue_4130",
+              "excerpt": "Feature/basic proxy test 7",
+              "char_start": 7,
+              "char_end": 33
+            }
+          ]
+        },
+        {
+          "id": "claim_2",
+          "subject_entity_id": "entity_1",
+          "predicate": "authored",
+          "object_entity_id": null,
+          "valid_from": "2023-05-12T02:42:33Z",
+          "valid_to": null,
+          "confidence": 1.0,
+          "evidence": [
+            {
+              "id": "evidence_2",
+              "artifact_id": "issue_4130",
+              "excerpt": "pull request",
+              "char_start": 409,
+              "char_end": 421
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "artifact_id": "issue_4128",
+    "extracted": {
+      "entities": [],
+      "claims": [
+        {
+          "id": "claim1",
+          "subject_entity_id": "person_BaseInfinity",
+          "predicate": "proposes_feature",
+          "object_entity_id": null,
+          "valid_from": "2023-05-11T23:27:30Z",
+          "valid_to": null,
+          "confidence": 1.0,
+          "evidence": [
+            {
+              "id": "evidence1",
+              "artifact_id": "issue_4128",
+              "excerpt": "set max token limits for better user experience",
+              "char_start": 13,
+              "char_end": 60
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "artifact_id": "comment_1544833388",
+    "extracted": {
+      "entities": [],
+      "claims": []
+    }
+  },
+  {
+    "artifact_id": "comment_1544849505",
+    "extracted": {
+      "entities": [
+        {
+          "id": "@BaseInfinity",
+          "type": "Person",
+          "name": "@BaseInfinity",
+          "aliases": []
+        }
+      ],
+      "claims": [
+        {
+          "id": "claim_1",
+          "subject_entity_id": "@BaseInfinity",
+          "predicate": "proposes_feature",
+          "object_entity_id": null,
+          "valid_from": "2023-05-11T23:38:23Z",
+          "valid_to": null,
+          "confidence": 1.0,
+          "evidence": [
+            {
+              "id": "ev_da3b9ce7",
+              "artifact_id": "comment_1544849505",
+              "excerpt": "Shouldnt you also remove the variable from the .env template? I might be wrong",
+              "char_start": 2,
+              "char_end": 80
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "artifact_id": "comment_1545480229",
+    "extracted": {
+      "entities": [
+        {
+          "id": "@Boostrix",
+          "type": "Person",
+          "name": "Boostrix",
+          "aliases": []
+        }
+      ],
+      "claims": [
+        {
+          "id": "modification_limit_exposure_via_command_interface",
+          "subject_entity_id": "@Boostrix",
+          "predicate": "suggests_change",
+          "object_entity_id": null,
+          "valid_from": "2023-05-12T09:49:38Z",
+          "valid_to": null,
+          "confidence": 0.9,
+          "evidence": [
+            {
+              "id": "modification_limit_exposure_via_command_interface_evidence",
+              "artifact_id": "comment_1545480229",
+              "excerpt": "exposing these details via the command interface (or even just via corresponding args) lets the AI/LLM play with different settings.",
+              "char_start": 283,
+              "char_end": 415
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "artifact_id": "comment_1547437354",
+    "extracted": {
+      "entities": [
+        {
+          "id": "Boostrix",
+          "type": "Person",
+          "name": "Boostrix",
+          "aliases": []
+        },
+        {
+          "id": "OpenAI",
+          "type": "Tool",
+          "name": "OpenAI",
+          "aliases": []
+        }
+      ],
+      "claims": [
+        {
+          "id": "Boostrix_proposes_feature_OpenAI",
+          "subject_entity_id": "Boostrix",
+          "predicate": "proposes_feature",
+          "object_entity_id": "OpenAI",
+          "valid_from": "2023-05-15T08:44:30Z",
+          "valid_to": null,
+          "confidence": 1.0,
+          "evidence": [
+            {
+              "id": "Boostrix_proposes_feature_OpenAI_evidence",
+              "artifact_id": "comment_1547437354",
+              "excerpt": "directly use a sub-dict named ",
+              "char_start": 83,
+              "char_end": 113
+            }
+          ]
+        },
+        {
+          "id": "Boostrix_suggests_change",
+          "subject_entity_id": "Boostrix",
+          "predicate": "suggests_change",
+          "object_entity_id": null,
+          "valid_from": "2023-05-15T08:44:30Z",
+          "valid_to": null,
+          "confidence": 1.0,
+          "evidence": [
+            {
+              "id": "Boostrix_suggests_change_evidence",
+              "artifact_id": "comment_1547437354",
+              "excerpt": "exposing these via the command interface enables the llm to tinker with different settings",
+              "char_start": 238,
+              "char_end": 328
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "artifact_id": "comment_1547468882",
+    "extracted": {
+      "entities": [
+        {
+          "id": "@BaseInfinity",
+          "type": "Person",
+          "name": "@BaseInfinity",
+          "aliases": []
+        },
+        {
+          "id": "@ntindle",
+          "type": "Person",
+          "name": "@ntindle",
+          "aliases": []
+        }
+      ],
+      "claims": []
+    }
+  },
+  {
+    "artifact_id": "comment_1547493770",
+    "extracted": {
+      "entities": [
+        {
+          "id": "Boostrix",
+          "type": "Person",
+          "name": "@Boostrix",
+          "aliases": [
+            "@Boostrix"
+          ]
+        },
+        {
+          "id": "nTindle",
+          "type": "Person",
+          "name": "ntindle",
+          "aliases": [
+            "ntindle"
+          ]
+        }
+      ],
+      "claims": []
+    }
+  },
+  {
+    "artifact_id": "comment_1548494037",
+    "extracted": {
+      "entities": [
+        {
+          "id": "BaseInfinity",
+          "type": "Person",
+          "name": "@BaseInfinity",
+          "aliases": []
+        }
+      ],
+      "claims": []
+    }
+  },
+  {
+    "artifact_id": "comment_1550297233",
+    "extracted": {
+      "entities": [
+        {
+          "id": "Issue_4128",
+          "type": "Issue",
+          "name": "4128",
+          "aliases": []
+        }
+      ],
+      "claims": [
+        {
+          "id": "Claim_1",
+          "subject_entity_id": "Issue_4128",
+          "predicate": "assigned_to",
+          "object_entity_id": "Person_BaseInfinity",
+          "valid_from": "2023-05-16T20:11:53Z",
+          "valid_to": null,
+          "confidence": 1.0,
+          "evidence": [
+            {
+              "id": "Evidence_1",
+              "artifact_id": "comment_1550297233",
+              "excerpt": "I'm not a fan of this change https://github.com/Significant-Gravitas/Auto-GPT/pull/4128/commits/31a3a477db4fb98464f5a8152a8dfc393ca57353 but I wasn't sure the best way to avoid a circular dependency without having to restructure things and since I'm new and wanting to keep this bitesized, I went for the above solution.",
+              "char_start": 3,
+              "char_end": 323
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "artifact_id": "comment_1550313219",
+    "extracted": {
+      "entities": [
+        {
+          "id": "@BaseInfinity",
+          "type": "Person",
+          "name": "BaseInfinity",
+          "aliases": []
+        }
+      ],
+      "claims": []
+    }
+  },
+  {
+    "artifact_id": "comment_1555980660",
+    "extracted": {
+      "entities": [
+        {
+          "id": "@BaseInfinity",
+          "type": "Person",
+          "name": "BaseInfinity",
+          "aliases": []
+        }
+      ],
+      "claims": [
+        {
+          "id": "claim_1",
+          "subject_entity_id": "@BaseInfinity",
+          "predicate": "suggests_change",
+          "object_entity_id": null,
+          "valid_from": "2023-05-20T19:46:54Z",
+          "valid_to": null,
+          "confidence": 1.0,
+          "evidence": [
+            {
+              "id": "evidence_1",
+              "artifact_id": "comment_1555980660",
+              "excerpt": "get to it before the end of the weekend",
+              "char_start": 123,
+              "char_end": 162
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "artifact_id": "comment_1556053332",
+    "extracted": {
+      "entities": [],
+      "claims": []
+    }
+  },
+  {
+    "artifact_id": "comment_1556055404",
+    "extracted": {
+      "entities": [
+        {
+          "id": "BaseInfinity",
+          "type": "Person",
+          "name": "BaseInfinity",
+          "aliases": [
+            "@BaseInfinity"
+          ]
+        }
+      ],
+      "claims": []
+    }
+  },
+  {
+    "artifact_id": "comment_1556218094",
+    "extracted": {
+      "entities": [
+        {
+          "id": "@ntindle",
+          "type": "Person",
+          "name": "@ntindle",
+          "aliases": []
+        }
+      ],
+      "claims": [
+        {
+          "id": "claim_5c6de588",
+          "subject_entity_id": "@ntindle",
+          "predicate": "suggests_change",
+          "object_entity_id": null,
+          "valid_from": "2023-05-21T16:21:05Z",
+          "valid_to": null,
+          "confidence": 1.0,
+          "evidence": [
+            {
+              "id": "evidence-1",
+              "artifact_id": "comment_1556218094",
+              "excerpt": "I think our automaton uses it for change logs",
+              "char_start": 33,
+              "char_end": 78
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "artifact_id": "comment_1558259962",
+    "extracted": {
+      "entities": [
+        {
+          "id": "BaseInfinity",
+          "type": "Person",
+          "name": "@BaseInfinity",
+          "aliases": []
+        }
+      ],
+      "claims": [
+        {
+          "id": "claim_1",
+          "subject_entity_id": "BaseInfinity",
+          "predicate": "reports_issue",
+          "object_entity_id": null,
+          "valid_from": "2023-05-23T00:20:47Z",
+          "valid_to": null,
+          "confidence": 1.0,
+          "evidence": [
+            {
+              "id": "evidence_1",
+              "artifact_id": "comment_1558259962",
+              "excerpt": "Derp, my fault, ill fixie",
+              "char_start": 0,
+              "char_end": 25
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "artifact_id": "comment_1558262375",
+    "extracted": {
+      "entities": [],
+      "claims": []
+    }
+  },
+  {
+    "artifact_id": "comment_1563510480",
+    "extracted": {
+      "entities": [
+        {
+          "id": "@Boostrix",
+          "type": "Person",
+          "name": "Boostrix",
+          "aliases": []
+        }
+      ],
+      "claims": [
+        {
+          "id": "claim_1",
+          "subject_entity_id": "@Boostrix",
+          "predicate": "authored",
+          "object_entity_id": null,
+          "valid_from": "2023-05-25T21:10:35Z",
+          "valid_to": null,
+          "confidence": 1.0,
+          "evidence": [
+            {
+              "id": "evidence_1",
+              "artifact_id": "comment_1563510480",
+              "excerpt": "many people on discord still report that they find having to downgrade the hard-coded defaults to stay within the ctx window - so it would be good to get this updated/reviewed",
+              "char_start": 0,
+              "char_end": 175
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "artifact_id": "comment_1563628611",
+    "extracted": {
+      "entities": [
+        {
+          "id": "@Boostrix",
+          "type": "Person",
+          "name": "@Boostrix",
+          "aliases": []
+        },
+        {
+          "id": "memory config changes",
+          "type": "Component",
+          "name": "memory config changes",
+          "aliases": []
+        }
+      ],
+      "claims": [
+        {
+          "id": "claim_1",
+          "subject_entity_id": "@Boostrix",
+          "predicate": "reports_issue",
+          "object_entity_id": "memory config changes",
+          "valid_from": "2023-05-25T23:29:43Z",
+          "valid_to": null,
+          "confidence": 1.0,
+          "evidence": [
+            {
+              "id": "evidence_1",
+              "artifact_id": "comment_1563628611",
+              "excerpt": "@Boostrix sounds good, i fixed the conflicts to include soft limits on top of the recent memory config changes",
+              "char_start": 0,
+              "char_end": 110
+            }
+          ]
+        },
+        {
+          "id": "claim_2",
+          "subject_entity_id": "memory config changes",
+          "predicate": "proposes_feature",
+          "object_entity_id": null,
+          "valid_from": "2023-05-25T23:29:43Z",
+          "valid_to": null,
+          "confidence": 1.0,
+          "evidence": [
+            {
+              "id": "evidence_2",
+              "artifact_id": "comment_1563628611",
+              "excerpt": "@Boostrix sounds good, i fixed the conflicts to include soft limits on top of the recent memory config changes",
+              "char_start": 0,
+              "char_end": 110
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "artifact_id": "comment_1564771802",
+    "extracted": {
+      "entities": [
+        {
+          "id": "@BaseInfinity",
+          "type": "Person",
+          "name": "@BaseInfinity",
+          "aliases": []
+        }
+      ],
+      "claims": []
+    }
+  },
+  {
+    "artifact_id": "comment_1566224254",
+    "extracted": {
+      "entities": [
+        {
+          "id": "@k-boikov",
+          "type": "Person",
+          "name": "@k-boikov",
+          "aliases": []
+        }
+      ],
+      "claims": []
+    }
+  },
+  {
+    "artifact_id": "comment_1566288460",
+    "extracted": {
+      "entities": [
+        {
+          "id": "@BaseInfinity",
+          "type": "Person",
+          "name": "@BaseInfinity",
+          "aliases": [
+            "@BaseInfinity"
+          ]
+        }
+      ],
+      "claims": [
+        {
+          "id": "claim_1",
+          "subject_entity_id": "@BaseInfinity",
+          "predicate": "suggests_change",
+          "object_entity_id": null,
+          "valid_from": "2023-05-28T22:37:52Z",
+          "valid_to": null,
+          "confidence": 1.0,
+          "evidence": [
+            {
+              "id": "evidence_1",
+              "artifact_id": "comment_1566288460",
+              "excerpt": "I'll make suggested changes today and fix up the tests",
+              "char_start": 0,
+              "char_end": 54
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "artifact_id": "comment_1566295718",
+    "extracted": {
+      "entities": [
+        {
+          "id": "Pwuts",
+          "type": "Person",
+          "name": "Pwuts",
+          "aliases": []
+        }
+      ],
+      "claims": []
+    }
+  },
+  {
+    "artifact_id": "comment_1567278536",
+    "extracted": {
+      "entities": [
+        {
+          "id": "AutoGPT",
+          "type": "Person",
+          "name": "AutoGPT",
+          "aliases": []
+        },
+        {
+          "id": "AutoGPT-Bot",
+          "type": "Person",
+          "name": "@Auto-GPT-Bot",
+          "aliases": []
+        }
+      ],
+      "claims": []
+    }
+  },
+  {
+    "artifact_id": "comment_1567403619",
+    "extracted": {
+      "entities": [],
+      "claims": []
+    }
+  },
+  {
+    "artifact_id": "issue_4122",
+    "extracted": {
+      "entities": [
+        {
+          "id": "command_get_hyperlinks",
+          "type": "Component",
+          "name": "get_hyperlinks",
+          "aliases": []
+        }
+      ],
+      "claims": [
+        {
+          "id": "claim_1",
+          "subject_entity_id": "person_sicongzhao",
+          "predicate": "authored",
+          "object_entity_id": null,
+          "valid_from": "2023-05-11T19:10:48Z",
+          "valid_to": null,
+          "confidence": 1.0,
+          "evidence": [
+            {
+              "id": "evidence_1",
+              "artifact_id": "issue_4122",
+              "excerpt": "Update instruction for command ",
+              "char_start": 42,
+              "char_end": 73
+            }
+          ]
+        },
+        {
+          "id": "claim_2",
+          "subject_entity_id": "person_sicongzhao",
+          "predicate": "assigned_to",
+          "object_entity_id": null,
+          "valid_from": "2023-05-11T19:10:48Z",
+          "valid_to": null,
+          "confidence": 1.0,
+          "evidence": [
+            {
+              "id": "evidence_2",
+              "artifact_id": "issue_4122",
+              "excerpt": "get_hyperlinks",
+              "char_start": 14,
+              "char_end": 28
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "artifact_id": "comment_1546935090",
+    "extracted": {
+      "entities": [
+        {
+          "id": "Boostrix",
+          "type": "Person",
+          "name": "Boostrix",
+          "aliases": []
+        }
+      ],
+      "claims": []
+    }
+  },
+  {
+    "artifact_id": "comment_1557105425",
+    "extracted": {
+      "entities": [
+        {
+          "id": "k-boikov",
+          "type": "Person",
+          "name": "@k-boikov",
+          "aliases": []
+        }
+      ],
+      "claims": []
+    }
+  }
+]

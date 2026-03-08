@@ -1,0 +1,398 @@
+[
+  {
+    "artifact_id": "comment_1544849505",
+    "extracted": {
+      "entities": [
+        {
+          "id": "BaseInfinity",
+          "type": "Person",
+          "name": "@BaseInfinity",
+          "aliases": []
+        }
+      ],
+      "claims": [
+        {
+          "id": "claim_b18041c9",
+          "subject_entity_id": "BaseInfinity",
+          "predicate": "authored",
+          "object_entity_id": "issue1",
+          "valid_from": "2023-05-11T23:38:23Z",
+          "valid_to": null,
+          "confidence": 1.0,
+          "evidence": [
+            {
+              "id": "ev_538e65ea",
+              "artifact_id": "comment_1544849505",
+              "excerpt": "Author: @BaseInfinity",
+              "char_start": null,
+              "char_end": null
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "artifact_id": "comment_1548494037",
+    "extracted": {
+      "entities": [
+        {
+          "id": "@BaseInfinity",
+          "type": "Person",
+          "name": "@BaseInfinity",
+          "aliases": []
+        }
+      ],
+      "claims": [
+        {
+          "id": "claim_cc7a0901",
+          "subject_entity_id": "@BaseInfinity",
+          "predicate": "authored",
+          "object_entity_id": "import tests",
+          "valid_from": "2023-05-15T20:00:59Z",
+          "valid_to": null,
+          "confidence": 1.0,
+          "evidence": [
+            {
+              "id": "ev_f714cfd4",
+              "artifact_id": "comment_1548494037",
+              "excerpt": "Ahh im failing the import tests, I",
+              "char_start": 0,
+              "char_end": 34
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "artifact_id": "comment_1555980660",
+    "extracted": {
+      "entities": [
+        {
+          "id": "@BaseInfinity",
+          "type": "Person",
+          "name": "@BaseInfinity",
+          "aliases": []
+        }
+      ],
+      "claims": []
+    }
+  },
+  {
+    "artifact_id": "comment_1556053332",
+    "extracted": {
+      "entities": [],
+      "claims": []
+    }
+  },
+  {
+    "artifact_id": "comment_1556218094",
+    "extracted": {
+      "entities": [
+        {
+          "id": "@ntindle",
+          "type": "Person",
+          "name": "@ntindle",
+          "aliases": []
+        },
+        {
+          "id": "PR",
+          "type": "Issue",
+          "name": "PR",
+          "aliases": []
+        }
+      ],
+      "claims": [
+        {
+          "id": "claim1",
+          "subject_entity_id": "@ntindle",
+          "predicate": "mentioned",
+          "object_entity_id": "PR",
+          "valid_from": "2023-05-21T16:21:05Z",
+          "valid_to": null,
+          "confidence": 1.0,
+          "evidence": [
+            {
+              "id": "evidence1",
+              "artifact_id": "comment_1556218094",
+              "excerpt": "PR",
+              "char_start": 29,
+              "char_end": 31
+            }
+          ]
+        },
+        {
+          "id": "claim2",
+          "subject_entity_id": "@ntindle",
+          "predicate": "assigned_to",
+          "object_entity_id": "PR",
+          "valid_from": "2023-05-21T16:21:05Z",
+          "valid_to": null,
+          "confidence": 1.0,
+          "evidence": [
+            {
+              "id": "evidence2",
+              "artifact_id": "comment_1556218094",
+              "excerpt": "PR",
+              "char_start": 29,
+              "char_end": 31
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "artifact_id": "comment_1556260884",
+    "extracted": {
+      "entities": [
+        {
+          "id": "@BaseInfinity",
+          "type": "Person",
+          "name": "BaseInfinity",
+          "aliases": [
+            "@BaseInfinity"
+          ]
+        }
+      ],
+      "claims": [
+        {
+          "id": "claim_18e5c52e",
+          "subject_entity_id": "@BaseInfinity",
+          "predicate": "mentioned",
+          "object_entity_id": "review",
+          "valid_from": "2023-05-21T18:59:43Z",
+          "valid_to": null,
+          "confidence": 1.0,
+          "evidence": [
+            {
+              "id": "ev_7875a49f",
+              "artifact_id": "comment_1556260884",
+              "excerpt": "thanks for the review!",
+              "char_start": 41,
+              "char_end": 63
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "artifact_id": "comment_1558259962",
+    "extracted": {
+      "entities": [
+        {
+          "id": "@BaseInfinity",
+          "type": "Person",
+          "name": "@BaseInfinity",
+          "aliases": []
+        }
+      ],
+      "claims": [
+        {
+          "id": "claim_1",
+          "subject_entity_id": "comment_1558259962",
+          "predicate": "mentioned",
+          "object_entity_id": "@BaseInfinity",
+          "valid_from": "2023-05-23T00:20:47Z",
+          "valid_to": null,
+          "confidence": 1.0,
+          "evidence": [
+            {
+              "id": "ev_44f0f7c8",
+              "artifact_id": "comment_1558259962",
+              "excerpt": "Author: @BaseInfinity",
+              "char_start": null,
+              "char_end": null
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "artifact_id": "comment_1563510480",
+    "extracted": {
+      "entities": [
+        {
+          "id": "Boostrix",
+          "type": "Person",
+          "name": "@Boostrix",
+          "aliases": []
+        },
+        {
+          "id": "discord",
+          "type": "URL",
+          "name": "discord",
+          "aliases": []
+        }
+      ],
+      "claims": []
+    }
+  },
+  {
+    "artifact_id": "comment_1564771802",
+    "extracted": {
+      "entities": [
+        {
+          "id": "@Pwuts",
+          "type": "Person",
+          "name": "@",
+          "aliases": []
+        },
+        {
+          "id": "@BaseInfinity",
+          "type": "Person",
+          "name": "@",
+          "aliases": []
+        }
+      ],
+      "claims": []
+    }
+  },
+  {
+    "artifact_id": "comment_1566224254",
+    "extracted": {
+      "entities": [
+        {
+          "id": "@k-boikov",
+          "type": "Person",
+          "name": "@k-boikov",
+          "aliases": [
+            "@k-boikov"
+          ]
+        }
+      ],
+      "claims": [
+        {
+          "id": "claim_12f31890",
+          "subject_entity_id": "@k-boikov",
+          "predicate": "authored",
+          "object_entity_id": "comment_1566224254",
+          "valid_from": "2023-05-28T18:33:38Z",
+          "valid_to": null,
+          "confidence": 1.0,
+          "evidence": [
+            {
+              "id": "ev_f624d652",
+              "artifact_id": "comment_1566224254",
+              "excerpt": "Author: @k-boikov",
+              "char_start": null,
+              "char_end": null
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "artifact_id": "comment_1566295718",
+    "extracted": {
+      "entities": [
+        {
+          "id": "@BaseInfinity",
+          "type": "Person",
+          "name": "BaseInfinity",
+          "aliases": []
+        },
+        {
+          "id": "@Pwuts",
+          "type": "Person",
+          "name": "Pwuts",
+          "aliases": []
+        }
+      ],
+      "claims": [
+        {
+          "id": "claim_e47fab5e",
+          "subject_entity_id": "BaseInfinity",
+          "predicate": "mentioned",
+          "object_entity_id": "Pwuts",
+          "valid_from": "2023-05-28T23:05:51Z",
+          "valid_to": null,
+          "confidence": 1.0,
+          "evidence": [
+            {
+              "id": "ev_cca6e6b0",
+              "artifact_id": "comment_1566295718",
+              "excerpt": "@Pwuts I went ahead and removed both max token settings from the config file and now set them at runtime wherever it was used",
+              "char_start": 0,
+              "char_end": 125
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "artifact_id": "comment_1567278536",
+    "extracted": {
+      "entities": [
+        {
+          "id": "@Auto-GPT-Bot",
+          "type": "API",
+          "name": "@Auto-GPT-Bot",
+          "aliases": [
+            "AutoGPT-Bot"
+          ]
+        }
+      ],
+      "claims": [
+        {
+          "id": "claim_13586458",
+          "subject_entity_id": "cassettes",
+          "predicate": "mentioned",
+          "object_entity_id": "AutoGPT-Bot",
+          "valid_from": "2023-05-29T15:30:22Z",
+          "valid_to": null,
+          "confidence": 1.0,
+          "evidence": [
+            {
+              "id": "ev_e10a7194",
+              "artifact_id": "comment_1567278536",
+              "excerpt": "You changed AutoGPT\\'s prompt.",
+              "char_start": null,
+              "char_end": null
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "artifact_id": "comment_1557105425",
+    "extracted": {
+      "entities": [
+        {
+          "id": "k-boikov",
+          "type": "Person",
+          "name": "@k-boikov",
+          "aliases": [
+            "@k-boikov"
+          ]
+        }
+      ],
+      "claims": [
+        {
+          "id": "claim1",
+          "subject_entity_id": "cassettes flow error",
+          "predicate": "mentioned",
+          "object_entity_id": "k-boikov",
+          "valid_from": "2023-05-22T12:08:05Z",
+          "valid_to": null,
+          "confidence": 1.0,
+          "evidence": [
+            {
+              "id": "evidence1",
+              "artifact_id": "comment_1557105425",
+              "excerpt": "Author: @k-boikov",
+              "char_start": null,
+              "char_end": null
+            }
+          ]
+        }
+      ]
+    }
+  }
+]

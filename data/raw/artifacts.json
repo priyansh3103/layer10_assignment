@@ -1,0 +1,402 @@
+[
+  {
+    "id": "issue_4130",
+    "url": "https://github.com/Significant-Gravitas/AutoGPT/pull/4130",
+    "type": "GitHubIssue",
+    "content": "Title: Feature/basic proxy test 7\n\n<!-- \u26a0\ufe0f At the moment any non-essential commands are not being merged.\r\nIf you want to add non-essential commands to Auto-GPT, please create a plugin instead.\r\nWe are expecting to ship plugin support within the week (PR #757).\r\nResources:\r\n* https://github.com/Significant-Gravitas/Auto-GPT-Plugin-Template\r\n-->\r\n\r\n<!-- \ud83d\udce2 Announcement\r\nWe've recently noticed an increase in pull requests focusing on combining multiple changes. While the intentions behind these PRs are appreciated, it's essential to maintain a clean and manageable git history. To ensure the quality of our repository, we kindly ask you to adhere to the following guidelines when submitting PRs:\r\n\r\nFocus on a single, specific change.\r\nDo not include any unrelated or \"extra\" modifications.\r\nProvide clear documentation and explanations of the changes made.\r\nEnsure diffs are limited to the intended lines \u2014 no applying preferred formatting styles or line endings (unless that's what the PR is about).\r\nFor guidance on committing only the specific lines you have changed, refer to this helpful video: https://youtu.be/8-hSNHHbiZg\r\n\r\nCheck out our [wiki page on Contributing](https://github.com/Significant-Gravitas/Auto-GPT/wiki/Contributing)\r\n\r\nBy following these guidelines, your PRs are more likely to be merged quickly after testing, as long as they align with the project's overall direction. -->\r\n\r\n### Background\r\n<!-- Provide a concise overview of the rationale behind this change. Include relevant context, prior discussions, or links to related issues. Ensure that the change aligns with the project's overall direction. -->\r\n\r\n### Changes\r\n<!-- Describe the specific, focused change made in this pull request. Detail the modifications clearly and avoid any unrelated or \"extra\" changes. -->\r\n\r\n### Documentation\r\n<!-- Explain how your changes are documented, such as in-code comments or external documentation. Ensure that the documentation is clear, concise, and easy to understand. -->\r\n\r\n### Test Plan\r\n<!-- Describe how you tested this functionality. Include steps to reproduce, relevant test cases, and any other pertinent information. -->\r\n\r\n### PR Quality Checklist\r\n- [ ] My pull request is atomic and focuses on a single change.\r\n- [ ] I have thoroughly tested my changes with multiple different prompts.\r\n- [ ] I have considered potential risks and mitigations for my changes.\r\n- [ ] I have documented my changes clearly and comprehensively.\r\n- [ ] I have not snuck in any \"extra\" small tweaks changes <!-- Submit these as separate Pull Requests, they are the easiest to merge! -->\r\n\r\n<!-- If you haven't added tests, please explain why. If you have, check the appropriate box. If you've ensured your PR is atomic and well-documented, check the corresponding boxes. -->\r\n\r\n<!-- By submitting this, I agree that my pull request should be closed if I do not fill this out or follow the guidelines. -->\r\n",
+    "author_id": "@waynehamadi",
+    "created_at": "2023-05-12T02:42:33Z"
+  },
+  {
+    "id": "comment_1545026604",
+    "url": "https://github.com/Significant-Gravitas/AutoGPT/pull/4130#issuecomment-1545026604",
+    "type": "GitHubComment",
+    "content": "[vc]: #f5v0Qdw1MOc9vlCDoH0nzWrchZUPkYLN0lDIIV1Fjtg=:eyJpc01vbm9yZXBvIjp0cnVlLCJ0eXBlIjoiZ2l0aHViIiwicHJvamVjdHMiOlt7Im5hbWUiOiJkb2NzIiwicm9vdERpcmVjdG9yeSI6bnVsbCwibGl2ZUZlZWRiYWNrIjp7InJlc29sdmVkIjowLCJ1bnJlc29sdmVkIjowLCJ0b3RhbCI6MCwibGluayI6IiJ9LCJpbnNwZWN0b3JVcmwiOiJodHRwczovL3ZlcmNlbC5jb20vYXV0by1ncHQvZG9jcy9hd2JqYmhadktqdUN2UEEyenRnQmRHNmVldDJ4IiwibmV4dENvbW1pdFN0YXR1cyI6IklHTk9SRUQifV19\n**The latest updates on your projects**. Learn more about [Vercel for Git \u2197\ufe0e](https://vercel.link/github-learn-more)\n\n\n<details><summary>1 Ignored Deployment</summary>\n\n| Name | Status | Preview | Comments | Updated (UTC) |\n| :--- | :----- | :------ | :------- | :------ |\n| **docs** | \u2b1c\ufe0f Ignored ([Inspect](https://vercel.com/auto-gpt/docs/awbjbhZvKjuCvPA2ztgBdG6eet2x)) |  |  | May 12, 2023 2:43am |\n</details>\n\n",
+    "author_id": "@vercel[bot]",
+    "created_at": "2023-05-12T02:42:37Z"
+  },
+  {
+    "id": "comment_1545026731",
+    "url": "https://github.com/Significant-Gravitas/AutoGPT/pull/4130#issuecomment-1545026731",
+    "type": "GitHubComment",
+    "content": "This pull request has conflicts with the base branch, please resolve those so we can evaluate the pull request.",
+    "author_id": "@github-actions[bot]",
+    "created_at": "2023-05-12T02:42:51Z"
+  },
+  {
+    "id": "comment_1545026757",
+    "url": "https://github.com/Significant-Gravitas/AutoGPT/pull/4130#issuecomment-1545026757",
+    "type": "GitHubComment",
+    "content": "This PR exceeds the recommended size of 200 lines. Please make sure you are NOT addressing multiple issues with one PR. Note this PR might be rejected due to its size  ",
+    "author_id": "@github-actions[bot]",
+    "created_at": "2023-05-12T02:42:54Z"
+  },
+  {
+    "id": "comment_1545027059",
+    "url": "https://github.com/Significant-Gravitas/AutoGPT/pull/4130#issuecomment-1545027059",
+    "type": "GitHubComment",
+    "content": "This PR exceeds the recommended size of 200 lines. Please make sure you are NOT addressing multiple issues with one PR. Note this PR might be rejected due to its size  ",
+    "author_id": "@github-actions[bot]",
+    "created_at": "2023-05-12T02:43:32Z"
+  },
+  {
+    "id": "issue_4128",
+    "url": "https://github.com/Significant-Gravitas/AutoGPT/pull/4128",
+    "type": "GitHubIssue",
+    "content": "Title: feat: set max token limits for better user experience\n\n<!-- \u26a0\ufe0f At the moment any non-essential commands are not being merged.\r\nIf you want to add non-essential commands to Auto-GPT, please create a plugin instead.\r\nWe are expecting to ship plugin support within the week (PR #757).\r\nResources:\r\n* https://github.com/Significant-Gravitas/Auto-GPT-Plugin-Template\r\n-->\r\n\r\n<!-- \ud83d\udce2 Announcement\r\nWe've recently noticed an increase in pull requests focusing on combining multiple changes. While the intentions behind these PRs are appreciated, it's essential to maintain a clean and manageable git history. To ensure the quality of our repository, we kindly ask you to adhere to the following guidelines when submitting PRs:\r\n\r\nFocus on a single, specific change.\r\nDo not include any unrelated or \"extra\" modifications.\r\nProvide clear documentation and explanations of the changes made.\r\nEnsure diffs are limited to the intended lines \u2014 no applying preferred formatting styles or line endings (unless that's what the PR is about).\r\nFor guidance on committing only the specific lines you have changed, refer to this helpful video: https://youtu.be/8-hSNHHbiZg\r\n\r\nCheck out our [wiki page on Contributing](https://github.com/Significant-Gravitas/Auto-GPT/wiki/Contributing)\r\n\r\nBy following these guidelines, your PRs are more likely to be merged quickly after testing, as long as they align with the project's overall direction. -->\r\n\r\n### Background\r\nEvery day we see people come into the discord explaining how they ran into a token limit because most people are still on a 3.0/3.5 key. The maintainer's built the app to assume 8000 token limit due to gpt4 key and atm this just causes friction because in reality, most people do not have a 4.0 key\r\n\r\nTo meet in the middle we will respect the user's token limit but compare it to the max token limit based off the smart/fast llvm model and set a limit 15% less to ensure we take into account the prompt and package\r\n\r\n### Changes\r\nUse the model's max_token_limits for both fast/smart llvm\r\n\r\n### Test Plan\r\ni updated failing tests\r\n\r\n### PR Quality Checklist\r\n- [x] My pull request is atomic and focuses on a single change.\r\n- [x] I have thoroughly tested my changes with multiple different prompts.\r\n- [x] I have considered potential risks and mitigations for my changes.\r\n- [x] I have documented my changes clearly and comprehensively.\r\n- [x] I have not snuck in any \"extra\" small tweaks changes <!-- Submit these as separate Pull Requests, they are the easiest to merge! -->\r\n",
+    "author_id": "@BaseInfinity",
+    "created_at": "2023-05-11T23:27:30Z"
+  },
+  {
+    "id": "comment_1544825587",
+    "url": "https://github.com/Significant-Gravitas/AutoGPT/pull/4128#issuecomment-1544825587",
+    "type": "GitHubComment",
+    "content": "[vc]: #649xKcPYY1zoR39UI2roYX7qyB9cPNIWUPE7iyhBbCs=:eyJpc01vbm9yZXBvIjp0cnVlLCJ0eXBlIjoiZ2l0aHViIiwicHJvamVjdHMiOlt7Im5hbWUiOiJkb2NzIiwicm9vdERpcmVjdG9yeSI6bnVsbCwibGl2ZUZlZWRiYWNrIjp7InJlc29sdmVkIjowLCJ1bnJlc29sdmVkIjowLCJ0b3RhbCI6MCwibGluayI6IiJ9LCJpbnNwZWN0b3JVcmwiOiJodHRwczovL3ZlcmNlbC5jb20vYXV0by1ncHQvZG9jcy80a283ZW5EUVM5M3lRSkphdTI0Tk5WTkJTRzdyIiwibmV4dENvbW1pdFN0YXR1cyI6IklHTk9SRUQiLCJwcmV2aWV3VXJsIjoiZG9jcy1naXQtZm9yay1iYXNlaW5maW5pdHktZmVhdC1zZXQtdG9rZW4tbGltaXQtMzBjZDFjLWF1dG8tZ3B0LnZlcmNlbC5hcHAifV19\n**The latest updates on your projects**. Learn more about [Vercel for Git \u2197\ufe0e](https://vercel.link/github-learn-more)\n\n\n<details><summary>1 Ignored Deployment</summary>\n\n| Name | Status | Preview | Comments | Updated (UTC) |\n| :--- | :----- | :------ | :------- | :------ |\n| **docs** | \u2b1c\ufe0f Ignored ([Inspect](https://vercel.com/auto-gpt/docs/4ko7enDQS93yQJJau24NNVNBSG7r)) | [Visit Preview](https://docs-git-fork-baseinfinity-feat-set-token-limit-30cd1c-auto-gpt.vercel.app) |  | May 31, 2023 10:03pm |\n</details>\n\n",
+    "author_id": "@vercel[bot]",
+    "created_at": "2023-05-11T23:27:33Z"
+  },
+  {
+    "id": "comment_1544833388",
+    "url": "https://github.com/Significant-Gravitas/AutoGPT/pull/4128#issuecomment-1544833388",
+    "type": "GitHubComment",
+    "content": "Shouldnt you also remove the variable from the .env template? I might be wrong",
+    "author_id": "@rihp",
+    "created_at": "2023-05-11T23:35:59Z"
+  },
+  {
+    "id": "comment_1544849505",
+    "url": "https://github.com/Significant-Gravitas/AutoGPT/pull/4128#issuecomment-1544849505",
+    "type": "GitHubComment",
+    "content": "> Shouldnt you also remove the variable from the .env template? I might be wrong\r\n\r\nI'm still letting people set custom limits in case they want to, I just make sure those custom limits are below a working threshold",
+    "author_id": "@BaseInfinity",
+    "created_at": "2023-05-11T23:38:23Z"
+  },
+  {
+    "id": "comment_1545480229",
+    "url": "https://github.com/Significant-Gravitas/AutoGPT/pull/4128#issuecomment-1545480229",
+    "type": "GitHubComment",
+    "content": "FWIW, I actually exposed these limits via the command interface, so that the LLM can dynamically modify these once an error occurs.\r\n\r\nThe background being that I ran  into a bunch of errors where the hard-coded limits were not right, or where the hard-coded model was not working - exposing these details via the command interface (or even just via corresponding args) lets the AI/LLM play with different settings.\r\n\r\nIn my case it would figure out what to do over the course of the next 3-4 iterations - as long as you ensure to pass any error messages to the LLM and also pass in the command/arg to modify, as well as any hard-coded options.\r\n\r\n(by extension we might even want to expose the endpoint and the URL to the API schema and if the hash changes ...)",
+    "author_id": "@Boostrix",
+    "created_at": "2023-05-12T09:49:38Z"
+  },
+  {
+    "id": "comment_1547437354",
+    "url": "https://github.com/Significant-Gravitas/AutoGPT/pull/4128#issuecomment-1547437354",
+    "type": "GitHubComment",
+    "content": "in the light of the ongoing work to support multiple LLMs, it might make sense, to directly use a sub-dict named \"openai\" for these defaults so that other LLMs can be more easily supported in the future ?\r\n\r\nAlso, like I said previously, exposing these via the command interface enables the llm to tinker with different settings if/when an error occurs - all that is needed is capturing the error via a system message that includes the commands/arguments that can be used to adapt these settings. ",
+    "author_id": "@Boostrix",
+    "created_at": "2023-05-15T08:44:30Z"
+  },
+  {
+    "id": "comment_1547468882",
+    "url": "https://github.com/Significant-Gravitas/AutoGPT/pull/4128#issuecomment-1547468882",
+    "type": "GitHubComment",
+    "content": "> in the light of the ongoing work to support multiple LLMs, it might make sense, to directly use a sub-dict named \"openai\" for these defaults ?\r\n> \r\n> Also, like I said previously, exposing these via the command interface enables the llm to tinker with different settings if/when an error occurs - all that is needed is capturing the error via a system message that includes the commands/arguments that can be used to adapt these settings.\r\n\r\nCorrect me if I'm wrong but your way sounds like a better solution and is more future proof, if that's the case then I'm okay with closing this.\r\n\r\n@ntindle if you want me to make the changes you suggested then I'll go ahead and do so but if this is going to be closed due to a better solution that's around the corner or close then I'm okay with letting this die lol",
+    "author_id": "@BaseInfinity",
+    "created_at": "2023-05-15T09:05:28Z"
+  },
+  {
+    "id": "comment_1547493770",
+    "url": "https://github.com/Significant-Gravitas/AutoGPT/pull/4128#issuecomment-1547493770",
+    "type": "GitHubComment",
+    "content": "I would suggest to get this integrated with ntindle at this point, we will need to wait for their feedback to see if they're supportive of the idea or not - with your current suggestion, at least you already got some feedback.\r\n\r\nAlso, some folks expressed concerns if hard-coded defaults are exposed to the LLM for tinkering, so what's probably going to happen is that someone is going to say we need to make this configurable, too  ",
+    "author_id": "@Boostrix",
+    "created_at": "2023-05-15T09:21:29Z"
+  },
+  {
+    "id": "comment_1548494037",
+    "url": "https://github.com/Significant-Gravitas/AutoGPT/pull/4128#issuecomment-1548494037",
+    "type": "GitHubComment",
+    "content": "Ahh im failing the import tests, I'll fixie them this evening",
+    "author_id": "@BaseInfinity",
+    "created_at": "2023-05-15T20:00:59Z"
+  },
+  {
+    "id": "comment_1550297233",
+    "url": "https://github.com/Significant-Gravitas/AutoGPT/pull/4128#issuecomment-1550297233",
+    "type": "GitHubComment",
+    "content": "So I'm not a fan of this change https://github.com/Significant-Gravitas/Auto-GPT/pull/4128/commits/31a3a477db4fb98464f5a8152a8dfc393ca57353 but I wasn't sure the best way to avoid a circular dependency without having to restructure things and since I'm new and wanting to keep this bitesized, I went for the above solution.\r\n\r\nBut please lemme know if there's an easy way to avoid this problem (I'm new to python and the codebase so I could be missing something), thanks!",
+    "author_id": "@BaseInfinity",
+    "created_at": "2023-05-16T20:11:53Z"
+  },
+  {
+    "id": "comment_1550313219",
+    "url": "https://github.com/Significant-Gravitas/AutoGPT/pull/4128#issuecomment-1550313219",
+    "type": "GitHubComment",
+    "content": "Looks like tests are failing but not for my changes:\r\n![Screen Shot 2023-05-16 at 1 25 11 PM](https://github.com/Significant-Gravitas/Auto-GPT/assets/1424113/3a8fc5a4-157a-4f05-9491-8c2d97cae7f8)\r\n\r\n![Screen Shot 2023-05-16 at 1 24 41 PM](https://github.com/Significant-Gravitas/Auto-GPT/assets/1424113/65727884-3e9d-47bf-b9bd-4a39edc4c4f6)\r\n",
+    "author_id": "@BaseInfinity",
+    "created_at": "2023-05-16T20:26:12Z"
+  },
+  {
+    "id": "comment_1555980660",
+    "url": "https://github.com/Significant-Gravitas/AutoGPT/pull/4128#issuecomment-1555980660",
+    "type": "GitHubComment",
+    "content": "I need to update some of the tests to account for the new soft limits and fix some linter formatting issues, I'll probably get to it before the end of the weekend ",
+    "author_id": "@BaseInfinity",
+    "created_at": "2023-05-20T19:46:54Z"
+  },
+  {
+    "id": "comment_1556053332",
+    "url": "https://github.com/Significant-Gravitas/AutoGPT/pull/4128#issuecomment-1556053332",
+    "type": "GitHubComment",
+    "content": "Whoops sorry for updating, didn't realize you just pushed",
+    "author_id": "@ntindle",
+    "created_at": "2023-05-21T00:48:39Z"
+  },
+  {
+    "id": "comment_1556055404",
+    "url": "https://github.com/Significant-Gravitas/AutoGPT/pull/4128#issuecomment-1556055404",
+    "type": "GitHubComment",
+    "content": "@ntindle sorry for all the forced push commits, I couldn't run the same commands in CI as i could Locally and figured it would be faster to just git force push for meow versus attempting to run tests locally atm lol",
+    "author_id": "@BaseInfinity",
+    "created_at": "2023-05-21T01:05:39Z"
+  },
+  {
+    "id": "comment_1556055481",
+    "url": "https://github.com/Significant-Gravitas/AutoGPT/pull/4128#issuecomment-1556055481",
+    "type": "GitHubComment",
+    "content": "## [Codecov](https://app.codecov.io/gh/Significant-Gravitas/Auto-GPT/pull/4128?src=pr&el=h1&utm_medium=referral&utm_source=github&utm_content=comment&utm_campaign=pr+comments&utm_term=Significant-Gravitas) Report\nPatch coverage: **`66.66`**% and project coverage change: **`-0.04`** :warning:\n> Comparison is base [(`1127d9c`)](https://app.codecov.io/gh/Significant-Gravitas/Auto-GPT/commit/1127d9c5f57c7a7e66900e7bbb95e943842097e9?el=desc&utm_medium=referral&utm_source=github&utm_content=comment&utm_campaign=pr+comments&utm_term=Significant-Gravitas) 68.43% compared to head [(`becdaa1`)](https://app.codecov.io/gh/Significant-Gravitas/Auto-GPT/pull/4128?src=pr&el=desc&utm_medium=referral&utm_source=github&utm_content=comment&utm_campaign=pr+comments&utm_term=Significant-Gravitas) 68.39%.\n\n<details><summary>Additional details and impacted files</summary>\n\n\n```diff\n@@            Coverage Diff             @@\n##           master    #4128      +/-   ##\n==========================================\n- Coverage   68.43%   68.39%   -0.04%     \n==========================================\n  Files          72       72              \n  Lines        3516     3512       -4     \n  Branches      560      560              \n==========================================\n- Hits         2406     2402       -4     \n  Misses        924      924              \n  Partials      186      186              \n```\n\n\n| [Impacted Files](https://app.codecov.io/gh/Significant-Gravitas/Auto-GPT/pull/4128?src=pr&el=tree&utm_medium=referral&utm_source=github&utm_content=comment&utm_campaign=pr+comments&utm_term=Significant-Gravitas) | Coverage \u0394 | |\n|---|---|---|\n| [autogpt/config/config.py](https://app.codecov.io/gh/Significant-Gravitas/Auto-GPT/pull/4128?src=pr&el=tree&utm_medium=referral&utm_source=github&utm_content=comment&utm_campaign=pr+comments&utm_term=Significant-Gravitas#diff-YXV0b2dwdC9jb25maWcvY29uZmlnLnB5) | `75.35% <\u00f8> (-1.00%)` | :arrow_down: |\n| [autogpt/agent/agent.py](https://app.codecov.io/gh/Significant-Gravitas/Auto-GPT/pull/4128?src=pr&el=tree&utm_medium=referral&utm_source=github&utm_content=comment&utm_campaign=pr+comments&utm_term=Significant-Gravitas#diff-YXV0b2dwdC9hZ2VudC9hZ2VudC5weQ==) | `60.00% <66.66%> (+0.49%)` | :arrow_up: |\n\n\n</details>\n\n[:umbrella: View full report in Codecov by Sentry](https://app.codecov.io/gh/Significant-Gravitas/Auto-GPT/pull/4128?src=pr&el=continue&utm_medium=referral&utm_source=github&utm_content=comment&utm_campaign=pr+comments&utm_term=Significant-Gravitas).   \n:loudspeaker: Do you have feedback about the report comment? [Let us know in this issue](https://about.codecov.io/codecov-pr-comment-feedback/?utm_medium=referral&utm_source=github&utm_content=comment&utm_campaign=pr+comments&utm_term=Significant-Gravitas).\n",
+    "author_id": "@codecov[bot]",
+    "created_at": "2023-05-21T01:06:09Z"
+  },
+  {
+    "id": "comment_1556218094",
+    "url": "https://github.com/Significant-Gravitas/AutoGPT/pull/4128#issuecomment-1556218094",
+    "type": "GitHubComment",
+    "content": "Don't forget to fill out the PR, I think our automaton uses it for change logs",
+    "author_id": "@ntindle",
+    "created_at": "2023-05-21T16:21:05Z"
+  },
+  {
+    "id": "comment_1556260884",
+    "url": "https://github.com/Significant-Gravitas/AutoGPT/pull/4128#issuecomment-1556260884",
+    "type": "GitHubComment",
+    "content": "Ill fill out the description later today thanks for the review!",
+    "author_id": "@BaseInfinity",
+    "created_at": "2023-05-21T18:59:43Z"
+  },
+  {
+    "id": "comment_1558209627",
+    "url": "https://github.com/Significant-Gravitas/AutoGPT/pull/4128#issuecomment-1558209627",
+    "type": "GitHubComment",
+    "content": "This PR exceeds the recommended size of 200 lines. Please make sure you are NOT addressing multiple issues with one PR. Note this PR might be rejected due to its size  ",
+    "author_id": "@github-actions[bot]",
+    "created_at": "2023-05-22T23:59:38Z"
+  },
+  {
+    "id": "comment_1558259962",
+    "url": "https://github.com/Significant-Gravitas/AutoGPT/pull/4128#issuecomment-1558259962",
+    "type": "GitHubComment",
+    "content": "Derp, my fault, ill fixie",
+    "author_id": "@BaseInfinity",
+    "created_at": "2023-05-23T00:20:47Z"
+  },
+  {
+    "id": "comment_1558262375",
+    "url": "https://github.com/Significant-Gravitas/AutoGPT/pull/4128#issuecomment-1558262375",
+    "type": "GitHubComment",
+    "content": "Fixed, thanks for the heads up @k-boikov ",
+    "author_id": "@BaseInfinity",
+    "created_at": "2023-05-23T00:23:48Z"
+  },
+  {
+    "id": "comment_1563367449",
+    "url": "https://github.com/Significant-Gravitas/AutoGPT/pull/4128#issuecomment-1563367449",
+    "type": "GitHubComment",
+    "content": "This pull request has conflicts with the base branch, please resolve those so we can evaluate the pull request.",
+    "author_id": "@github-actions[bot]",
+    "created_at": "2023-05-25T18:55:30Z"
+  },
+  {
+    "id": "comment_1563510480",
+    "url": "https://github.com/Significant-Gravitas/AutoGPT/pull/4128#issuecomment-1563510480",
+    "type": "GitHubComment",
+    "content": "many people on discord still report that they find having to downgrade the hard-coded defaults to stay within the ctx window - so it would be good to get this updated/reviewed",
+    "author_id": "@Boostrix",
+    "created_at": "2023-05-25T21:10:35Z"
+  },
+  {
+    "id": "comment_1563627533",
+    "url": "https://github.com/Significant-Gravitas/AutoGPT/pull/4128#issuecomment-1563627533",
+    "type": "GitHubComment",
+    "content": "Conflicts have been resolved! \ud83c\udf89 A maintainer will review the pull request shortly.",
+    "author_id": "@github-actions[bot]",
+    "created_at": "2023-05-25T23:27:48Z"
+  },
+  {
+    "id": "comment_1563628611",
+    "url": "https://github.com/Significant-Gravitas/AutoGPT/pull/4128#issuecomment-1563628611",
+    "type": "GitHubComment",
+    "content": "@Boostrix sounds good, i fixed the conflicts to include soft limits on top of the recent memory config changes",
+    "author_id": "@BaseInfinity",
+    "created_at": "2023-05-25T23:29:43Z"
+  },
+  {
+    "id": "comment_1564771802",
+    "url": "https://github.com/Significant-Gravitas/AutoGPT/pull/4128#issuecomment-1564771802",
+    "type": "GitHubComment",
+    "content": "@Pwuts gotcha thanks for the info, i like those suggestions",
+    "author_id": "@BaseInfinity",
+    "created_at": "2023-05-26T18:27:18Z"
+  },
+  {
+    "id": "comment_1566224254",
+    "url": "https://github.com/Significant-Gravitas/AutoGPT/pull/4128#issuecomment-1566224254",
+    "type": "GitHubComment",
+    "content": "![image](https://github.com/Significant-Gravitas/Auto-GPT/assets/64261260/6c8d58c2-f8e9-4618-89e3-8a9b5fa844ca)\r\n",
+    "author_id": "@k-boikov",
+    "created_at": "2023-05-28T18:33:38Z"
+  },
+  {
+    "id": "comment_1566288460",
+    "url": "https://github.com/Significant-Gravitas/AutoGPT/pull/4128#issuecomment-1566288460",
+    "type": "GitHubComment",
+    "content": "I'll make suggested changes today and fix up the tests",
+    "author_id": "@BaseInfinity",
+    "created_at": "2023-05-28T22:37:52Z"
+  },
+  {
+    "id": "comment_1566295718",
+    "url": "https://github.com/Significant-Gravitas/AutoGPT/pull/4128#issuecomment-1566295718",
+    "type": "GitHubComment",
+    "content": "@Pwuts I went ahead and removed both max token settings from the config file and now set them at runtime wherever it was used",
+    "author_id": "@BaseInfinity",
+    "created_at": "2023-05-28T23:05:51Z"
+  },
+  {
+    "id": "comment_1567278536",
+    "url": "https://github.com/Significant-Gravitas/AutoGPT/pull/4128#issuecomment-1567278536",
+    "type": "GitHubComment",
+    "content": "You changed AutoGPT's prompt. The cassettes have been updated and will be merged to the submodule when this Pull Request gets merged.",
+    "author_id": "@Auto-GPT-Bot",
+    "created_at": "2023-05-29T15:30:22Z"
+  },
+  {
+    "id": "comment_1567396794",
+    "url": "https://github.com/Significant-Gravitas/AutoGPT/pull/4128#issuecomment-1567396794",
+    "type": "GitHubComment",
+    "content": "This pull request has conflicts with the base branch, please resolve those so we can evaluate the pull request.",
+    "author_id": "@github-actions[bot]",
+    "created_at": "2023-05-29T18:06:51Z"
+  },
+  {
+    "id": "comment_1567403619",
+    "url": "https://github.com/Significant-Gravitas/AutoGPT/pull/4128#issuecomment-1567403619",
+    "type": "GitHubComment",
+    "content": "> @k-boikov  What if people want to intentionally limit the tokens they spend? Sometimes that helps when we have a bug and we don't calculate the limits correctly. The only limit I think we should enforce if someone tries to play with their env and puts a limit higher than the model's max tokens.\r\n\r\nthat's a fair point. I don't mind either solution we end up going with since it solves the major problem (mismanaged token limits).\r\n\r\nAt my day job I'd ping a project manager and ask for their 2 cents and decision, is that @ntindle in this case lol?",
+    "author_id": "@BaseInfinity",
+    "created_at": "2023-05-29T18:15:48Z"
+  },
+  {
+    "id": "issue_4122",
+    "url": "https://github.com/Significant-Gravitas/AutoGPT/pull/4122",
+    "type": "GitHubIssue",
+    "content": "Title: Update get_hyperlinks description\n\nUpdate instruction for command 'get_hyperlinks'\r\n\r\n<!-- \u26a0\ufe0f At the moment any non-essential commands are not being merged.\r\nIf you want to add non-essential commands to Auto-GPT, please create a plugin instead.\r\nWe are expecting to ship plugin support within the week (PR #757).\r\nResources:\r\n* https://github.com/Significant-Gravitas/Auto-GPT-Plugin-Template\r\n-->\r\n\r\n<!-- \ud83d\udce2 Announcement\r\nWe've recently noticed an increase in pull requests focusing on combining multiple changes. While the intentions behind these PRs are appreciated, it's essential to maintain a clean and manageable git history. To ensure the quality of our repository, we kindly ask you to adhere to the following guidelines when submitting PRs:\r\n\r\nFocus on a single, specific change.\r\nDo not include any unrelated or \"extra\" modifications.\r\nProvide clear documentation and explanations of the changes made.\r\nEnsure diffs are limited to the intended lines \u2014 no applying preferred formatting styles or line endings (unless that's what the PR is about).\r\nFor guidance on committing only the specific lines you have changed, refer to this helpful video: https://youtu.be/8-hSNHHbiZg\r\n\r\nCheck out our [wiki page on Contributing](https://github.com/Significant-Gravitas/Auto-GPT/wiki/Contributing)\r\n\r\nBy following these guidelines, your PRs are more likely to be merged quickly after testing, as long as they align with the project's overall direction. -->\r\n\r\n### Background\r\n<!-- Provide a concise overview of the rationale behind this change. Include relevant context, prior discussions, or links to related issues. Ensure that the change aligns with the project's overall direction. -->\r\nI was testing out this software, and found an inconsistency in the activity log. `\"\\n14. get_hyperlinks: Get text summary, args: \\\"url\\\": \\\"<url>\\\"`\r\nFor command `get_hyperlinks`, the description was 'Get text summary.'\r\n\r\n### Changes\r\n<!-- Describe the specific, focused change made in this pull request. Detail the modifications clearly and avoid any unrelated or \"extra\" changes. -->\r\nI just changed the description of command `get_hyperlinks` from `Get text summary` to `Get hyperlinks`.\r\n\r\n### Documentation\r\n<!-- Explain how your changes are documented, such as in-code comments or external documentation. Ensure that the documentation is clear, concise, and easy to understand. -->\r\nBecause my edit was an inconsistency of a text description, the edit should be intuitive and not causing any misunderstanding. So no documented is needed in my opinion.\r\n\r\n### Test Plan\r\n<!-- Describe how you tested this functionality. Include steps to reproduce, relevant test cases, and any other pertinent information. -->\r\nI just ran it locally to make sure the output aligns.\r\n\r\n### PR Quality Checklist\r\n- [x] My pull request is atomic and focuses on a single change.\r\n- [x] I have thoroughly tested my changes with multiple different prompts.\r\n- [x] I have considered potential risks and mitigations for my changes.\r\n- [x] I have documented my changes clearly and comprehensively.\r\n- [x] I have not snuck in any \"extra\" small tweaks changes <!-- Submit these as separate Pull Requests, they are the easiest to merge! -->\r\n\r\n<!-- If you haven't added tests, please explain why. If you have, check the appropriate box. If you've ensured your PR is atomic and well-documented, check the corresponding boxes. -->\r\n\r\n<!-- By submitting this, I agree that my pull request should be closed if I do not fill this out or follow the guidelines. -->\r\n",
+    "author_id": "@sicongzhao",
+    "created_at": "2023-05-11T19:10:48Z"
+  },
+  {
+    "id": "comment_1544540756",
+    "url": "https://github.com/Significant-Gravitas/AutoGPT/pull/4122#issuecomment-1544540756",
+    "type": "GitHubComment",
+    "content": "[vc]: #YRNTK3hIr4WU700DOVk3QjlAyHyZ4TTvVMzyKMxe4dI=:eyJpc01vbm9yZXBvIjp0cnVlLCJ0eXBlIjoiZ2l0aHViIiwicHJvamVjdHMiOlt7Im5hbWUiOiJkb2NzIiwicm9vdERpcmVjdG9yeSI6bnVsbCwibGl2ZUZlZWRiYWNrIjp7InJlc29sdmVkIjowLCJ1bnJlc29sdmVkIjowLCJ0b3RhbCI6MCwibGluayI6IiJ9LCJpbnNwZWN0b3JVcmwiOiJodHRwczovL3ZlcmNlbC5jb20vYXV0by1ncHQvZG9jcy9CM2Jocll3SHFVWVltakVWMUpZVVJUQ2ZvOGg0IiwibmV4dENvbW1pdFN0YXR1cyI6IklHTk9SRUQiLCJwcmV2aWV3VXJsIjoiZG9jcy1naXQtZm9yay1zaWNvbmd6aGFvLW1hc3Rlci1hdXRvLWdwdC52ZXJjZWwuYXBwIn1dfQ==\n**The latest updates on your projects**. Learn more about [Vercel for Git \u2197\ufe0e](https://vercel.link/github-learn-more)\n\n\n<details><summary>1 Ignored Deployment</summary>\n\n| Name | Status | Preview | Comments | Updated (UTC) |\n| :--- | :----- | :------ | :------- | :------ |\n| **docs** | \u2b1c\ufe0f Ignored ([Inspect](https://vercel.com/auto-gpt/docs/B3bhrYwHqUYYmjEV1JYURTCfo8h4)) | [Visit Preview](https://docs-git-fork-sicongzhao-master-auto-gpt.vercel.app) |  | May 23, 2023 1:41pm |\n</details>\n\n",
+    "author_id": "@vercel[bot]",
+    "created_at": "2023-05-11T19:10:53Z"
+  },
+  {
+    "id": "comment_1546935090",
+    "url": "https://github.com/Significant-Gravitas/AutoGPT/pull/4122#issuecomment-1546935090",
+    "type": "GitHubComment",
+    "content": "actually, there's more stuff like this - I could reliably reproduce that whenever the LLM got stuck, it wants to \"analyse code\" - and that is, because it's focusing on \"analysis\" rather than on the code aspect - so, we should probably weigh things differently or at least reword the help string/description in some cases to get better behavior from the LLM ",
+    "author_id": "@Boostrix",
+    "created_at": "2023-05-14T16:13:21Z"
+  },
+  {
+    "id": "comment_1549306438",
+    "url": "https://github.com/Significant-Gravitas/AutoGPT/pull/4122#issuecomment-1549306438",
+    "type": "GitHubComment",
+    "content": "## [Codecov](https://app.codecov.io/gh/Significant-Gravitas/Auto-GPT/pull/4122?src=pr&el=h1&utm_medium=referral&utm_source=github&utm_content=comment&utm_campaign=pr+comments&utm_term=Significant-Gravitas) Report\nPatch coverage: **`100.00`**% and project coverage change: **`+0.14`** :tada:\n> Comparison is base [(`9c7f567`)](https://app.codecov.io/gh/Significant-Gravitas/Auto-GPT/commit/9c7f5671e6ce666d5410900b7f350a59853ba6b9?el=desc&utm_medium=referral&utm_source=github&utm_content=comment&utm_campaign=pr+comments&utm_term=Significant-Gravitas) 64.76% compared to head [(`fd8bc2e`)](https://app.codecov.io/gh/Significant-Gravitas/Auto-GPT/pull/4122?src=pr&el=desc&utm_medium=referral&utm_source=github&utm_content=comment&utm_campaign=pr+comments&utm_term=Significant-Gravitas) 64.90%.\n\n<details><summary>Additional details and impacted files</summary>\n\n\n```diff\n@@            Coverage Diff             @@\n##           master    #4122      +/-   ##\n==========================================\n+ Coverage   64.76%   64.90%   +0.14%     \n==========================================\n  Files          75       75              \n  Lines        3542     3542              \n  Branches      520      520              \n==========================================\n+ Hits         2294     2299       +5     \n+ Misses       1078     1071       -7     \n- Partials      170      172       +2     \n```\n\n\n| [Impacted Files](https://app.codecov.io/gh/Significant-Gravitas/Auto-GPT/pull/4122?src=pr&el=tree&utm_medium=referral&utm_source=github&utm_content=comment&utm_campaign=pr+comments&utm_term=Significant-Gravitas) | Coverage \u0394 | |\n|---|---|---|\n| [autogpt/app.py](https://app.codecov.io/gh/Significant-Gravitas/Auto-GPT/pull/4122?src=pr&el=tree&utm_medium=referral&utm_source=github&utm_content=comment&utm_campaign=pr+comments&utm_term=Significant-Gravitas#diff-YXV0b2dwdC9hcHAucHk=) | `43.15% <100.00%> (\u00f8)` | |\n\n... and [1 file with indirect coverage changes](https://app.codecov.io/gh/Significant-Gravitas/Auto-GPT/pull/4122/indirect-changes?src=pr&el=tree-more&utm_medium=referral&utm_source=github&utm_content=comment&utm_campaign=pr+comments&utm_term=Significant-Gravitas)\n\n\n</details>\n\n[:umbrella: View full report in Codecov by Sentry](https://app.codecov.io/gh/Significant-Gravitas/Auto-GPT/pull/4122?src=pr&el=continue&utm_medium=referral&utm_source=github&utm_content=comment&utm_campaign=pr+comments&utm_term=Significant-Gravitas).   \n:loudspeaker: Do you have feedback about the report comment? [Let us know in this issue](https://about.codecov.io/codecov-pr-comment-feedback/?utm_medium=referral&utm_source=github&utm_content=comment&utm_campaign=pr+comments&utm_term=Significant-Gravitas).\n",
+    "author_id": "@codecov[bot]",
+    "created_at": "2023-05-16T09:21:26Z"
+  },
+  {
+    "id": "comment_1556057268",
+    "url": "https://github.com/Significant-Gravitas/AutoGPT/pull/4122#issuecomment-1556057268",
+    "type": "GitHubComment",
+    "content": "This PR exceeds the recommended size of 200 lines. Please make sure you are NOT addressing multiple issues with one PR. Note this PR might be rejected due to its size  ",
+    "author_id": "@github-actions[bot]",
+    "created_at": "2023-05-21T01:17:18Z"
+  },
+  {
+    "id": "comment_1556286776",
+    "url": "https://github.com/Significant-Gravitas/AutoGPT/pull/4122#issuecomment-1556286776",
+    "type": "GitHubComment",
+    "content": "This pull request has conflicts with the base branch, please resolve those so we can evaluate the pull request.",
+    "author_id": "@github-actions[bot]",
+    "created_at": "2023-05-21T20:41:02Z"
+  },
+  {
+    "id": "comment_1556288127",
+    "url": "https://github.com/Significant-Gravitas/AutoGPT/pull/4122#issuecomment-1556288127",
+    "type": "GitHubComment",
+    "content": "Conflicts have been resolved! \ud83c\udf89 A maintainer will review the pull request shortly.",
+    "author_id": "@github-actions[bot]",
+    "created_at": "2023-05-21T20:47:12Z"
+  },
+  {
+    "id": "comment_1556288148",
+    "url": "https://github.com/Significant-Gravitas/AutoGPT/pull/4122#issuecomment-1556288148",
+    "type": "GitHubComment",
+    "content": "This PR exceeds the recommended size of 200 lines. Please make sure you are NOT addressing multiple issues with one PR. Note this PR might be rejected due to its size  ",
+    "author_id": "@github-actions[bot]",
+    "created_at": "2023-05-21T20:47:17Z"
+  },
+  {
+    "id": "comment_1557087548",
+    "url": "https://github.com/Significant-Gravitas/AutoGPT/pull/4122#issuecomment-1557087548",
+    "type": "GitHubComment",
+    "content": "This PR exceeds the recommended size of 200 lines. Please make sure you are NOT addressing multiple issues with one PR. Note this PR might be rejected due to its size  ",
+    "author_id": "@github-actions[bot]",
+    "created_at": "2023-05-22T11:57:14Z"
+  },
+  {
+    "id": "comment_1557105425",
+    "url": "https://github.com/Significant-Gravitas/AutoGPT/pull/4122#issuecomment-1557105425",
+    "type": "GitHubComment",
+    "content": "Cannot be merged due to cassettes flow error.",
+    "author_id": "@k-boikov",
+    "created_at": "2023-05-22T12:08:05Z"
+  },
+  {
+    "id": "comment_1558895259",
+    "url": "https://github.com/Significant-Gravitas/AutoGPT/pull/4122#issuecomment-1558895259",
+    "type": "GitHubComment",
+    "content": "This PR exceeds the recommended size of 200 lines. Please make sure you are NOT addressing multiple issues with one PR. Note this PR might be rejected due to its size  ",
+    "author_id": "@github-actions[bot]",
+    "created_at": "2023-05-23T09:25:09Z"
+  },
+  {
+    "id": "comment_1559330831",
+    "url": "https://github.com/Significant-Gravitas/AutoGPT/pull/4122#issuecomment-1559330831",
+    "type": "GitHubComment",
+    "content": "This PR exceeds the recommended size of 200 lines. Please make sure you are NOT addressing multiple issues with one PR. Note this PR might be rejected due to its size  ",
+    "author_id": "@github-actions[bot]",
+    "created_at": "2023-05-23T13:18:33Z"
+  },
+  {
+    "id": "comment_1559364798",
+    "url": "https://github.com/Significant-Gravitas/AutoGPT/pull/4122#issuecomment-1559364798",
+    "type": "GitHubComment",
+    "content": "We committed some changes to this branch, please run \n```\ngit fetch\ngit rebase origin/master\n```\nbefore pushing more changes to the remote.",
+    "author_id": "@github-actions[bot]",
+    "created_at": "2023-05-23T13:30:46Z"
+  },
+  {
+    "id": "comment_1559394641",
+    "url": "https://github.com/Significant-Gravitas/AutoGPT/pull/4122#issuecomment-1559394641",
+    "type": "GitHubComment",
+    "content": "This PR exceeds the recommended size of 200 lines. Please make sure you are NOT addressing multiple issues with one PR. Note this PR might be rejected due to its size  ",
+    "author_id": "@github-actions[bot]",
+    "created_at": "2023-05-23T13:41:48Z"
+  }
+]

@@ -1,0 +1,32 @@
+# Virtual Environment
+.venv/
+venv/
+ENV/
+env/
+
+# Environment Variables
+.env
+.env.local
+
+# Python Caches
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# System Files
+.DS_Store
+Thumbs.db
+
+# Project Specific
+*.log
+*.zip
+*.pdf
+claim_entities.txt
+entities.txt
+layer10_memory_graph_submission.zip
+node_modules/
+
+# Neo4j Data (if local)
+data/neo4j/
