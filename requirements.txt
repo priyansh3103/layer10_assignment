@@ -1,28 +1,30 @@
-# Database
-neo4j==5.16.0
+# Core
 python-dotenv==1.0.0
-
-# LLM Extraction & Validation
-pydantic==2.5.3
-instructor==0.5.2
-openai==1.12.0
-
-# Deduplication / Embeddings
-sentence-transformers==2.3.1
-torch==2.1.2  # Implicitly required, pinning for stability
-numpy==1.26.3
-networkx==3.2.1
-
-# Application / Retrieval Framework
-fastapi==0.109.0
-uvicorn==0.27.0
 requests==2.31.0
+tqdm==4.66.1
+python-dateutil==2.8.2
+
+# LLM extraction
+pydantic==2.5.3
+openai==1.12.0
+instructor==0.5.2
+
+# Graph database
+neo4j==5.16.0
+
+# Embedding retrieval
+sentence-transformers==2.3.1
+torch==2.1.2
+numpy==1.26.3
+
+# Graph utilities
+networkx==3.2.1
 
 # Visualization
 streamlit==1.30.0
 streamlit-agraph==0.0.45
 pyvis==0.3.2
 
-# Utilities
-tqdm==4.66.1
-python-dateutil==2.8.2
+# API / backend (optional future extension)
+fastapi==0.109.0
+uvicorn==0.27.0

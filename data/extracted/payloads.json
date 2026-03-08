@@ -4,76 +4,57 @@
     "extracted": {
       "entities": [
         {
-          "id": "@waynehamadi",
-          "type": "Person",
-          "name": "@waynehamadi",
+          "id": "feature_basic_proxy_test_7",
+          "type": "Component",
+          "name": "feature/basic proxy test 7",
           "aliases": []
         }
       ],
-      "claims": [
-        {
-          "id": "claim_1",
-          "subject_entity_id": "entity_1",
-          "predicate": "authored",
-          "object_entity_id": null,
-          "valid_from": "2023-05-12T02:42:33Z",
-          "valid_to": null,
-          "confidence": 1.0,
-          "evidence": [
-            {
-              "id": "evidence_1",
-              "artifact_id": "issue_4130",
-              "excerpt": "Feature/basic proxy test 7",
-              "char_start": 7,
-              "char_end": 33
-            }
-          ]
-        },
-        {
-          "id": "claim_2",
-          "subject_entity_id": "entity_1",
-          "predicate": "authored",
-          "object_entity_id": null,
-          "valid_from": "2023-05-12T02:42:33Z",
-          "valid_to": null,
-          "confidence": 1.0,
-          "evidence": [
-            {
-              "id": "evidence_2",
-              "artifact_id": "issue_4130",
-              "excerpt": "pull request",
-              "char_start": 409,
-              "char_end": 421
-            }
-          ]
-        }
-      ]
+      "claims": []
     }
   },
   {
     "artifact_id": "issue_4128",
     "extracted": {
-      "entities": [],
-      "claims": [
+      "entities": [
         {
-          "id": "claim1",
-          "subject_entity_id": "person_BaseInfinity",
-          "predicate": "proposes_feature",
-          "object_entity_id": null,
-          "valid_from": "2023-05-11T23:27:30Z",
-          "valid_to": null,
-          "confidence": 1.0,
-          "evidence": [
-            {
-              "id": "evidence1",
-              "artifact_id": "issue_4128",
-              "excerpt": "set max token limits for better user experience",
-              "char_start": 13,
-              "char_end": 60
-            }
-          ]
+          "id": "discord",
+          "type": "Tool",
+          "name": "discord",
+          "aliases": []
+        },
+        {
+          "id": "maintainer",
+          "type": "Person",
+          "name": "maintainer",
+          "aliases": []
+        },
+        {
+          "id": "gpt4_key",
+          "type": "Component",
+          "name": "gpt4 key",
+          "aliases": []
+        },
+        {
+          "id": "smart_fast_llvm_model",
+          "type": "Component",
+          "name": "smart/fast llvm model",
+          "aliases": []
+        },
+        {
+          "id": "pull_request",
+          "type": "Tool",
+          "name": "pull request",
+          "aliases": []
+        },
+        {
+          "id": "pr_quality_checklist",
+          "type": "Tool",
+          "name": "pr quality checklist",
+          "aliases": []
         }
-      ]
+      ],
+      "claims": []
     }
   },
   {
@@ -88,61 +69,64 @@
     "extracted": {
       "entities": [
         {
-          "id": "@BaseInfinity",
-          "type": "Person",
-          "name": "@BaseInfinity",
+          "id": "variable",
+          "type": "File",
+          "name": "variable",
+          "aliases": []
+        },
+        {
+          "id": "_env_template",
+          "type": "File",
+          "name": ".env template",
+          "aliases": []
+        },
+        {
+          "id": "custom_limits",
+          "type": "Component",
+          "name": "custom limits",
+          "aliases": []
+        },
+        {
+          "id": "working_threshold",
+          "type": "Component",
+          "name": "working threshold",
           "aliases": []
         }
       ],
       "claims": [
         {
-          "id": "claim_1",
-          "subject_entity_id": "@BaseInfinity",
-          "predicate": "proposes_feature",
-          "object_entity_id": null,
+          "id": "de7dda50-7449-4f12-8339-3f6d4d8d2c05",
+          "subject_entity_id": "variable",
+          "predicate": "removes_configuration",
+          "object_entity_id": "_env_template",
           "valid_from": "2023-05-11T23:38:23Z",
           "valid_to": null,
-          "confidence": 1.0,
+          "confidence": 0.8,
           "evidence": [
             {
-              "id": "ev_da3b9ce7",
+              "id": "09c69de3-7241-4f8a-9142-fc1a17722fc4",
               "artifact_id": "comment_1544849505",
-              "excerpt": "Shouldnt you also remove the variable from the .env template? I might be wrong",
+              "excerpt": "Shouldnt you also remove the variable from the .env template?",
               "char_start": 2,
-              "char_end": 80
+              "char_end": 63
             }
           ]
-        }
-      ]
-    }
-  },
-  {
-    "artifact_id": "comment_1545480229",
-    "extracted": {
-      "entities": [
+        },
         {
-          "id": "@Boostrix",
-          "type": "Person",
-          "name": "Boostrix",
-          "aliases": []
-        }
-      ],
-      "claims": [
-        {
-          "id": "modification_limit_exposure_via_command_interface",
-          "subject_entity_id": "@Boostrix",
-          "predicate": "suggests_change",
-          "object_entity_id": null,
-          "valid_from": "2023-05-12T09:49:38Z",
+          "id": "c73833e4-80c7-44d5-8708-d52e9f3a1fc8",
+          "subject_entity_id": "custom_limits",
+          "predicate": "depends_on",
+          "object_entity_id": "working_threshold",
+          "valid_from": "2023-05-11T23:38:23Z",
           "valid_to": null,
-          "confidence": 0.9,
+          "confidence": 0.8,
           "evidence": [
             {
-              "id": "modification_limit_exposure_via_command_interface_evidence",
-              "artifact_id": "comment_1545480229",
-              "excerpt": "exposing these details via the command interface (or even just via corresponding args) lets the AI/LLM play with different settings.",
-              "char_start": 283,
-              "char_end": 415
+              "id": "044edd2c-9887-4e0f-9a9b-0e432e0c883c",
+              "artifact_id": "comment_1544849505",
+              "excerpt": "I just make sure those custom limits are below a working threshold",
+              "char_start": 149,
+              "char_end": 215
             }
           ]
         }
@@ -154,56 +138,37 @@
     "extracted": {
       "entities": [
         {
-          "id": "Boostrix",
-          "type": "Person",
-          "name": "Boostrix",
+          "id": "llms",
+          "type": "Component",
+          "name": "llms",
           "aliases": []
         },
         {
-          "id": "OpenAI",
+          "id": "sub_dict",
           "type": "Tool",
-          "name": "OpenAI",
+          "name": "sub-dict",
+          "aliases": []
+        },
+        {
+          "id": "command_interface",
+          "type": "Tool",
+          "name": "command interface",
+          "aliases": []
+        },
+        {
+          "id": "settings",
+          "type": "Component",
+          "name": "settings",
+          "aliases": []
+        },
+        {
+          "id": "system_message",
+          "type": "Tool",
+          "name": "system message",
           "aliases": []
         }
       ],
-      "claims": [
-        {
-          "id": "Boostrix_proposes_feature_OpenAI",
-          "subject_entity_id": "Boostrix",
-          "predicate": "proposes_feature",
-          "object_entity_id": "OpenAI",
-          "valid_from": "2023-05-15T08:44:30Z",
-          "valid_to": null,
-          "confidence": 1.0,
-          "evidence": [
-            {
-              "id": "Boostrix_proposes_feature_OpenAI_evidence",
-              "artifact_id": "comment_1547437354",
-              "excerpt": "directly use a sub-dict named ",
-              "char_start": 83,
-              "char_end": 113
-            }
-          ]
-        },
-        {
-          "id": "Boostrix_suggests_change",
-          "subject_entity_id": "Boostrix",
-          "predicate": "suggests_change",
-          "object_entity_id": null,
-          "valid_from": "2023-05-15T08:44:30Z",
-          "valid_to": null,
-          "confidence": 1.0,
-          "evidence": [
-            {
-              "id": "Boostrix_suggests_change_evidence",
-              "artifact_id": "comment_1547437354",
-              "excerpt": "exposing these via the command interface enables the llm to tinker with different settings",
-              "char_start": 238,
-              "char_end": 328
-            }
-          ]
-        }
-      ]
+      "claims": []
     }
   },
   {
@@ -211,15 +176,45 @@
     "extracted": {
       "entities": [
         {
-          "id": "@BaseInfinity",
-          "type": "Person",
-          "name": "@BaseInfinity",
+          "id": "llms",
+          "type": "Component",
+          "name": "llms",
           "aliases": []
         },
         {
-          "id": "@ntindle",
+          "id": "sub_dict",
+          "type": "Tool",
+          "name": "sub-dict",
+          "aliases": []
+        },
+        {
+          "id": "openai",
+          "type": "Component",
+          "name": "openai",
+          "aliases": []
+        },
+        {
+          "id": "command_interface",
+          "type": "Tool",
+          "name": "command interface",
+          "aliases": []
+        },
+        {
+          "id": "settings",
+          "type": "Component",
+          "name": "settings",
+          "aliases": []
+        },
+        {
+          "id": "system_message",
+          "type": "Tool",
+          "name": "system message",
+          "aliases": []
+        },
+        {
+          "id": "ntindle",
           "type": "Person",
-          "name": "@ntindle",
+          "name": "ntindle",
           "aliases": []
         }
       ],
@@ -231,23 +226,38 @@
     "extracted": {
       "entities": [
         {
-          "id": "Boostrix",
-          "type": "Person",
-          "name": "@Boostrix",
-          "aliases": [
-            "@Boostrix"
-          ]
+          "id": "ntindle",
+          "type": "Tool",
+          "name": "ntindle",
+          "aliases": []
         },
         {
-          "id": "nTindle",
-          "type": "Person",
-          "name": "ntindle",
-          "aliases": [
-            "ntindle"
-          ]
+          "id": "llm",
+          "type": "Tool",
+          "name": "llm",
+          "aliases": []
         }
       ],
-      "claims": []
+      "claims": [
+        {
+          "id": "1ffce2d2-e8a6-436b-84e2-747958ccf7cd",
+          "subject_entity_id": "ntindle",
+          "predicate": "proposes_feature",
+          "object_entity_id": null,
+          "valid_from": "2023-05-15T09:21:29Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "e66202b3-9cfa-410a-ae0c-aac69544da2f",
+              "artifact_id": "comment_1547493770",
+              "excerpt": "get this integrated with ntindle at this point",
+              "char_start": 19,
+              "char_end": 65
+            }
+          ]
+        }
+      ]
     }
   },
   {
@@ -255,13 +265,38 @@
     "extracted": {
       "entities": [
         {
-          "id": "BaseInfinity",
-          "type": "Person",
-          "name": "@BaseInfinity",
+          "id": "import_tests",
+          "type": "Issue",
+          "name": "import tests",
+          "aliases": []
+        },
+        {
+          "id": "fixie",
+          "type": "Tool",
+          "name": "fixie",
           "aliases": []
         }
       ],
-      "claims": []
+      "claims": [
+        {
+          "id": "9881db5b-7c11-4f28-9be8-e32b45b79412",
+          "subject_entity_id": "import_tests",
+          "predicate": "fixes_issue",
+          "object_entity_id": "fixie",
+          "valid_from": "2023-05-15T20:00:59Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "e3559197-9eae-4fac-8a7a-152895806305",
+              "artifact_id": "comment_1548494037",
+              "excerpt": "Ahh im failing the import tests, I'll fixie them this evening",
+              "char_start": 0,
+              "char_end": 61
+            }
+          ]
+        }
+      ]
     }
   },
   {
@@ -269,28 +304,82 @@
     "extracted": {
       "entities": [
         {
-          "id": "Issue_4128",
+          "id": "significant_gravitas_auto_gpt",
+          "type": "Repository",
+          "name": "significant-gravitas/auto-gpt",
+          "aliases": []
+        },
+        {
+          "id": "4128",
           "type": "Issue",
           "name": "4128",
+          "aliases": []
+        },
+        {
+          "id": "python",
+          "type": "Tool",
+          "name": "python",
+          "aliases": []
+        },
+        {
+          "id": "significant_gravitas",
+          "type": "Person",
+          "name": "significant-gravitas",
           "aliases": []
         }
       ],
       "claims": [
         {
-          "id": "Claim_1",
-          "subject_entity_id": "Issue_4128",
-          "predicate": "assigned_to",
-          "object_entity_id": "Person_BaseInfinity",
+          "id": "3065f81b-4f0e-4d67-b1f8-de29d0d71f90",
+          "subject_entity_id": "significant_gravitas_auto_gpt",
+          "predicate": "authored",
+          "object_entity_id": null,
           "valid_from": "2023-05-16T20:11:53Z",
           "valid_to": null,
-          "confidence": 1.0,
+          "confidence": 0.8,
           "evidence": [
             {
-              "id": "Evidence_1",
+              "id": "c759720c-a2fd-4ed6-9b80-02ef8eeb24ee",
               "artifact_id": "comment_1550297233",
-              "excerpt": "I'm not a fan of this change https://github.com/Significant-Gravitas/Auto-GPT/pull/4128/commits/31a3a477db4fb98464f5a8152a8dfc393ca57353 but I wasn't sure the best way to avoid a circular dependency without having to restructure things and since I'm new and wanting to keep this bitesized, I went for the above solution.",
+              "excerpt": "https://github.com/Significant-Gravitas/Auto-GPT/pull/4128/commits/31a3a477db4fb98464f5a8152a8dfc393ca57353",
+              "char_start": 32,
+              "char_end": 139
+            }
+          ]
+        },
+        {
+          "id": "31828f1c-fadd-46f7-ae19-c97cb5daf6f6",
+          "subject_entity_id": "significant_gravitas",
+          "predicate": "assigned_to",
+          "object_entity_id": "4128",
+          "valid_from": "2023-05-16T20:11:53Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "d868116e-ce27-4fd5-878e-95a717667250",
+              "artifact_id": "comment_1550297233",
+              "excerpt": "I'm not a fan of this change https://github.com/Significant-Gravitas/Auto-GPT/pull/4128/commits/31a3a477db4fb98464f5a8152a8dfc393ca57353",
               "char_start": 3,
-              "char_end": 323
+              "char_end": 139
+            }
+          ]
+        },
+        {
+          "id": "eedbba07-9e19-48da-8b3e-a933ac4e690b",
+          "subject_entity_id": "significant_gravitas",
+          "predicate": "proposes_feature",
+          "object_entity_id": null,
+          "valid_from": "2023-05-16T20:11:53Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "bded53fd-4599-4279-b363-14d5b383150c",
+              "artifact_id": "comment_1550297233",
+              "excerpt": "But please lemme know if there's an easy way to avoid this problem (I'm new to python and the codebase so I could be missing something), thanks!",
+              "char_start": 327,
+              "char_end": 471
             }
           ]
         }
@@ -302,13 +391,74 @@
     "extracted": {
       "entities": [
         {
-          "id": "@BaseInfinity",
+          "id": "significant_gravitas",
           "type": "Person",
-          "name": "BaseInfinity",
+          "name": "significant-gravitas",
+          "aliases": []
+        },
+        {
+          "id": "auto_gpt",
+          "type": "Component",
+          "name": "auto-gpt",
           "aliases": []
         }
       ],
-      "claims": []
+      "claims": [
+        {
+          "id": "81a3646b-5ce9-4311-8646-3ef0ed720ab6",
+          "subject_entity_id": "significant_gravitas",
+          "predicate": "authored",
+          "object_entity_id": null,
+          "valid_from": "2023-05-16T20:26:12Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "a4d3ee9a-3b63-4870-a0cd-442378b4eb7d",
+              "artifact_id": "comment_1550313219",
+              "excerpt": "Looks like tests are failing but not for my changes",
+              "char_start": 0,
+              "char_end": 51
+            }
+          ]
+        },
+        {
+          "id": "3b5909b4-9410-4b72-a3c3-7f4e1ec11179",
+          "subject_entity_id": "significant_gravitas",
+          "predicate": "authored",
+          "object_entity_id": null,
+          "valid_from": "2023-05-16T20:26:12Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "7ec6a9e3-2594-4a7e-ad00-3ae5ddd7f62a",
+              "artifact_id": "comment_1550313219",
+              "excerpt": "![Screen Shot 2023-05-16 at 1 25 11 PM](https://github.com/Significant-Gravitas/Auto-GPT/assets/1424113/3a8fc5a4-157a-4f05-9491-8c2d97cae7f8)",
+              "char_start": 54,
+              "char_end": 195
+            }
+          ]
+        },
+        {
+          "id": "c780a155-402a-47d9-b2bd-ba64dcf33fac",
+          "subject_entity_id": "significant_gravitas",
+          "predicate": "authored",
+          "object_entity_id": null,
+          "valid_from": "2023-05-16T20:26:12Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "0f944035-1b02-452c-b5ae-d65e35f647a5",
+              "artifact_id": "comment_1550313219",
+              "excerpt": "![Screen Shot 2023-05-16 at 1 24 41 PM](https://github.com/Significant-Gravitas/Auto-GPT/assets/1424113/65727884-3e9d-47bf-b9bd-4a39edc4c4f6)",
+              "char_start": 199,
+              "char_end": 340
+            }
+          ]
+        }
+      ]
     }
   },
   {
@@ -316,28 +466,82 @@
     "extracted": {
       "entities": [
         {
-          "id": "@BaseInfinity",
-          "type": "Person",
-          "name": "BaseInfinity",
+          "id": "tests",
+          "type": "Component",
+          "name": "tests",
+          "aliases": []
+        },
+        {
+          "id": "soft_limits",
+          "type": "Issue",
+          "name": "soft limits",
+          "aliases": []
+        },
+        {
+          "id": "weekend",
+          "type": "Component",
+          "name": "weekend",
+          "aliases": []
+        },
+        {
+          "id": "linter",
+          "type": "Tool",
+          "name": "linter",
           "aliases": []
         }
       ],
       "claims": [
         {
-          "id": "claim_1",
-          "subject_entity_id": "@BaseInfinity",
-          "predicate": "suggests_change",
+          "id": "21ea857e-83d1-4d8b-aac5-045a5f01cb0e",
+          "subject_entity_id": "tests",
+          "predicate": "updates_component",
           "object_entity_id": null,
           "valid_from": "2023-05-20T19:46:54Z",
           "valid_to": null,
-          "confidence": 1.0,
+          "confidence": 0.8,
           "evidence": [
             {
-              "id": "evidence_1",
+              "id": "86df6fb1-a445-423f-a25f-e540533faab0",
               "artifact_id": "comment_1555980660",
-              "excerpt": "get to it before the end of the weekend",
-              "char_start": 123,
+              "excerpt": "I need to update some of the tests",
+              "char_start": 0,
+              "char_end": 34
+            }
+          ]
+        },
+        {
+          "id": "e85aa4f8-1b12-4bfd-baad-42a53b6339b5",
+          "subject_entity_id": "tests",
+          "predicate": "fixes_issue",
+          "object_entity_id": null,
+          "valid_from": "2023-05-20T19:46:54Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "a38d8bb0-5105-4364-baca-5bf82ef9704c",
+              "artifact_id": "comment_1555980660",
+              "excerpt": "I'll probably get to it before the end of the weekend",
+              "char_start": 109,
               "char_end": 162
+            }
+          ]
+        },
+        {
+          "id": "8d08bb8c-3e4b-4cc7-932d-b1c399d1378a",
+          "subject_entity_id": "linter",
+          "predicate": "fixes_issue",
+          "object_entity_id": null,
+          "valid_from": "2023-05-20T19:46:54Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "7086b0db-d7e9-4e52-beec-efaebfef97e5",
+              "artifact_id": "comment_1555980660",
+              "excerpt": "fix some linter formatting issues",
+              "char_start": 74,
+              "char_end": 107
             }
           ]
         }
@@ -347,7 +551,20 @@
   {
     "artifact_id": "comment_1556053332",
     "extracted": {
-      "entities": [],
+      "entities": [
+        {
+          "id": "pushed",
+          "type": "Tool",
+          "name": "pushed",
+          "aliases": []
+        },
+        {
+          "id": "updating",
+          "type": "Tool",
+          "name": "updating",
+          "aliases": []
+        }
+      ],
       "claims": []
     }
   },
@@ -356,15 +573,32 @@
     "extracted": {
       "entities": [
         {
-          "id": "BaseInfinity",
+          "id": "ntindle",
           "type": "Person",
-          "name": "BaseInfinity",
-          "aliases": [
-            "@BaseInfinity"
-          ]
+          "name": "ntindle",
+          "aliases": []
         }
       ],
-      "claims": []
+      "claims": [
+        {
+          "id": "640c138f-a93f-4729-a6af-e8e7fdf44d7b",
+          "subject_entity_id": "ntindle",
+          "predicate": "authored",
+          "object_entity_id": null,
+          "valid_from": "2023-05-21T01:05:39Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "d3c1e0ca-b0f8-41f2-8fe1-1e57012f12ba",
+              "artifact_id": "comment_1556055404",
+              "excerpt": "sorry for all the forced push commits, I couldn't run the same commands in CI as i could Locally and figured it would be faster to just git force push for meow versus attempting to run tests locally atm lol",
+              "char_start": 9,
+              "char_end": 215
+            }
+          ]
+        }
+      ]
     }
   },
   {
@@ -372,32 +606,26 @@
     "extracted": {
       "entities": [
         {
-          "id": "@ntindle",
-          "type": "Person",
-          "name": "@ntindle",
+          "id": "pr",
+          "type": "Component",
+          "name": "pr",
+          "aliases": []
+        },
+        {
+          "id": "automaton",
+          "type": "Component",
+          "name": "automaton",
           "aliases": []
         }
       ],
-      "claims": [
-        {
-          "id": "claim_5c6de588",
-          "subject_entity_id": "@ntindle",
-          "predicate": "suggests_change",
-          "object_entity_id": null,
-          "valid_from": "2023-05-21T16:21:05Z",
-          "valid_to": null,
-          "confidence": 1.0,
-          "evidence": [
-            {
-              "id": "evidence-1",
-              "artifact_id": "comment_1556218094",
-              "excerpt": "I think our automaton uses it for change logs",
-              "char_start": 33,
-              "char_end": 78
-            }
-          ]
-        }
-      ]
+      "claims": []
+    }
+  },
+  {
+    "artifact_id": "comment_1556260884",
+    "extracted": {
+      "entities": [],
+      "claims": []
     }
   },
   {
@@ -405,38 +633,26 @@
     "extracted": {
       "entities": [
         {
-          "id": "BaseInfinity",
+          "id": "derp",
           "type": "Person",
-          "name": "@BaseInfinity",
+          "name": "derp",
           "aliases": []
         }
       ],
-      "claims": [
-        {
-          "id": "claim_1",
-          "subject_entity_id": "BaseInfinity",
-          "predicate": "reports_issue",
-          "object_entity_id": null,
-          "valid_from": "2023-05-23T00:20:47Z",
-          "valid_to": null,
-          "confidence": 1.0,
-          "evidence": [
-            {
-              "id": "evidence_1",
-              "artifact_id": "comment_1558259962",
-              "excerpt": "Derp, my fault, ill fixie",
-              "char_start": 0,
-              "char_end": 25
-            }
-          ]
-        }
-      ]
+      "claims": []
     }
   },
   {
     "artifact_id": "comment_1558262375",
     "extracted": {
-      "entities": [],
+      "entities": [
+        {
+          "id": "k_boikov",
+          "type": "Person",
+          "name": "k-boikov",
+          "aliases": []
+        }
+      ],
       "claims": []
     }
   },
@@ -445,28 +661,58 @@
     "extracted": {
       "entities": [
         {
-          "id": "@Boostrix",
+          "id": "people",
           "type": "Person",
-          "name": "Boostrix",
+          "name": "people",
+          "aliases": []
+        },
+        {
+          "id": "discord",
+          "type": "Tool",
+          "name": "discord",
+          "aliases": []
+        },
+        {
+          "id": "ctx_window",
+          "type": "Component",
+          "name": "ctx window",
           "aliases": []
         }
       ],
       "claims": [
         {
-          "id": "claim_1",
-          "subject_entity_id": "@Boostrix",
-          "predicate": "authored",
-          "object_entity_id": null,
+          "id": "cbe9036d-5225-4fb6-ab46-7b5f004ed544",
+          "subject_entity_id": "people",
+          "predicate": "reports_issue",
+          "object_entity_id": "discord",
           "valid_from": "2023-05-25T21:10:35Z",
           "valid_to": null,
-          "confidence": 1.0,
+          "confidence": 0.8,
           "evidence": [
             {
-              "id": "evidence_1",
+              "id": "0a484d11-9834-4681-bf31-7b8228b06b5c",
               "artifact_id": "comment_1563510480",
-              "excerpt": "many people on discord still report that they find having to downgrade the hard-coded defaults to stay within the ctx window - so it would be good to get this updated/reviewed",
-              "char_start": 0,
-              "char_end": 175
+              "excerpt": "having to downgrade the hard-coded defaults",
+              "char_start": 51,
+              "char_end": 94
+            }
+          ]
+        },
+        {
+          "id": "d7cea615-abfc-47b8-8c87-f1a29495e287",
+          "subject_entity_id": "people",
+          "predicate": "reports_issue",
+          "object_entity_id": "ctx_window",
+          "valid_from": "2023-05-25T21:10:35Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "277c0e6f-09a2-45de-8dc1-20c4fc34e9e8",
+              "artifact_id": "comment_1563510480",
+              "excerpt": "to stay within",
+              "char_start": 95,
+              "char_end": 109
             }
           ]
         }
@@ -478,51 +724,27 @@
     "extracted": {
       "entities": [
         {
-          "id": "@Boostrix",
+          "id": "boostrix",
           "type": "Person",
-          "name": "@Boostrix",
-          "aliases": []
-        },
-        {
-          "id": "memory config changes",
-          "type": "Component",
-          "name": "memory config changes",
+          "name": "boostrix",
           "aliases": []
         }
       ],
       "claims": [
         {
-          "id": "claim_1",
-          "subject_entity_id": "@Boostrix",
-          "predicate": "reports_issue",
-          "object_entity_id": "memory config changes",
-          "valid_from": "2023-05-25T23:29:43Z",
-          "valid_to": null,
-          "confidence": 1.0,
-          "evidence": [
-            {
-              "id": "evidence_1",
-              "artifact_id": "comment_1563628611",
-              "excerpt": "@Boostrix sounds good, i fixed the conflicts to include soft limits on top of the recent memory config changes",
-              "char_start": 0,
-              "char_end": 110
-            }
-          ]
-        },
-        {
-          "id": "claim_2",
-          "subject_entity_id": "memory config changes",
-          "predicate": "proposes_feature",
+          "id": "5d841d33-4a93-441d-bb6f-acfcb32c1661",
+          "subject_entity_id": "boostrix",
+          "predicate": "fixes_issue",
           "object_entity_id": null,
           "valid_from": "2023-05-25T23:29:43Z",
           "valid_to": null,
-          "confidence": 1.0,
+          "confidence": 0.8,
           "evidence": [
             {
-              "id": "evidence_2",
+              "id": "03cb33dd-3c22-4f8e-bab5-caec402e7955",
               "artifact_id": "comment_1563628611",
-              "excerpt": "@Boostrix sounds good, i fixed the conflicts to include soft limits on top of the recent memory config changes",
-              "char_start": 0,
+              "excerpt": "i fixed the conflicts to include soft limits on top of the recent memory config changes",
+              "char_start": 23,
               "char_end": 110
             }
           ]
@@ -535,9 +757,9 @@
     "extracted": {
       "entities": [
         {
-          "id": "@BaseInfinity",
+          "id": "pwuts",
           "type": "Person",
-          "name": "@BaseInfinity",
+          "name": "pwuts",
           "aliases": []
         }
       ],
@@ -549,44 +771,28 @@
     "extracted": {
       "entities": [
         {
-          "id": "@k-boikov",
-          "type": "Person",
-          "name": "@k-boikov",
+          "id": "auto_gpt",
+          "type": "Tool",
+          "name": "auto-gpt",
           "aliases": []
-        }
-      ],
-      "claims": []
-    }
-  },
-  {
-    "artifact_id": "comment_1566288460",
-    "extracted": {
-      "entities": [
-        {
-          "id": "@BaseInfinity",
-          "type": "Person",
-          "name": "@BaseInfinity",
-          "aliases": [
-            "@BaseInfinity"
-          ]
         }
       ],
       "claims": [
         {
-          "id": "claim_1",
-          "subject_entity_id": "@BaseInfinity",
-          "predicate": "suggests_change",
+          "id": "186c67d6-45f4-4d05-a8f7-fb65fb889a90",
+          "subject_entity_id": "auto_gpt",
+          "predicate": "authored",
           "object_entity_id": null,
-          "valid_from": "2023-05-28T22:37:52Z",
+          "valid_from": "2023-05-28T18:33:38Z",
           "valid_to": null,
-          "confidence": 1.0,
+          "confidence": 0.8,
           "evidence": [
             {
-              "id": "evidence_1",
-              "artifact_id": "comment_1566288460",
-              "excerpt": "I'll make suggested changes today and fix up the tests",
-              "char_start": 0,
-              "char_end": 54
+              "id": "4de12708-53b7-47c1-8444-44c405ebeef6",
+              "artifact_id": "comment_1566224254",
+              "excerpt": "https://github.com/Significant-Gravitas/Auto-GPT/assets/64261260/6c8d58c2-f8e9-4618-89e3-8a9b5fa844ca",
+              "char_start": 9,
+              "char_end": 110
             }
           ]
         }
@@ -594,13 +800,20 @@
     }
   },
   {
+    "artifact_id": "comment_1566288460",
+    "extracted": {
+      "entities": [],
+      "claims": []
+    }
+  },
+  {
     "artifact_id": "comment_1566295718",
     "extracted": {
       "entities": [
         {
-          "id": "Pwuts",
+          "id": "pwuts",
           "type": "Person",
-          "name": "Pwuts",
+          "name": "pwuts",
           "aliases": []
         }
       ],
@@ -612,15 +825,27 @@
     "extracted": {
       "entities": [
         {
-          "id": "AutoGPT",
-          "type": "Person",
-          "name": "AutoGPT",
+          "id": "autogpt",
+          "type": "Component",
+          "name": "autogpt",
           "aliases": []
         },
         {
-          "id": "AutoGPT-Bot",
-          "type": "Person",
-          "name": "@Auto-GPT-Bot",
+          "id": "cassettes",
+          "type": "Component",
+          "name": "cassettes",
+          "aliases": []
+        },
+        {
+          "id": "submodule",
+          "type": "Component",
+          "name": "submodule",
+          "aliases": []
+        },
+        {
+          "id": "pull_request",
+          "type": "Issue",
+          "name": "pull request",
           "aliases": []
         }
       ],
@@ -630,8 +855,94 @@
   {
     "artifact_id": "comment_1567403619",
     "extracted": {
-      "entities": [],
-      "claims": []
+      "entities": [
+        {
+          "id": "k_boikov",
+          "type": "Person",
+          "name": "k-boikov",
+          "aliases": []
+        },
+        {
+          "id": "ntindle",
+          "type": "Person",
+          "name": "ntindle",
+          "aliases": []
+        }
+      ],
+      "claims": [
+        {
+          "id": "afe84da1-8a57-44e0-b549-6a9e451d01fe",
+          "subject_entity_id": "k_boikov",
+          "predicate": "authored",
+          "object_entity_id": null,
+          "valid_from": "2023-05-29T18:15:48Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "da7af2cb-e24b-4931-9a99-3e031aa1758b",
+              "artifact_id": "comment_1567403619",
+              "excerpt": "What if people want to intentionally limit the tokens they spend?",
+              "char_start": 13,
+              "char_end": 78
+            }
+          ]
+        },
+        {
+          "id": "23b79faa-19f4-47c9-80c1-fc7917b979f9",
+          "subject_entity_id": "k_boikov",
+          "predicate": "authored",
+          "object_entity_id": null,
+          "valid_from": "2023-05-29T18:15:48Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "5e24d1cb-12ab-47e5-a178-d8a8809bf34a",
+              "artifact_id": "comment_1567403619",
+              "excerpt": "Sometimes that helps when we have a bug and we don't calculate the limits correctly.",
+              "char_start": 79,
+              "char_end": 163
+            }
+          ]
+        },
+        {
+          "id": "c8a6b5a2-f39e-4404-bbbf-1e1aa9aa7452",
+          "subject_entity_id": "k_boikov",
+          "predicate": "authored",
+          "object_entity_id": null,
+          "valid_from": "2023-05-29T18:15:48Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "78220e4b-5e1e-44c5-9abf-cac9fd43a8be",
+              "artifact_id": "comment_1567403619",
+              "excerpt": "The only limit I think we should enforce if someone tries to play with their env and puts a limit higher than the model's max tokens.",
+              "char_start": 164,
+              "char_end": 297
+            }
+          ]
+        },
+        {
+          "id": "0bbe58ca-1933-49be-91cd-0cdb638193eb",
+          "subject_entity_id": "k_boikov",
+          "predicate": "authored",
+          "object_entity_id": null,
+          "valid_from": "2023-05-29T18:15:48Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "7963a3e8-297f-4869-a7de-b1a1322f6548",
+              "artifact_id": "comment_1567403619",
+              "excerpt": "that's a fair point.",
+              "char_start": 301,
+              "char_end": 321
+            }
+          ]
+        }
+      ]
     }
   },
   {
@@ -639,46 +950,118 @@
     "extracted": {
       "entities": [
         {
-          "id": "command_get_hyperlinks",
-          "type": "Component",
+          "id": "get_hyperlinks",
+          "type": "Tool",
           "name": "get_hyperlinks",
+          "aliases": []
+        },
+        {
+          "id": "url",
+          "type": "File",
+          "name": "url",
+          "aliases": []
+        },
+        {
+          "id": "command",
+          "type": "Component",
+          "name": "command",
+          "aliases": []
+        },
+        {
+          "id": "description",
+          "type": "File",
+          "name": "description",
+          "aliases": []
+        },
+        {
+          "id": "activity_log",
+          "type": "File",
+          "name": "activity log",
+          "aliases": []
+        },
+        {
+          "id": "pr_quality_checklist",
+          "type": "Tool",
+          "name": "pr quality checklist",
+          "aliases": []
+        },
+        {
+          "id": "pull_request",
+          "type": "Component",
+          "name": "pull request",
           "aliases": []
         }
       ],
       "claims": [
         {
-          "id": "claim_1",
-          "subject_entity_id": "person_sicongzhao",
+          "id": "59cf00fb-1a69-4fe4-aa0f-cbdb5261361a",
+          "subject_entity_id": "get_hyperlinks",
           "predicate": "authored",
           "object_entity_id": null,
           "valid_from": "2023-05-11T19:10:48Z",
           "valid_to": null,
-          "confidence": 1.0,
+          "confidence": 0.8,
           "evidence": [
             {
-              "id": "evidence_1",
+              "id": "622c412a-cd70-4d51-8a6a-b582a9df42f3",
               "artifact_id": "issue_4122",
-              "excerpt": "Update instruction for command ",
+              "excerpt": "Update instruction for command 'get_hyperlinks'",
               "char_start": 42,
-              "char_end": 73
+              "char_end": 89
             }
           ]
         },
         {
-          "id": "claim_2",
-          "subject_entity_id": "person_sicongzhao",
+          "id": "9b9d6ef4-7e63-4429-ad77-e0740e1dbf8e",
+          "subject_entity_id": "command",
+          "predicate": "updates_component",
+          "object_entity_id": "get_hyperlinks",
+          "valid_from": "2023-05-11T19:10:48Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "362d527c-44a4-4fef-a812-beed8cc6c30b",
+              "artifact_id": "issue_4122",
+              "excerpt": "Update instruction for command 'get_hyperlinks'",
+              "char_start": 42,
+              "char_end": 89
+            }
+          ]
+        },
+        {
+          "id": "848258c7-9245-4620-8de5-9e9cb7a48592",
+          "subject_entity_id": "get_hyperlinks",
           "predicate": "assigned_to",
           "object_entity_id": null,
           "valid_from": "2023-05-11T19:10:48Z",
           "valid_to": null,
-          "confidence": 1.0,
+          "confidence": 0.8,
           "evidence": [
             {
-              "id": "evidence_2",
+              "id": "c0333107-81b6-4575-b7be-667b97fe4e18",
               "artifact_id": "issue_4122",
-              "excerpt": "get_hyperlinks",
-              "char_start": 14,
-              "char_end": 28
+              "excerpt": "Update instruction for command 'get_hyperlinks'",
+              "char_start": 42,
+              "char_end": 89
+            }
+          ]
+        },
+        {
+          "id": "fa21ccc8-e1b0-45b0-8053-790fd180fb8e",
+          "subject_entity_id": "pr_quality_checklist",
+          "predicate": "authored",
+          "object_entity_id": null,
+          "valid_from": "2023-05-11T19:10:48Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "811a81f0-fc77-4e8c-8406-fa22b3ef7966",
+              "artifact_id": "issue_4122",
+              "excerpt": "- [x] My pull request is atomic and focuses on a single change.",
+              "char_start": 2797,
+              "char_end": 2860
             }
           ]
         }
@@ -690,9 +1073,21 @@
     "extracted": {
       "entities": [
         {
-          "id": "Boostrix",
-          "type": "Person",
-          "name": "Boostrix",
+          "id": "llm",
+          "type": "Tool",
+          "name": "llm",
+          "aliases": []
+        },
+        {
+          "id": "code",
+          "type": "File",
+          "name": "code",
+          "aliases": []
+        },
+        {
+          "id": "help_string_description",
+          "type": "File",
+          "name": "help string/description",
           "aliases": []
         }
       ],
@@ -702,15 +1097,4072 @@
   {
     "artifact_id": "comment_1557105425",
     "extracted": {
+      "entities": [],
+      "claims": []
+    }
+  },
+  {
+    "artifact_id": "issue_4100",
+    "extracted": {
       "entities": [
         {
-          "id": "k-boikov",
-          "type": "Person",
-          "name": "@k-boikov",
+          "id": "feature_basic_proxy",
+          "type": "Component",
+          "name": "feature/basic proxy",
           "aliases": []
         }
       ],
       "claims": []
+    }
+  },
+  {
+    "artifact_id": "issue_4102",
+    "extracted": {
+      "entities": [
+        {
+          "id": "auto_gpt",
+          "type": "Tool",
+          "name": "auto-gpt",
+          "aliases": []
+        },
+        {
+          "id": "gpt_4",
+          "type": "Tool",
+          "name": "gpt-4",
+          "aliases": []
+        },
+        {
+          "id": "delta",
+          "type": "Component",
+          "name": "delta",
+          "aliases": []
+        },
+        {
+          "id": "marriott",
+          "type": "Component",
+          "name": "marriott",
+          "aliases": []
+        },
+        {
+          "id": "gsp",
+          "type": "Component",
+          "name": "gsp",
+          "aliases": []
+        },
+        {
+          "id": "ord",
+          "type": "Component",
+          "name": "ord",
+          "aliases": []
+        },
+        {
+          "id": "gleacher_center",
+          "type": "Component",
+          "name": "gleacher center",
+          "aliases": []
+        },
+        {
+          "id": "travelagent",
+          "type": "Component",
+          "name": "travelagent",
+          "aliases": []
+        },
+        {
+          "id": "errno_2",
+          "type": "Issue",
+          "name": "errno 2",
+          "aliases": []
+        }
+      ],
+      "claims": []
+    }
+  },
+  {
+    "artifact_id": "comment_1543300639",
+    "extracted": {
+      "entities": [
+        {
+          "id": "gpt_4",
+          "type": "Tool",
+          "name": "gpt-4",
+          "aliases": []
+        },
+        {
+          "id": "gsp",
+          "type": "Repository",
+          "name": "gsp",
+          "aliases": []
+        },
+        {
+          "id": "ord",
+          "type": "Repository",
+          "name": "ord",
+          "aliases": []
+        },
+        {
+          "id": "gleacher_center",
+          "type": "Component",
+          "name": "gleacher center",
+          "aliases": []
+        },
+        {
+          "id": "travel_options_txt",
+          "type": "File",
+          "name": "travel_options.txt",
+          "aliases": []
+        }
+      ],
+      "claims": []
+    }
+  },
+  {
+    "artifact_id": "issue_4104",
+    "extracted": {
+      "entities": [
+        {
+          "id": "json_decoder_issue_s_",
+          "type": "Issue",
+          "name": "json decoder issue(s)",
+          "aliases": []
+        },
+        {
+          "id": "pr",
+          "type": "Component",
+          "name": "pr",
+          "aliases": []
+        },
+        {
+          "id": "json_load_errors",
+          "type": "Issue",
+          "name": "json load errors",
+          "aliases": []
+        }
+      ],
+      "claims": [
+        {
+          "id": "3d0452ac-cce1-4435-ab29-4eaae54154cf",
+          "subject_entity_id": "pr",
+          "predicate": "fixes_issue",
+          "object_entity_id": "json_decoder_issue_s_",
+          "valid_from": "2023-05-11T05:32:59Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "78115a76-d960-46a1-84f7-da455c4fc6e7",
+              "artifact_id": "issue_4104",
+              "excerpt": "This PR helps address multiple issues regarding json decode issues",
+              "char_start": 51,
+              "char_end": 117
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "artifact_id": "comment_1545318314",
+    "extracted": {
+      "entities": [
+        {
+          "id": "_3996",
+          "type": "Issue",
+          "name": "#3996",
+          "aliases": []
+        },
+        {
+          "id": "_3923",
+          "type": "Issue",
+          "name": "#3923",
+          "aliases": []
+        },
+        {
+          "id": "https___github_com_anonhostpi_autogpt_trackers_blob_main_topics_0017_bugs_json_md",
+          "type": "Repository",
+          "name": "https://github.com/anonhostpi/autogpt.trackers/blob/main/topics/0017.bugs/json.md",
+          "aliases": []
+        },
+        {
+          "id": "https___github_com_anonhostpi_autogpt_trackers",
+          "type": "Repository",
+          "name": "https://github.com/anonhostpi/autogpt.trackers",
+          "aliases": []
+        },
+        {
+          "id": "anonhostpi",
+          "type": "Person",
+          "name": "anonhostpi",
+          "aliases": []
+        },
+        {
+          "id": "autogpt_trackers",
+          "type": "Component",
+          "name": "autogpt.trackers",
+          "aliases": []
+        },
+        {
+          "id": "topics",
+          "type": "Component",
+          "name": "topics",
+          "aliases": []
+        },
+        {
+          "id": "0017_bugs",
+          "type": "Component",
+          "name": "0017.bugs",
+          "aliases": []
+        },
+        {
+          "id": "json_md",
+          "type": "File",
+          "name": "json.md",
+          "aliases": []
+        }
+      ],
+      "claims": [
+        {
+          "id": "2ec32363-5505-431b-93ed-f6e95882de17",
+          "subject_entity_id": "_3996",
+          "predicate": "reports_issue",
+          "object_entity_id": null,
+          "valid_from": "2023-05-12T07:42:37Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "b546f460-8f66-4a84-be49-746005c6216d",
+              "artifact_id": "comment_1545318314",
+              "excerpt": "Duplicate efforts: #3996, #3923",
+              "char_start": 0,
+              "char_end": 31
+            }
+          ]
+        },
+        {
+          "id": "fd5789e8-7b59-46f1-b84a-305c2f7c2a5e",
+          "subject_entity_id": "_3923",
+          "predicate": "reports_issue",
+          "object_entity_id": null,
+          "valid_from": "2023-05-12T07:42:37Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "b24cac2d-140f-4796-83da-cf86dd256214",
+              "artifact_id": "comment_1545318314",
+              "excerpt": "Duplicate efforts: #3996, #3923",
+              "char_start": 0,
+              "char_end": 31
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "artifact_id": "comment_1545319208",
+    "extracted": {
+      "entities": [
+        {
+          "id": "pr",
+          "type": "Component",
+          "name": "pr",
+          "aliases": []
+        }
+      ],
+      "claims": [
+        {
+          "id": "c9820ec0-2859-44ca-a9d4-a19192f23033",
+          "subject_entity_id": "pr",
+          "predicate": "fixes_issue",
+          "object_entity_id": null,
+          "valid_from": "2023-05-12T07:43:13Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "a03d9bed-fa51-4068-a980-40994031db82",
+              "artifact_id": "comment_1545319208",
+              "excerpt": "Definitely needs to be fixed.",
+              "char_start": 0,
+              "char_end": 29
+            }
+          ]
+        },
+        {
+          "id": "2b2010ff-4546-4e1b-a8f9-62a7cba53ea6",
+          "subject_entity_id": "pr",
+          "predicate": "depends_on",
+          "object_entity_id": null,
+          "valid_from": "2023-05-12T07:43:13Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "9d23ba8c-6222-4074-b240-a7ce4abcf137",
+              "artifact_id": "comment_1545319208",
+              "excerpt": "Just referencing other similar PRs",
+              "char_start": 30,
+              "char_end": 64
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "artifact_id": "comment_1592133825",
+    "extracted": {
+      "entities": [
+        {
+          "id": "erik_megarad",
+          "type": "Person",
+          "name": "erik-megarad",
+          "aliases": []
+        }
+      ],
+      "claims": []
+    }
+  },
+  {
+    "artifact_id": "comment_1636088787",
+    "extracted": {
+      "entities": [
+        {
+          "id": "component",
+          "type": "Component",
+          "name": "component",
+          "aliases": []
+        },
+        {
+          "id": "_4208",
+          "type": "Issue",
+          "name": "#4208",
+          "aliases": []
+        },
+        {
+          "id": "pr",
+          "type": "Component",
+          "name": "pr",
+          "aliases": []
+        }
+      ],
+      "claims": [
+        {
+          "id": "3d32809d-5e40-421c-a81d-07ce61522ddc",
+          "subject_entity_id": "_4208",
+          "predicate": "fixes_issue",
+          "object_entity_id": "component",
+          "valid_from": "2023-07-14T16:22:28Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "835392a6-f213-4862-844c-ae0983fb8d55",
+              "artifact_id": "comment_1636088787",
+              "excerpt": "The \"summary memory\" was re-implemented by #4208, and as far as I can see that also addresses the issues fixed by your PR.",
+              "char_start": 85,
+              "char_end": 207
+            }
+          ]
+        },
+        {
+          "id": "af3013e6-a6fd-4be0-827f-869f9bc4a18a",
+          "subject_entity_id": "pr",
+          "predicate": "fixes_issue",
+          "object_entity_id": "component",
+          "valid_from": "2023-07-14T16:22:28Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "b4674976-e1f0-4f13-b8e2-e04b16e34719",
+              "artifact_id": "comment_1636088787",
+              "excerpt": "The \"summary memory\" was re-implemented by #4208, and as far as I can see that also addresses the issues fixed by your PR.",
+              "char_start": 85,
+              "char_end": 207
+            }
+          ]
+        },
+        {
+          "id": "06788902-6449-45fa-acd2-2f90cf58ea3d",
+          "subject_entity_id": "pr",
+          "predicate": "authored",
+          "object_entity_id": "component",
+          "valid_from": "2023-07-14T16:22:28Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "93fd6282-7156-4377-9e32-36f9979ec386",
+              "artifact_id": "comment_1636088787",
+              "excerpt": "The \"summary memory\" was re-implemented by #4208, and as far as I can see that also addresses the issues fixed by your PR.",
+              "char_start": 85,
+              "char_end": 207
+            }
+          ]
+        },
+        {
+          "id": "cc6d0f56-89d6-42a9-89bc-9fb7ff4cfdd7",
+          "subject_entity_id": "pr",
+          "predicate": "suggests_change",
+          "object_entity_id": null,
+          "valid_from": "2023-07-14T16:22:28Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "c06e21fa-89ef-4174-a9a2-5264353c0044",
+              "artifact_id": "comment_1636088787",
+              "excerpt": "The \"summary memory\" was re-implemented by #4208, and as far as I can see that also addresses the issues fixed by your PR.",
+              "char_start": 85,
+              "char_end": 207
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "artifact_id": "issue_4105",
+    "extracted": {
+      "entities": [
+        {
+          "id": "autogpt_core",
+          "type": "Component",
+          "name": "autogpt.core",
+          "aliases": []
+        },
+        {
+          "id": "pwuts",
+          "type": "Person",
+          "name": "pwuts",
+          "aliases": []
+        },
+        {
+          "id": "boostrix",
+          "type": "Person",
+          "name": "boostrix",
+          "aliases": []
+        }
+      ],
+      "claims": [
+        {
+          "id": "4a7f750a-a496-413c-8982-0aa86670a4ca",
+          "subject_entity_id": "autogpt_core",
+          "predicate": "authored",
+          "object_entity_id": null,
+          "valid_from": "2023-05-11T07:35:10Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "0797e1bc-6a72-449a-a39e-3ba4146569e8",
+              "artifact_id": "issue_4105",
+              "excerpt": "the easiest way to realize this seems to be `autogpt.core` (#4770)",
+              "char_start": 150,
+              "char_end": 216
+            }
+          ]
+        },
+        {
+          "id": "fe584b1c-a2ca-46ed-bd73-3aa0e9eabeb9",
+          "subject_entity_id": "pwuts",
+          "predicate": "assigned_to",
+          "object_entity_id": null,
+          "valid_from": "2023-05-11T07:35:10Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "f7c61bba-68c5-4fdf-8e31-60651b6adffc",
+              "artifact_id": "issue_4105",
+              "excerpt": "converted to a roadmap item by a maintainer (@Pwuts)",
+              "char_start": 493,
+              "char_end": 545
+            }
+          ]
+        },
+        {
+          "id": "325a240a-8c67-4554-aba8-380e15962882",
+          "subject_entity_id": "boostrix",
+          "predicate": "assigned_to",
+          "object_entity_id": null,
+          "valid_from": "2023-05-11T07:35:10Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "b5e62529-4183-4234-9a2e-7ceefc37098a",
+              "artifact_id": "issue_4105",
+              "excerpt": "Thanks for creating this overview @Boostrix!",
+              "char_start": 547,
+              "char_end": 591
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "artifact_id": "issue_4106",
+    "extracted": {
+      "entities": [
+        {
+          "id": "rsrrrrrr_patch_7",
+          "type": "Component",
+          "name": "rsrrrrrr patch 7",
+          "aliases": []
+        },
+        {
+          "id": "pr_quality_checklist",
+          "type": "Tool",
+          "name": "pr quality checklist",
+          "aliases": []
+        },
+        {
+          "id": "pull_request",
+          "type": "Component",
+          "name": "pull request",
+          "aliases": []
+        }
+      ],
+      "claims": []
+    }
+  },
+  {
+    "artifact_id": "comment_1543584043",
+    "extracted": {
+      "entities": [
+        {
+          "id": "api_key",
+          "type": "Tool",
+          "name": "api key",
+          "aliases": []
+        }
+      ],
+      "claims": []
+    }
+  },
+  {
+    "artifact_id": "issue_4107",
+    "extracted": {
+      "entities": [
+        {
+          "id": "implement_structured_planning___evaluation",
+          "type": "Issue",
+          "name": "implement structured planning & evaluation",
+          "aliases": []
+        },
+        {
+          "id": "_6964",
+          "type": "Issue",
+          "name": "#6964",
+          "aliases": []
+        },
+        {
+          "id": "discussion",
+          "type": "Component",
+          "name": "discussion",
+          "aliases": []
+        },
+        {
+          "id": "your_input_is_appreciated_",
+          "type": "Tool",
+          "name": "your input is appreciated!",
+          "aliases": []
+        },
+        {
+          "id": "comment",
+          "type": "Tool",
+          "name": "comment",
+          "aliases": []
+        },
+        {
+          "id": "discord",
+          "type": "Tool",
+          "name": "discord",
+          "aliases": []
+        },
+        {
+          "id": "agent",
+          "type": "Component",
+          "name": "agent",
+          "aliases": []
+        },
+        {
+          "id": "commands",
+          "type": "Component",
+          "name": "commands",
+          "aliases": []
+        },
+        {
+          "id": "executive_prompt",
+          "type": "Component",
+          "name": "executive prompt",
+          "aliases": []
+        },
+        {
+          "id": "plan",
+          "type": "Component",
+          "name": "plan",
+          "aliases": []
+        },
+        {
+          "id": "to_do_list",
+          "type": "Component",
+          "name": "to-do list",
+          "aliases": []
+        }
+      ],
+      "claims": [
+        {
+          "id": "1a87b2e8-24a0-49bb-8a9f-23fd7a28ce51",
+          "subject_entity_id": "implement_structured_planning___evaluation",
+          "predicate": "authored",
+          "object_entity_id": null,
+          "valid_from": "2023-05-11T10:07:39Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "372b07e9-441f-4ea7-874b-89fb9e728490",
+              "artifact_id": "issue_4107",
+              "excerpt": "Before we can start managing the workflow of the agent, we have to give it some more structure.",
+              "char_start": 77,
+              "char_end": 172
+            }
+          ]
+        },
+        {
+          "id": "d99213ad-0c66-4c53-835b-0185ca9e98da",
+          "subject_entity_id": "_6964",
+          "predicate": "authored",
+          "object_entity_id": null,
+          "valid_from": "2023-05-11T10:07:39Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "7b6ef5ea-8ab1-4395-b440-fcafb4171ed6",
+              "artifact_id": "issue_4107",
+              "excerpt": "Before we can start managing the workflow of the agent, we have to give it some more structure.",
+              "char_start": 77,
+              "char_end": 172
+            }
+          ]
+        },
+        {
+          "id": "6ce511b9-043a-4b5b-a9f7-b9701f6390a7",
+          "subject_entity_id": "discussion",
+          "predicate": "authored",
+          "object_entity_id": null,
+          "valid_from": "2023-05-11T10:07:39Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "7a35f8b8-20e7-4846-902c-ce193c18b81d",
+              "artifact_id": "issue_4107",
+              "excerpt": "Before we can start managing the workflow of the agent, we have to give it some more structure.",
+              "char_start": 77,
+              "char_end": 172
+            }
+          ]
+        },
+        {
+          "id": "f0cb25b9-ccd9-458c-a0be-4483411ef859",
+          "subject_entity_id": "your_input_is_appreciated_",
+          "predicate": "proposes_feature",
+          "object_entity_id": null,
+          "valid_from": "2023-05-11T10:07:39Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "11d8319d-3f6f-48fd-9f0e-fe3844fe0648",
+              "artifact_id": "issue_4107",
+              "excerpt": "If you think something important is missing from this comparison, please leave a comment below or bring it up [on Discord](https://discord.com/channels/1092243196446249134/1095817829405704305)!",
+              "char_start": 294,
+              "char_end": 487
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "artifact_id": "comment_1617671944",
+    "extracted": {
+      "entities": [
+        {
+          "id": "lorenzo_pieri",
+          "type": "Person",
+          "name": "lorenzo pieri",
+          "aliases": []
+        },
+        {
+          "id": "autogpt",
+          "type": "Tool",
+          "name": "autogpt",
+          "aliases": []
+        },
+        {
+          "id": "llm",
+          "type": "Tool",
+          "name": "llm",
+          "aliases": []
+        }
+      ],
+      "claims": [
+        {
+          "id": "cff18686-6bdc-4c80-9d67-b849c6a4cd7a",
+          "subject_entity_id": "lorenzo_pieri",
+          "predicate": "authored",
+          "object_entity_id": null,
+          "valid_from": "2023-07-03T09:01:09Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "57a48bfb-fd5f-4e9b-89da-1247ffbe46e5",
+              "artifact_id": "comment_1617671944",
+              "excerpt": "https://lorenzopieri.com/autogpt_fix/",
+              "char_start": 72,
+              "char_end": 109
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "artifact_id": "comment_2167056116",
+    "extracted": {
+      "entities": [
+        {
+          "id": "autogpt_roadmap___workflow_efficacy",
+          "type": "Issue",
+          "name": "autogpt roadmap - workflow efficacy",
+          "aliases": []
+        },
+        {
+          "id": "significant_gravitas_autogpt",
+          "type": "Repository",
+          "name": "significant-gravitas/autogpt",
+          "aliases": []
+        },
+        {
+          "id": "significant_gravitas",
+          "type": "Person",
+          "name": "significant-gravitas",
+          "aliases": []
+        },
+        {
+          "id": "discord",
+          "type": "Tool",
+          "name": "discord",
+          "aliases": []
+        },
+        {
+          "id": "1092243196446249134",
+          "type": "Component",
+          "name": "1092243196446249134",
+          "aliases": []
+        },
+        {
+          "id": "1095817829405704305",
+          "type": "Component",
+          "name": "1095817829405704305",
+          "aliases": []
+        }
+      ],
+      "claims": [
+        {
+          "id": "7c190023-1f36-482c-a71d-431f36d18293",
+          "subject_entity_id": "autogpt_roadmap___workflow_efficacy",
+          "predicate": "authored",
+          "object_entity_id": null,
+          "valid_from": "2024-06-14T01:39:20Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "83a85194-e808-4f47-b8fb-8efbf55f99e3",
+              "artifact_id": "comment_2167056116",
+              "excerpt": "Before we can start managing the workflow of the agent, we have to give it some more structure.",
+              "char_start": 142,
+              "char_end": 237
+            }
+          ]
+        },
+        {
+          "id": "5cd31d7f-2e9b-41c0-81a6-052241a1ce30",
+          "subject_entity_id": "significant_gravitas",
+          "predicate": "proposes_feature",
+          "object_entity_id": null,
+          "valid_from": "2024-06-14T01:39:20Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "dc614340-44d6-48a9-8cac-0085f2cdf91b",
+              "artifact_id": "comment_2167056116",
+              "excerpt": "If you think something important is missing from this comparison, please leave a comment below or bring it up [on Discord](https://discord.com/channels/1092243196446249134/1095817829405704305)!",
+              "char_start": 365,
+              "char_end": 558
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "artifact_id": "comment_2167056920",
+    "extracted": {
+      "entities": [
+        {
+          "id": "nichebiche",
+          "type": "Person",
+          "name": "nichebiche",
+          "aliases": []
+        }
+      ],
+      "claims": []
+    }
+  },
+  {
+    "artifact_id": "issue_4108",
+    "extracted": {
+      "entities": [
+        {
+          "id": "qdrant_db",
+          "type": "Tool",
+          "name": "qdrant db",
+          "aliases": []
+        },
+        {
+          "id": "qdrant_index",
+          "type": "Component",
+          "name": "qdrant index",
+          "aliases": []
+        },
+        {
+          "id": "qdrant_memory",
+          "type": "Tool",
+          "name": "qdrant memory",
+          "aliases": []
+        },
+        {
+          "id": "qdrant_client",
+          "type": "Tool",
+          "name": "qdrant-client",
+          "aliases": []
+        },
+        {
+          "id": "autogpt",
+          "type": "Tool",
+          "name": "autogpt",
+          "aliases": []
+        },
+        {
+          "id": "pip",
+          "type": "Tool",
+          "name": "pip",
+          "aliases": []
+        },
+        {
+          "id": "qdrant_credentials",
+          "type": "File",
+          "name": "qdrant credentials",
+          "aliases": []
+        },
+        {
+          "id": "collection_name",
+          "type": "File",
+          "name": "collection name",
+          "aliases": []
+        }
+      ],
+      "claims": []
+    }
+  },
+  {
+    "artifact_id": "comment_1546700505",
+    "extracted": {
+      "entities": [
+        {
+          "id": "pr",
+          "type": "Component",
+          "name": "pr",
+          "aliases": []
+        },
+        {
+          "id": "re_arch",
+          "type": "Tool",
+          "name": "re-arch",
+          "aliases": []
+        }
+      ],
+      "claims": []
+    }
+  },
+  {
+    "artifact_id": "comment_1563149917",
+    "extracted": {
+      "entities": [
+        {
+          "id": "memory_fixes",
+          "type": "Component",
+          "name": "memory fixes",
+          "aliases": []
+        }
+      ],
+      "claims": []
+    }
+  },
+  {
+    "artifact_id": "comment_1564367966",
+    "extracted": {
+      "entities": [
+        {
+          "id": "_4280",
+          "type": "Issue",
+          "name": "#4280",
+          "aliases": []
+        }
+      ],
+      "claims": [
+        {
+          "id": "7471ec28-5037-4e70-bf24-5b7317da5795",
+          "subject_entity_id": "_4280",
+          "predicate": "reports_issue",
+          "object_entity_id": null,
+          "valid_from": "2023-05-26T13:06:26Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "aea751f4-a116-4a65-81c2-c13a0d7a3fd0",
+              "artifact_id": "comment_1564367966",
+              "excerpt": "Before we process this PR further, please check out / comment on #4280.",
+              "char_start": 0,
+              "char_end": 71
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "artifact_id": "issue_4109",
+    "extracted": {
+      "entities": [
+        {
+          "id": "auto_gpt",
+          "type": "Tool",
+          "name": "auto-gpt",
+          "aliases": []
+        },
+        {
+          "id": "python",
+          "type": "Tool",
+          "name": "python",
+          "aliases": []
+        },
+        {
+          "id": "gpt_3",
+          "type": "Tool",
+          "name": "gpt-3",
+          "aliases": []
+        },
+        {
+          "id": "gpt_4",
+          "type": "Tool",
+          "name": "gpt-4",
+          "aliases": []
+        },
+        {
+          "id": "github",
+          "type": "Tool",
+          "name": "github",
+          "aliases": []
+        },
+        {
+          "id": "cmd",
+          "type": "Tool",
+          "name": "cmd",
+          "aliases": []
+        },
+        {
+          "id": "pip",
+          "type": "Tool",
+          "name": "pip",
+          "aliases": []
+        },
+        {
+          "id": "v0_3_0",
+          "type": "Component",
+          "name": "v0.3.0",
+          "aliases": []
+        },
+        {
+          "id": "zacha",
+          "type": "Person",
+          "name": "zacha",
+          "aliases": []
+        }
+      ],
+      "claims": []
+    }
+  },
+  {
+    "artifact_id": "comment_1544023061",
+    "extracted": {
+      "entities": [
+        {
+          "id": "issue__2551",
+          "type": "Issue",
+          "name": "issue #2551",
+          "aliases": []
+        },
+        {
+          "id": "this",
+          "type": "Component",
+          "name": "this",
+          "aliases": []
+        }
+      ],
+      "claims": [
+        {
+          "id": "2ba6974d-1a7e-4678-b656-e7a9f6306a68",
+          "subject_entity_id": "this",
+          "predicate": "reports_issue",
+          "object_entity_id": "issue__2551",
+          "valid_from": "2023-05-11T13:38:06Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "6edad751-7392-4ebc-b2ed-3002a81b7deb",
+              "artifact_id": "comment_1544023061",
+              "excerpt": "Found related issue #2551 after posting this, but I do not see a fix given for 2551",
+              "char_start": 0,
+              "char_end": 83
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "artifact_id": "comment_1560475788",
+    "extracted": {
+      "entities": [
+        {
+          "id": "windows_10",
+          "type": "Component",
+          "name": "windows 10",
+          "aliases": []
+        },
+        {
+          "id": "issue",
+          "type": "Issue",
+          "name": "issue",
+          "aliases": []
+        },
+        {
+          "id": "vm",
+          "type": "Component",
+          "name": "vm",
+          "aliases": []
+        }
+      ],
+      "claims": [
+        {
+          "id": "9c75e1b2-134d-4ea6-8dea-60d6472ae25c",
+          "subject_entity_id": "issue",
+          "predicate": "reports_issue",
+          "object_entity_id": null,
+          "valid_from": "2023-05-24T05:24:56Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "8adc25d6-a541-42a8-8a0d-5833ccec272c",
+              "artifact_id": "comment_1560475788",
+              "excerpt": "running in fresh Windows 10 VM",
+              "char_start": 29,
+              "char_end": 59
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "artifact_id": "comment_1562935383",
+    "extracted": {
+      "entities": [
+        {
+          "id": "llnski",
+          "type": "Person",
+          "name": "llnski",
+          "aliases": []
+        }
+      ],
+      "claims": [
+        {
+          "id": "ab0671ba-b5f5-43ed-a12c-1872cae5d1f0",
+          "subject_entity_id": "llnski",
+          "predicate": "assigned_to",
+          "object_entity_id": null,
+          "valid_from": "2023-05-25T13:43:31Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "2a1b367e-a897-4b4e-af68-986a81b1ea0e",
+              "artifact_id": "comment_1562935383",
+              "excerpt": "was able to get it running that way",
+              "char_start": 138,
+              "char_end": 173
+            }
+          ]
+        },
+        {
+          "id": "937ad77f-a461-477a-8168-51f3db82e58a",
+          "subject_entity_id": "llnski",
+          "predicate": "authored",
+          "object_entity_id": null,
+          "valid_from": "2023-05-25T13:43:31Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "eeddc8af-e1e5-4338-b0c1-d93b1125749a",
+              "artifact_id": "comment_1562935383",
+              "excerpt": "was able to get it running that way",
+              "char_start": 138,
+              "char_end": 173
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "artifact_id": "comment_1572854420",
+    "extracted": {
+      "entities": [
+        {
+          "id": "zylerkade",
+          "type": "Person",
+          "name": "zylerkade",
+          "aliases": []
+        },
+        {
+          "id": "powershell",
+          "type": "Tool",
+          "name": "powershell",
+          "aliases": []
+        },
+        {
+          "id": "cmd",
+          "type": "Tool",
+          "name": "cmd",
+          "aliases": []
+        },
+        {
+          "id": "https___learn_microsoft_com_en_us_cpp_windows_latest_supported_vc_redist_view_msvc_170",
+          "type": "File",
+          "name": "https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170",
+          "aliases": []
+        }
+      ],
+      "claims": [
+        {
+          "id": "0614033e-700c-41a7-989c-644ede05f1a3",
+          "subject_entity_id": "zylerkade",
+          "predicate": "authored",
+          "object_entity_id": null,
+          "valid_from": "2023-06-01T22:09:07Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "82388c8a-fcda-46be-b660-af2f30b90621",
+              "artifact_id": "comment_1572854420",
+              "excerpt": "I was finally able to get it working",
+              "char_start": 13,
+              "char_end": 49
+            }
+          ]
+        },
+        {
+          "id": "3deac170-b70a-409a-83a5-da76a165c384",
+          "subject_entity_id": "zylerkade",
+          "predicate": "assigned_to",
+          "object_entity_id": null,
+          "valid_from": "2023-06-01T22:09:07Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "46469a0e-63f2-4a81-b286-a171b9a9d3fc",
+              "artifact_id": "comment_1572854420",
+              "excerpt": "although I'd assume this fix would be just as good",
+              "char_start": 64,
+              "char_end": 114
+            }
+          ]
+        },
+        {
+          "id": "c91e5d24-2337-4c8e-b1da-03b741c1b719",
+          "subject_entity_id": "powershell",
+          "predicate": "suggests_change",
+          "object_entity_id": null,
+          "valid_from": "2023-06-01T22:09:07Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "f747d7d3-9a22-4f4e-9f4a-134189155a0b",
+              "artifact_id": "comment_1572854420",
+              "excerpt": "by installing [https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170]",
+              "char_start": 123,
+              "char_end": 225
+            }
+          ]
+        },
+        {
+          "id": "e8b6f692-8e07-4d98-aa33-1a74fd1aeedd",
+          "subject_entity_id": "cmd",
+          "predicate": "suggests_change",
+          "object_entity_id": null,
+          "valid_from": "2023-06-01T22:09:07Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "1ddcdd99-5ad1-4d9d-ba46-471e553c5c57",
+              "artifact_id": "comment_1572854420",
+              "excerpt": "by installing [https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170]",
+              "char_start": 123,
+              "char_end": 225
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "artifact_id": "comment_1581840838",
+    "extracted": {
+      "entities": [
+        {
+          "id": "zylerkade",
+          "type": "Person",
+          "name": "zylerkade",
+          "aliases": []
+        }
+      ],
+      "claims": [
+        {
+          "id": "888f84bc-0034-4bcd-a429-e04ea97ef5d9",
+          "subject_entity_id": "zylerkade",
+          "predicate": "assigned_to",
+          "object_entity_id": "zylerkade",
+          "valid_from": "2023-06-08T03:38:53Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "ebee964a-f58a-4841-a8a4-17b4f0b508e3",
+              "artifact_id": "comment_1581840838",
+              "excerpt": "have you tried the solution provided by @ZylerKade",
+              "char_start": 12,
+              "char_end": 62
+            }
+          ]
+        },
+        {
+          "id": "07120a3e-3a6c-4786-835f-76ce4d5dfc21",
+          "subject_entity_id": "zylerkade",
+          "predicate": "authored",
+          "object_entity_id": null,
+          "valid_from": "2023-06-08T03:38:53Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "c20423e3-d519-47fb-9549-42c6f6e28ddb",
+              "artifact_id": "comment_1581840838",
+              "excerpt": "If so, please share if it worked for you.",
+              "char_start": 64,
+              "char_end": 105
+            }
+          ]
+        },
+        {
+          "id": "778582d4-440f-4534-b9f4-7444d7243606",
+          "subject_entity_id": "zylerkade",
+          "predicate": "authored",
+          "object_entity_id": null,
+          "valid_from": "2023-06-08T03:38:53Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "25aeb18c-108d-4c33-b888-55ca6f2991fe",
+              "artifact_id": "comment_1581840838",
+              "excerpt": "We would appreciate your feedback and can update the documentation accordingly.",
+              "char_start": 106,
+              "char_end": 185
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "artifact_id": "issue_4111",
+    "extracted": {
+      "entities": [
+        {
+          "id": "first_commit",
+          "type": "Component",
+          "name": "first commit",
+          "aliases": []
+        }
+      ],
+      "claims": []
+    }
+  },
+  {
+    "artifact_id": "issue_4112",
+    "extracted": {
+      "entities": [
+        {
+          "id": "python",
+          "type": "Tool",
+          "name": "python",
+          "aliases": []
+        },
+        {
+          "id": "api_tokens",
+          "type": "File",
+          "name": "api tokens",
+          "aliases": []
+        },
+        {
+          "id": "pr",
+          "type": "Tool",
+          "name": "pr",
+          "aliases": []
+        },
+        {
+          "id": "rfes",
+          "type": "Issue",
+          "name": "rfes",
+          "aliases": []
+        },
+        {
+          "id": "regex",
+          "type": "Tool",
+          "name": "regex",
+          "aliases": []
+        },
+        {
+          "id": "sed",
+          "type": "Tool",
+          "name": "sed",
+          "aliases": []
+        },
+        {
+          "id": "awk",
+          "type": "Tool",
+          "name": "awk",
+          "aliases": []
+        },
+        {
+          "id": "_286",
+          "type": "Issue",
+          "name": "#286",
+          "aliases": []
+        },
+        {
+          "id": "_3412",
+          "type": "Issue",
+          "name": "#3412",
+          "aliases": []
+        },
+        {
+          "id": "_3775",
+          "type": "Issue",
+          "name": "#3775",
+          "aliases": []
+        },
+        {
+          "id": "pull_request",
+          "type": "Tool",
+          "name": "pull request",
+          "aliases": []
+        },
+        {
+          "id": "wiki",
+          "type": "Repository",
+          "name": "wiki",
+          "aliases": []
+        }
+      ],
+      "claims": [
+        {
+          "id": "9a693dcf-6683-4d4c-98f6-25d1dcf47a8b",
+          "subject_entity_id": "api_tokens",
+          "predicate": "removes_configuration",
+          "object_entity_id": null,
+          "valid_from": "2023-05-11T14:21:53Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "e82bbfdf-bc46-495e-bf48-8995063b19a9",
+              "artifact_id": "issue_4112",
+              "excerpt": "save bandwidth",
+              "char_start": 357,
+              "char_end": 371
+            }
+          ]
+        },
+        {
+          "id": "6bb5b531-ba95-4aee-9ec4-317cd1848a8c",
+          "subject_entity_id": "pr",
+          "predicate": "authored",
+          "object_entity_id": null,
+          "valid_from": "2023-05-11T14:21:53Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "2efe902e-5bff-48e7-81ff-e6c6c3220aae",
+              "artifact_id": "issue_4112",
+              "excerpt": "- [ ] My pull request is atomic and focuses on a single change.",
+              "char_start": 2803,
+              "char_end": 2866
+            }
+          ]
+        },
+        {
+          "id": "ec0a03dd-fab7-4151-8ed6-aeb16fce0cd3",
+          "subject_entity_id": "wiki",
+          "predicate": "authored",
+          "object_entity_id": null,
+          "valid_from": "2023-05-11T14:21:53Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "28812a00-2164-47aa-a68b-b257c0acc9ea",
+              "artifact_id": "issue_4112",
+              "excerpt": "don't know if I can simply open a PR to get this added to the wiki?",
+              "char_start": 267,
+              "char_end": 334
+            }
+          ]
+        },
+        {
+          "id": "1e5efda3-7fc1-4ee4-b948-3215335b24e5",
+          "subject_entity_id": "pull_request",
+          "predicate": "authored",
+          "object_entity_id": null,
+          "valid_from": "2023-05-11T14:21:53Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "ba9dbda8-9d09-43f1-91ca-0cd1b3f2eba1",
+              "artifact_id": "issue_4112",
+              "excerpt": "- [ ] I have t",
+              "char_start": 2868,
+              "char_end": 2882
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "artifact_id": "comment_1711623178",
+    "extracted": {
+      "entities": [
+        {
+          "id": "write_file",
+          "type": "Component",
+          "name": "write_file",
+          "aliases": []
+        },
+        {
+          "id": "_py",
+          "type": "File",
+          "name": ".py",
+          "aliases": []
+        }
+      ],
+      "claims": []
+    }
+  },
+  {
+    "artifact_id": "comment_1749714702",
+    "extracted": {
+      "entities": [
+        {
+          "id": "this",
+          "type": "Issue",
+          "name": "this",
+          "aliases": []
+        },
+        {
+          "id": "merge_request",
+          "type": "Component",
+          "name": "merge request",
+          "aliases": []
+        }
+      ],
+      "claims": []
+    }
+  },
+  {
+    "artifact_id": "issue_4113",
+    "extracted": {
+      "entities": [
+        {
+          "id": "useless_branch",
+          "type": "Component",
+          "name": "useless branch",
+          "aliases": []
+        },
+        {
+          "id": "my_pull_request",
+          "type": "Component",
+          "name": "my pull request",
+          "aliases": []
+        }
+      ],
+      "claims": []
+    }
+  },
+  {
+    "artifact_id": "issue_4115",
+    "extracted": {
+      "entities": [
+        {
+          "id": "devcontainer___codespace",
+          "type": "Component",
+          "name": "devcontainer / codespace",
+          "aliases": []
+        },
+        {
+          "id": "auto_gpt",
+          "type": "Component",
+          "name": "auto-gpt",
+          "aliases": []
+        },
+        {
+          "id": "gpt_3",
+          "type": "Component",
+          "name": "gpt-3",
+          "aliases": []
+        },
+        {
+          "id": "gpt_4",
+          "type": "Component",
+          "name": "gpt-4",
+          "aliases": []
+        },
+        {
+          "id": "vs_code___container",
+          "type": "Component",
+          "name": "vs code + container",
+          "aliases": []
+        }
+      ],
+      "claims": []
+    }
+  },
+  {
+    "artifact_id": "issue_4118",
+    "extracted": {
+      "entities": [
+        {
+          "id": "typeerror",
+          "type": "Issue",
+          "name": "typeerror",
+          "aliases": []
+        },
+        {
+          "id": "__run_sh",
+          "type": "File",
+          "name": "./run.sh",
+          "aliases": []
+        },
+        {
+          "id": "auto_gpt",
+          "type": "Tool",
+          "name": "auto-gpt",
+          "aliases": []
+        },
+        {
+          "id": "gpt_3_5",
+          "type": "Tool",
+          "name": "gpt-3.5",
+          "aliases": []
+        },
+        {
+          "id": "terminal",
+          "type": "Tool",
+          "name": "terminal",
+          "aliases": []
+        },
+        {
+          "id": "traceback",
+          "type": "Issue",
+          "name": "traceback",
+          "aliases": []
+        },
+        {
+          "id": "_opt_anaconda3_envs_auto_gpt_lib_python3_8_runpy_py",
+          "type": "Component",
+          "name": "/opt/anaconda3/envs/auto-gpt/lib/python3.8/runpy.py",
+          "aliases": []
+        },
+        {
+          "id": "_users_account_documents_auto_gpt_auto_gpt_0_3_0_autogpt___main___py",
+          "type": "File",
+          "name": "/users/account/documents/auto-gpt/auto-gpt-0.3.0/autogpt/__main__.py",
+          "aliases": []
+        },
+        {
+          "id": "account",
+          "type": "Person",
+          "name": "account",
+          "aliases": []
+        },
+        {
+          "id": "auto_gpt_0_3_0",
+          "type": "Component",
+          "name": "auto-gpt-0.3.0",
+          "aliases": []
+        }
+      ],
+      "claims": [
+        {
+          "id": "d6d89355-cfdd-467f-8d3a-5231c5ad8ca2",
+          "subject_entity_id": "typeerror",
+          "predicate": "reports_issue",
+          "object_entity_id": null,
+          "valid_from": "2023-05-11T18:07:18Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "ff69d71e-f145-49c1-87e5-bb7da9ef641d",
+              "artifact_id": "issue_4118",
+              "excerpt": "TypeError: 'type' object is not subscriptable",
+              "char_start": 7,
+              "char_end": 52
+            }
+          ]
+        },
+        {
+          "id": "dae0ae58-a6d3-4e5a-8080-bcca7d7b5c7a",
+          "subject_entity_id": "__run_sh",
+          "predicate": "authored",
+          "object_entity_id": "account",
+          "valid_from": "2023-05-11T18:07:18Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "4e3041b9-aefe-4085-bc33-21733e92ad97",
+              "artifact_id": "issue_4118",
+              "excerpt": "./run.sh command in terminal",
+              "char_start": 380,
+              "char_end": 408
+            }
+          ]
+        },
+        {
+          "id": "64fcaaf5-ebfd-428a-a4c1-46065b144bb6",
+          "subject_entity_id": "__run_sh",
+          "predicate": "assigned_to",
+          "object_entity_id": "account",
+          "valid_from": "2023-05-11T18:07:18Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "ec40b53b-3253-4501-bad3-5f890d539dd2",
+              "artifact_id": "issue_4118",
+              "excerpt": "./run.sh command in terminal",
+              "char_start": 380,
+              "char_end": 408
+            }
+          ]
+        },
+        {
+          "id": "78d69594-752e-410d-bba8-8f244d759498",
+          "subject_entity_id": "_opt_anaconda3_envs_auto_gpt_lib_python3_8_runpy_py",
+          "predicate": "authored",
+          "object_entity_id": null,
+          "valid_from": "2023-05-11T18:07:18Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "73d64a5c-6298-4b3c-8441-d3f75c5b3fc4",
+              "artifact_id": "issue_4118",
+              "excerpt": "/opt/anaconda3/envs/auto-gpt/lib/python3.8/runpy.py",
+              "char_start": 479,
+              "char_end": 530
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "artifact_id": "comment_1544487537",
+    "extracted": {
+      "entities": [
+        {
+          "id": "python_3_8",
+          "type": "Component",
+          "name": "python 3.8",
+          "aliases": []
+        },
+        {
+          "id": "python_3_10",
+          "type": "Component",
+          "name": "python 3.10",
+          "aliases": []
+        },
+        {
+          "id": "python_3_11_3",
+          "type": "Component",
+          "name": "python 3.11.3",
+          "aliases": []
+        },
+        {
+          "id": "homebrew",
+          "type": "Tool",
+          "name": "homebrew",
+          "aliases": []
+        },
+        {
+          "id": "pyenv",
+          "type": "Tool",
+          "name": "pyenv",
+          "aliases": []
+        },
+        {
+          "id": "pyenv_update",
+          "type": "Tool",
+          "name": "pyenv-update",
+          "aliases": []
+        },
+        {
+          "id": "macos",
+          "type": "Component",
+          "name": "macos",
+          "aliases": []
+        },
+        {
+          "id": "shell",
+          "type": "Tool",
+          "name": "shell",
+          "aliases": []
+        }
+      ],
+      "claims": [
+        {
+          "id": "02a96cc6-3375-4075-a9f5-137e0236e994",
+          "subject_entity_id": "python_3_8",
+          "predicate": "authored",
+          "object_entity_id": null,
+          "valid_from": "2023-05-11T18:29:27Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "cf537fb4-5373-4b48-a3a5-e87f3c5021e0",
+              "artifact_id": "comment_1544487537",
+              "excerpt": "when the documentation is asking for 3.10+",
+              "char_start": 38,
+              "char_end": 80
+            }
+          ]
+        },
+        {
+          "id": "72ed3225-7958-4d6f-98cd-dfce44c8eb04",
+          "subject_entity_id": "homebrew",
+          "predicate": "authored",
+          "object_entity_id": null,
+          "valid_from": "2023-05-11T18:29:27Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "c73d763d-34eb-4fe9-a633-67a0e5131016",
+              "artifact_id": "comment_1544487537",
+              "excerpt": "to install the latest python3 (3.11.3)",
+              "char_start": 152,
+              "char_end": 190
+            }
+          ]
+        },
+        {
+          "id": "08d3ab94-5ccb-4e7a-acee-810ceec661df",
+          "subject_entity_id": "shell",
+          "predicate": "authored",
+          "object_entity_id": null,
+          "valid_from": "2023-05-11T18:29:27Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "bbeaa000-aabd-4767-b57d-340bd16aeb17",
+              "artifact_id": "comment_1544487537",
+              "excerpt": "and run `python --version` to confirm the results",
+              "char_start": 321,
+              "char_end": 370
+            }
+          ]
+        },
+        {
+          "id": "ee8e9808-d951-4229-a637-cf98ba91f621",
+          "subject_entity_id": "pyenv",
+          "predicate": "authored",
+          "object_entity_id": null,
+          "valid_from": "2023-05-11T18:29:27Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "f8d0a3df-84b7-42d0-8324-c75aa2e07501",
+              "artifact_id": "comment_1544487537",
+              "excerpt": "and update your shell",
+              "char_start": 493,
+              "char_end": 514
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "artifact_id": "comment_1546732060",
+    "extracted": {
+      "entities": [
+        {
+          "id": "pyenv",
+          "type": "Tool",
+          "name": "pyenv",
+          "aliases": []
+        },
+        {
+          "id": "homebrew",
+          "type": "Tool",
+          "name": "homebrew",
+          "aliases": []
+        },
+        {
+          "id": "shell",
+          "type": "Component",
+          "name": "shell",
+          "aliases": []
+        },
+        {
+          "id": "python",
+          "type": "Component",
+          "name": "python",
+          "aliases": []
+        }
+      ],
+      "claims": []
+    }
+  },
+  {
+    "artifact_id": "comment_1555329498",
+    "extracted": {
+      "entities": [
+        {
+          "id": "auto_gpt",
+          "type": "Tool",
+          "name": "auto-gpt",
+          "aliases": []
+        },
+        {
+          "id": "terminal",
+          "type": "Tool",
+          "name": "terminal",
+          "aliases": []
+        },
+        {
+          "id": "account",
+          "type": "Person",
+          "name": "account",
+          "aliases": []
+        },
+        {
+          "id": "requirements_txt",
+          "type": "File",
+          "name": "requirements.txt",
+          "aliases": []
+        },
+        {
+          "id": "aiohttp",
+          "type": "Tool",
+          "name": "aiohttp",
+          "aliases": []
+        },
+        {
+          "id": "openai",
+          "type": "Tool",
+          "name": "openai",
+          "aliases": []
+        },
+        {
+          "id": "aiosignal",
+          "type": "Tool",
+          "name": "aiosignal",
+          "aliases": []
+        },
+        {
+          "id": "python",
+          "type": "Tool",
+          "name": "python",
+          "aliases": []
+        },
+        {
+          "id": "dotenv",
+          "type": "Tool",
+          "name": "dotenv",
+          "aliases": []
+        }
+      ],
+      "claims": []
+    }
+  },
+  {
+    "artifact_id": "comment_1555781775",
+    "extracted": {
+      "entities": [
+        {
+          "id": "pip",
+          "type": "Tool",
+          "name": "pip",
+          "aliases": []
+        },
+        {
+          "id": "pyenv",
+          "type": "Tool",
+          "name": "pyenv",
+          "aliases": []
+        },
+        {
+          "id": "stackoverflow",
+          "type": "Repository",
+          "name": "stackoverflow",
+          "aliases": []
+        },
+        {
+          "id": "pip_for_pyenv",
+          "type": "Component",
+          "name": "pip for pyenv",
+          "aliases": []
+        }
+      ],
+      "claims": []
+    }
+  },
+  {
+    "artifact_id": "comment_1559511583",
+    "extracted": {
+      "entities": [
+        {
+          "id": "traceback",
+          "type": "Issue",
+          "name": "traceback",
+          "aliases": []
+        },
+        {
+          "id": "file",
+          "type": "File",
+          "name": "file",
+          "aliases": []
+        },
+        {
+          "id": "dotenv",
+          "type": "Tool",
+          "name": "dotenv",
+          "aliases": []
+        },
+        {
+          "id": "account",
+          "type": "Person",
+          "name": "account",
+          "aliases": []
+        },
+        {
+          "id": "autogpt",
+          "type": "Component",
+          "name": "autogpt",
+          "aliases": []
+        },
+        {
+          "id": "__init___py",
+          "type": "File",
+          "name": "__init__.py",
+          "aliases": []
+        },
+        {
+          "id": "runpy",
+          "type": "Tool",
+          "name": "runpy",
+          "aliases": []
+        }
+      ],
+      "claims": [
+        {
+          "id": "3136b3fd-0853-4b32-9aab-296d5c1f488a",
+          "subject_entity_id": "traceback",
+          "predicate": "reports_issue",
+          "object_entity_id": null,
+          "valid_from": "2023-05-23T14:22:17Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "9a08acc4-ceb2-4152-a9c1-1d29adf7bc3b",
+              "artifact_id": "comment_1559511583",
+              "excerpt": "getting the exact same issue",
+              "char_start": 5,
+              "char_end": 33
+            }
+          ]
+        },
+        {
+          "id": "37bdc42f-8378-4214-9053-3b16cf64e7ea",
+          "subject_entity_id": "traceback",
+          "predicate": "fixes_issue",
+          "object_entity_id": null,
+          "valid_from": "2023-05-23T14:22:17Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "936f2115-961e-4cf4-87ab-5b6a8d819db3",
+              "artifact_id": "comment_1559511583",
+              "excerpt": "getting the same exact traceback as well",
+              "char_start": 35,
+              "char_end": 75
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "artifact_id": "issue_4119",
+    "extracted": {
+      "entities": [
+        {
+          "id": "autogpt",
+          "type": "Tool",
+          "name": "autogpt",
+          "aliases": []
+        },
+        {
+          "id": "continuous_mode",
+          "type": "Component",
+          "name": "continuous mode",
+          "aliases": []
+        },
+        {
+          "id": "user",
+          "type": "Person",
+          "name": "user",
+          "aliases": []
+        },
+        {
+          "id": "plugins",
+          "type": "Component",
+          "name": "plugins",
+          "aliases": []
+        }
+      ],
+      "claims": [
+        {
+          "id": "d6c9a72d-ea1e-4ddd-801a-32de8fef38a2",
+          "subject_entity_id": "autogpt",
+          "predicate": "fixes_issue",
+          "object_entity_id": null,
+          "valid_from": "2023-05-11T18:29:38Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "f8e51545-bbbe-499e-b643-1f2c23b757d4",
+              "artifact_id": "issue_4119",
+              "excerpt": "Added a check to the code that prompts the user about unconfigured plugins.",
+              "char_start": 209,
+              "char_end": 284
+            }
+          ]
+        },
+        {
+          "id": "727c8c9d-b57c-4094-a41a-4673b80078fa",
+          "subject_entity_id": "continuous_mode",
+          "predicate": "authored",
+          "object_entity_id": "autogpt",
+          "valid_from": "2023-05-11T18:29:38Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "441d3936-0322-459d-b48e-04c66eaa6036",
+              "artifact_id": "issue_4119",
+              "excerpt": "When started in continuous mode, AutoGPT will still prompt the user about unconfigured plugins, which breaks the continuous flow.",
+              "char_start": 63,
+              "char_end": 192
+            }
+          ]
+        },
+        {
+          "id": "7fa01765-0271-418b-8339-65c729bb2217",
+          "subject_entity_id": "continuous_mode",
+          "predicate": "assigned_to",
+          "object_entity_id": "autogpt",
+          "valid_from": "2023-05-11T18:29:38Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "76f90419-ce93-4824-8bd2-f6022830aeeb",
+              "artifact_id": "issue_4119",
+              "excerpt": "Added a check to the code that prompts the user about unconfigured plugins.",
+              "char_start": 209,
+              "char_end": 284
+            }
+          ]
+        },
+        {
+          "id": "8dcbe86e-8820-49b0-9ab4-ddb44a9ea1b2",
+          "subject_entity_id": "user",
+          "predicate": "assigned_to",
+          "object_entity_id": "autogpt",
+          "valid_from": "2023-05-11T18:29:38Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "979bd2cf-8eb8-4a2d-9e09-fe2267b67118",
+              "artifact_id": "issue_4119",
+              "excerpt": "When started in continuous mode, AutoGPT will still prompt the user about unconfigured plugins, which breaks the continuous flow.",
+              "char_start": 63,
+              "char_end": 192
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "artifact_id": "comment_1550009833",
+    "extracted": {
+      "entities": [
+        {
+          "id": "user",
+          "type": "Person",
+          "name": "user",
+          "aliases": []
+        }
+      ],
+      "claims": []
+    }
+  },
+  {
+    "artifact_id": "comment_1552260154",
+    "extracted": {
+      "entities": [
+        {
+          "id": "user",
+          "type": "Person",
+          "name": "user",
+          "aliases": []
+        }
+      ],
+      "claims": []
+    }
+  },
+  {
+    "artifact_id": "issue_4120",
+    "extracted": {
+      "entities": [
+        {
+          "id": "google",
+          "type": "Tool",
+          "name": "google",
+          "aliases": []
+        },
+        {
+          "id": "windows",
+          "type": "Component",
+          "name": "windows",
+          "aliases": []
+        },
+        {
+          "id": "auto_gpt",
+          "type": "Tool",
+          "name": "auto-gpt",
+          "aliases": []
+        },
+        {
+          "id": "gpt_3_5",
+          "type": "Component",
+          "name": "gpt-3.5",
+          "aliases": []
+        },
+        {
+          "id": "steps_to_reproduce",
+          "type": "Issue",
+          "name": "steps to reproduce",
+          "aliases": []
+        },
+        {
+          "id": "command_google_returned____",
+          "type": "Issue",
+          "name": "command google returned: []",
+          "aliases": []
+        },
+        {
+          "id": "autogpt",
+          "type": "Tool",
+          "name": "autogpt",
+          "aliases": []
+        },
+        {
+          "id": "your_prompt",
+          "type": "File",
+          "name": "your prompt",
+          "aliases": []
+        },
+        {
+          "id": "your_logs",
+          "type": "File",
+          "name": "your logs",
+          "aliases": []
+        }
+      ],
+      "claims": []
+    }
+  },
+  {
+    "artifact_id": "comment_1544558159",
+    "extracted": {
+      "entities": [
+        {
+          "id": "git",
+          "type": "Tool",
+          "name": "git",
+          "aliases": []
+        }
+      ],
+      "claims": []
+    }
+  },
+  {
+    "artifact_id": "comment_1544574065",
+    "extracted": {
+      "entities": [
+        {
+          "id": "google_api_key",
+          "type": "Tool",
+          "name": "google api key",
+          "aliases": []
+        },
+        {
+          "id": "custom_search_engine_id",
+          "type": "Tool",
+          "name": "custom search engine id",
+          "aliases": []
+        },
+        {
+          "id": "_env",
+          "type": "File",
+          "name": ".env",
+          "aliases": []
+        }
+      ],
+      "claims": []
+    }
+  },
+  {
+    "artifact_id": "comment_1544618767",
+    "extracted": {
+      "entities": [
+        {
+          "id": "that",
+          "type": "Component",
+          "name": "that",
+          "aliases": []
+        },
+        {
+          "id": "before",
+          "type": "Component",
+          "name": "before",
+          "aliases": []
+        },
+        {
+          "id": "the",
+          "type": "Component",
+          "name": "the",
+          "aliases": []
+        }
+      ],
+      "claims": []
+    }
+  },
+  {
+    "artifact_id": "comment_1544629119",
+    "extracted": {
+      "entities": [
+        {
+          "id": "google_api",
+          "type": "Tool",
+          "name": "google api",
+          "aliases": []
+        }
+      ],
+      "claims": []
+    }
+  },
+  {
+    "artifact_id": "comment_1544649054",
+    "extracted": {
+      "entities": [
+        {
+          "id": "duckduckgo",
+          "type": "Tool",
+          "name": "duckduckgo",
+          "aliases": []
+        },
+        {
+          "id": "autogpt",
+          "type": "Component",
+          "name": "autogpt",
+          "aliases": []
+        },
+        {
+          "id": "duckduckgo_search_package",
+          "type": "Component",
+          "name": "duckduckgo-search package",
+          "aliases": []
+        },
+        {
+          "id": "deedy5",
+          "type": "Person",
+          "name": "deedy5",
+          "aliases": []
+        },
+        {
+          "id": "github",
+          "type": "Tool",
+          "name": "github",
+          "aliases": []
+        },
+        {
+          "id": "duckduckgo_search",
+          "type": "Repository",
+          "name": "duckduckgo_search",
+          "aliases": []
+        },
+        {
+          "id": "issues_56",
+          "type": "Issue",
+          "name": "issues/56",
+          "aliases": []
+        }
+      ],
+      "claims": [
+        {
+          "id": "12be1e8e-09ba-408c-bee3-12b937f5c76a",
+          "subject_entity_id": "duckduckgo",
+          "predicate": "authored",
+          "object_entity_id": null,
+          "valid_from": "2023-05-11T20:41:12Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "52c23bad-c799-499c-879e-b9543a4b3421",
+              "artifact_id": "comment_1544649054",
+              "excerpt": "may be related to a recently change just made by",
+              "char_start": 16,
+              "char_end": 64
+            }
+          ]
+        },
+        {
+          "id": "a6ec0d81-8f73-4047-bd52-d4cbe7077d3b",
+          "subject_entity_id": "duckduckgo_search",
+          "predicate": "reports_issue",
+          "object_entity_id": "issues_56",
+          "valid_from": "2023-05-11T20:41:12Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "4f23bac6-a9f4-4207-99f6-de358384a87b",
+              "artifact_id": "comment_1544649054",
+              "excerpt": "https://github.com/deedy5/duckduckgo_search/issues/56",
+              "char_start": 132,
+              "char_end": 185
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "artifact_id": "comment_1544674743",
+    "extracted": {
+      "entities": [
+        {
+          "id": "autogpt",
+          "type": "Tool",
+          "name": "autogpt",
+          "aliases": []
+        }
+      ],
+      "claims": []
+    }
+  },
+  {
+    "artifact_id": "comment_1544768830",
+    "extracted": {
+      "entities": [
+        {
+          "id": "issue",
+          "type": "Issue",
+          "name": "issue",
+          "aliases": []
+        }
+      ],
+      "claims": [
+        {
+          "id": "29089563-b2c6-418e-ad99-61eeab23af49",
+          "subject_entity_id": "issue",
+          "predicate": "suggests_change",
+          "object_entity_id": null,
+          "valid_from": "2023-05-11T22:22:22Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "b3f41491-3c0d-431f-9d17-1b03d8e1e3e8",
+              "artifact_id": "comment_1544768830",
+              "excerpt": "How do i update it?",
+              "char_start": 82,
+              "char_end": 101
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "artifact_id": "comment_1544809860",
+    "extracted": {
+      "entities": [
+        {
+          "id": "https___github_com_significant_gravitas_auto_gpt_issues_2330",
+          "type": "Repository",
+          "name": "https://github.com/significant-gravitas/auto-gpt/issues/2330",
+          "aliases": []
+        },
+        {
+          "id": "https___customsearch_googleapis_com_customsearch_v1_q_ways_to_increase_net_worth_num_8_key__myrealkey__alt_json",
+          "type": "Tool",
+          "name": "https://customsearch.googleapis.com/customsearch/v1?q=ways+to+increase+net+worth&num=8&key=[myrealkey]&alt=json",
+          "aliases": []
+        },
+        {
+          "id": "command_google",
+          "type": "Tool",
+          "name": "command google",
+          "aliases": []
+        }
+      ],
+      "claims": []
+    }
+  },
+  {
+    "artifact_id": "comment_1545022881",
+    "extracted": {
+      "entities": [
+        {
+          "id": "duckduck_go",
+          "type": "Component",
+          "name": "duckduck go",
+          "aliases": []
+        },
+        {
+          "id": "deedy5",
+          "type": "Person",
+          "name": "deedy5",
+          "aliases": []
+        },
+        {
+          "id": "duckduckgo_search",
+          "type": "Component",
+          "name": "duckduckgo_search",
+          "aliases": []
+        },
+        {
+          "id": "github_com",
+          "type": "Tool",
+          "name": "github.com",
+          "aliases": []
+        },
+        {
+          "id": "readme_file",
+          "type": "File",
+          "name": "readme file",
+          "aliases": []
+        },
+        {
+          "id": "issue_56",
+          "type": "Issue",
+          "name": "issue 56",
+          "aliases": []
+        }
+      ],
+      "claims": [
+        {
+          "id": "27821f6f-129c-42c8-8d8f-aeea3e052be2",
+          "subject_entity_id": "deedy5",
+          "predicate": "authored",
+          "object_entity_id": "issue_56",
+          "valid_from": "2023-05-12T02:36:51Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "cca6fd94-556d-4937-8aac-f6383e6d8865",
+              "artifact_id": "comment_1545022881",
+              "excerpt": "how do i fix it step by step by updating DuckDuck Go",
+              "char_start": 29,
+              "char_end": 81
+            }
+          ]
+        },
+        {
+          "id": "652782d8-4a3a-41ee-b7bb-0651267de0a3",
+          "subject_entity_id": "deedy5",
+          "predicate": "suggests_change",
+          "object_entity_id": null,
+          "valid_from": "2023-05-12T02:36:51Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "b391ca7b-372e-4e3b-acc1-504444d8efb3",
+              "artifact_id": "comment_1545022881",
+              "excerpt": "https://github.com/deedy5/duckduckgo_search/issues/56",
+              "char_start": 165,
+              "char_end": 218
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "artifact_id": "comment_1545186664",
+    "extracted": {
+      "entities": [
+        {
+          "id": "pip_install___upgrade_duckduckgo_search",
+          "type": "Tool",
+          "name": "pip install --upgrade duckduckgo-search",
+          "aliases": []
+        },
+        {
+          "id": "deedy5",
+          "type": "Person",
+          "name": "deedy5",
+          "aliases": []
+        }
+      ],
+      "claims": []
+    }
+  },
+  {
+    "artifact_id": "comment_1545700428",
+    "extracted": {
+      "entities": [
+        {
+          "id": "autogpt",
+          "type": "Tool",
+          "name": "autogpt",
+          "aliases": []
+        },
+        {
+          "id": "docker_compose",
+          "type": "Tool",
+          "name": "docker-compose",
+          "aliases": []
+        },
+        {
+          "id": "google",
+          "type": "Tool",
+          "name": "google",
+          "aliases": []
+        }
+      ],
+      "claims": []
+    }
+  },
+  {
+    "artifact_id": "comment_1545772942",
+    "extracted": {
+      "entities": [
+        {
+          "id": "autogpt",
+          "type": "Tool",
+          "name": "autogpt",
+          "aliases": []
+        },
+        {
+          "id": "docker_compose",
+          "type": "Tool",
+          "name": "docker-compose",
+          "aliases": []
+        },
+        {
+          "id": "google",
+          "type": "Tool",
+          "name": "google",
+          "aliases": []
+        },
+        {
+          "id": "duckduckgo_search",
+          "type": "Tool",
+          "name": "duckduckgo-search",
+          "aliases": []
+        }
+      ],
+      "claims": []
+    }
+  },
+  {
+    "artifact_id": "comment_1545803954",
+    "extracted": {
+      "entities": [
+        {
+          "id": "bash_shell",
+          "type": "Tool",
+          "name": "bash shell",
+          "aliases": []
+        },
+        {
+          "id": "docker",
+          "type": "Tool",
+          "name": "docker",
+          "aliases": []
+        },
+        {
+          "id": "expert",
+          "type": "Person",
+          "name": "expert",
+          "aliases": []
+        }
+      ],
+      "claims": []
+    }
+  },
+  {
+    "artifact_id": "comment_1546518735",
+    "extracted": {
+      "entities": [
+        {
+          "id": "release",
+          "type": "Component",
+          "name": "release",
+          "aliases": []
+        },
+        {
+          "id": "this",
+          "type": "Component",
+          "name": "this",
+          "aliases": []
+        }
+      ],
+      "claims": []
+    }
+  },
+  {
+    "artifact_id": "comment_1546725140",
+    "extracted": {
+      "entities": [
+        {
+          "id": "significant_gravitas_auto_gpt",
+          "type": "Repository",
+          "name": "significant-gravitas/auto-gpt",
+          "aliases": []
+        }
+      ],
+      "claims": [
+        {
+          "id": "08cf868f-3201-4e62-9330-ecfc797906b4",
+          "subject_entity_id": "significant_gravitas_auto_gpt",
+          "predicate": "fixes_issue",
+          "object_entity_id": null,
+          "valid_from": "2023-05-13T18:23:45Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "f765173b-55a5-4573-a830-df787260fcc4",
+              "artifact_id": "comment_1546725140",
+              "excerpt": "Fixed with https://github.com/Significant-Gravitas/Auto-GPT/pull/4142",
+              "char_start": 0,
+              "char_end": 69
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "artifact_id": "comment_1560963298",
+    "extracted": {
+      "entities": [
+        {
+          "id": "pip",
+          "type": "Tool",
+          "name": "pip",
+          "aliases": []
+        },
+        {
+          "id": "urllib3",
+          "type": "Component",
+          "name": "urllib3",
+          "aliases": []
+        },
+        {
+          "id": "urllib3__1_25",
+          "type": "Component",
+          "name": "urllib3==1.25",
+          "aliases": []
+        },
+        {
+          "id": "command",
+          "type": "File",
+          "name": "command",
+          "aliases": []
+        }
+      ],
+      "claims": []
+    }
+  },
+  {
+    "artifact_id": "comment_1562964258",
+    "extracted": {
+      "entities": [
+        {
+          "id": "python310",
+          "type": "Component",
+          "name": "python310",
+          "aliases": []
+        },
+        {
+          "id": "caio_",
+          "type": "Person",
+          "name": "caio_",
+          "aliases": []
+        },
+        {
+          "id": "duckduckgo_search",
+          "type": "Tool",
+          "name": "duckduckgo_search",
+          "aliases": []
+        },
+        {
+          "id": "compat_py",
+          "type": "File",
+          "name": "compat.py",
+          "aliases": []
+        },
+        {
+          "id": "ddgs",
+          "type": "Tool",
+          "name": "ddgs",
+          "aliases": []
+        }
+      ],
+      "claims": []
+    }
+  },
+  {
+    "artifact_id": "comment_1566430414",
+    "extracted": {
+      "entities": [
+        {
+          "id": "it",
+          "type": "File",
+          "name": "it",
+          "aliases": []
+        },
+        {
+          "id": "thanks",
+          "type": "Tool",
+          "name": "thanks",
+          "aliases": []
+        }
+      ],
+      "claims": []
+    }
+  },
+  {
+    "artifact_id": "issue_4121",
+    "extracted": {
+      "entities": [
+        {
+          "id": "kubernetes",
+          "type": "Component",
+          "name": "kubernetes",
+          "aliases": []
+        },
+        {
+          "id": "pull_request",
+          "type": "Tool",
+          "name": "pull request",
+          "aliases": []
+        },
+        {
+          "id": "pr_quality_checklist",
+          "type": "Tool",
+          "name": "pr quality checklist",
+          "aliases": []
+        }
+      ],
+      "claims": []
+    }
+  },
+  {
+    "artifact_id": "comment_1546712423",
+    "extracted": {
+      "entities": [
+        {
+          "id": "rihp",
+          "type": "Person",
+          "name": "rihp",
+          "aliases": []
+        }
+      ],
+      "claims": []
+    }
+  },
+  {
+    "artifact_id": "issue_4123",
+    "extracted": {
+      "entities": [
+        {
+          "id": "psutil",
+          "type": "Tool",
+          "name": "psutil",
+          "aliases": []
+        },
+        {
+          "id": "github",
+          "type": "Repository",
+          "name": "github",
+          "aliases": []
+        },
+        {
+          "id": "significant_gravitas_auto_gpt",
+          "type": "Repository",
+          "name": "significant-gravitas/auto-gpt",
+          "aliases": []
+        },
+        {
+          "id": "auto_gpt",
+          "type": "Component",
+          "name": "auto-gpt",
+          "aliases": []
+        },
+        {
+          "id": "cpu_ram_and_disk_utilization",
+          "type": "Component",
+          "name": "cpu/ram and disk utilization",
+          "aliases": []
+        },
+        {
+          "id": "reward_fitness_function",
+          "type": "Component",
+          "name": "reward/fitness function",
+          "aliases": []
+        },
+        {
+          "id": "rfes",
+          "type": "Issue",
+          "name": "rfes",
+          "aliases": []
+        },
+        {
+          "id": "_15",
+          "type": "Issue",
+          "name": "#15",
+          "aliases": []
+        },
+        {
+          "id": "_2446",
+          "type": "Issue",
+          "name": "#2446",
+          "aliases": []
+        },
+        {
+          "id": "_4042",
+          "type": "Issue",
+          "name": "#4042",
+          "aliases": []
+        },
+        {
+          "id": "https___github_com_significant_gravitas_auto_gpt_discussions_3392_discussioncomment_5773718",
+          "type": "File",
+          "name": "https://github.com/significant-gravitas/auto-gpt/discussions/3392#discussioncomment-5773718",
+          "aliases": []
+        },
+        {
+          "id": "https___github_com_significant_gravitas_auto_gpt_issues_3466_issuecomment_1539866505",
+          "type": "File",
+          "name": "https://github.com/significant-gravitas/auto-gpt/issues/3466#issuecomment-1539866505",
+          "aliases": []
+        },
+        {
+          "id": "https___github_com_significant_gravitas_auto_gpt_issues_1327_issuecomment_1529012402",
+          "type": "File",
+          "name": "https://github.com/significant-gravitas/auto-gpt/issues/1327#issuecomment-1529012402",
+          "aliases": []
+        },
+        {
+          "id": "nano",
+          "type": "Tool",
+          "name": "nano",
+          "aliases": []
+        },
+        {
+          "id": "vim",
+          "type": "Tool",
+          "name": "vim",
+          "aliases": []
+        },
+        {
+          "id": "joe",
+          "type": "Tool",
+          "name": "joe",
+          "aliases": []
+        },
+        {
+          "id": "pr_quality_checklist",
+          "type": "Tool",
+          "name": "pr quality checklist",
+          "aliases": []
+        }
+      ],
+      "claims": [
+        {
+          "id": "e611d10d-a2e2-4ea5-b608-44827d6f6a8f",
+          "subject_entity_id": "github",
+          "predicate": "proposes_feature",
+          "object_entity_id": null,
+          "valid_from": "2023-05-11T19:17:48Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "12b1bac3-aa9e-466d-b5f0-17511a0e88b7",
+              "artifact_id": "issue_4123",
+              "excerpt": "various RFEs on github",
+              "char_start": 44,
+              "char_end": 66
+            }
+          ]
+        },
+        {
+          "id": "2645a0bd-db83-4198-a632-17abf8289ac1",
+          "subject_entity_id": "significant_gravitas_auto_gpt",
+          "predicate": "proposes_feature",
+          "object_entity_id": null,
+          "valid_from": "2023-05-11T19:17:48Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "ea6e28aa-725f-400c-82ac-7c09f9a600aa",
+              "artifact_id": "issue_4123",
+              "excerpt": "various RFEs on github",
+              "char_start": 44,
+              "char_end": 66
+            }
+          ]
+        },
+        {
+          "id": "24368937-3f24-4a89-8fe1-53e28768c9b4",
+          "subject_entity_id": "auto_gpt",
+          "predicate": "proposes_feature",
+          "object_entity_id": null,
+          "valid_from": "2023-05-11T19:17:48Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "9735e0df-5dad-4609-9973-13dfe69ef376",
+              "artifact_id": "issue_4123",
+              "excerpt": "various RFEs on github",
+              "char_start": 44,
+              "char_end": 66
+            }
+          ]
+        },
+        {
+          "id": "f143219f-7636-4135-9bcb-abf4c591c7f8",
+          "subject_entity_id": "cpu_ram_and_disk_utilization",
+          "predicate": "proposes_feature",
+          "object_entity_id": null,
+          "valid_from": "2023-05-11T19:17:48Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "f4e5f38d-7258-4ba6-8c52-31d4451a981e",
+              "artifact_id": "issue_4123",
+              "excerpt": "as parts of a reward/fitness function to self-improve",
+              "char_start": 161,
+              "char_end": 214
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "artifact_id": "comment_1711634247",
+    "extracted": {
+      "entities": [
+        {
+          "id": "auto_gpt",
+          "type": "Tool",
+          "name": "auto-gpt",
+          "aliases": []
+        },
+        {
+          "id": "llm",
+          "type": "Tool",
+          "name": "llm",
+          "aliases": []
+        }
+      ],
+      "claims": []
+    }
+  },
+  {
+    "artifact_id": "issue_4124",
+    "extracted": {
+      "entities": [
+        {
+          "id": "auto_gpt",
+          "type": "Tool",
+          "name": "auto-gpt",
+          "aliases": []
+        },
+        {
+          "id": "gpt_3_5",
+          "type": "Tool",
+          "name": "gpt-3.5",
+          "aliases": []
+        },
+        {
+          "id": "chrome",
+          "type": "Tool",
+          "name": "chrome",
+          "aliases": []
+        }
+      ],
+      "claims": []
+    }
+  },
+  {
+    "artifact_id": "comment_1544562338",
+    "extracted": {
+      "entities": [
+        {
+          "id": "command_argument_validation",
+          "type": "Issue",
+          "name": "command/argument validation",
+          "aliases": []
+        },
+        {
+          "id": "pr",
+          "type": "Tool",
+          "name": "pr",
+          "aliases": []
+        }
+      ],
+      "claims": [
+        {
+          "id": "bfe5c753-b7a5-4b72-88ac-eb8f2d2f0a33",
+          "subject_entity_id": "command_argument_validation",
+          "predicate": "reports_issue",
+          "object_entity_id": "pr",
+          "valid_from": "2023-05-11T19:29:39Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "75edf591-e6d0-4466-8085-15d762a38825",
+              "artifact_id": "comment_1544562338",
+              "excerpt": "There's work in progress",
+              "char_start": 0,
+              "char_end": 24
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "artifact_id": "comment_1544606914",
+    "extracted": {
+      "entities": [
+        {
+          "id": "github",
+          "type": "Tool",
+          "name": "github",
+          "aliases": []
+        },
+        {
+          "id": "pr",
+          "type": "Issue",
+          "name": "pr",
+          "aliases": []
+        },
+        {
+          "id": "command_argument_validation",
+          "type": "Component",
+          "name": "command/argument validation",
+          "aliases": []
+        },
+        {
+          "id": "people",
+          "type": "Person",
+          "name": "people",
+          "aliases": []
+        }
+      ],
+      "claims": [
+        {
+          "id": "1b40d0f8-a25a-4932-b8e1-e38d7f9e3491",
+          "subject_entity_id": "people",
+          "predicate": "assigned_to",
+          "object_entity_id": "github",
+          "valid_from": "2023-05-11T20:07:04Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "5af55495-8e90-4e35-a20e-c94c0f949548",
+              "artifact_id": "comment_1544606914",
+              "excerpt": "may not understand your special abbreviations and terminology",
+              "char_start": 162,
+              "char_end": 223
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "artifact_id": "comment_1544714116",
+    "extracted": {
+      "entities": [
+        {
+          "id": "autogpt",
+          "type": "Tool",
+          "name": "autogpt",
+          "aliases": []
+        },
+        {
+          "id": "_env_template",
+          "type": "File",
+          "name": ".env.template",
+          "aliases": []
+        },
+        {
+          "id": "_env",
+          "type": "File",
+          "name": ".env",
+          "aliases": []
+        },
+        {
+          "id": "pinecone",
+          "type": "Tool",
+          "name": "pinecone",
+          "aliases": []
+        },
+        {
+          "id": "chrome",
+          "type": "Tool",
+          "name": "chrome",
+          "aliases": []
+        },
+        {
+          "id": "firefox",
+          "type": "Tool",
+          "name": "firefox",
+          "aliases": []
+        }
+      ],
+      "claims": []
+    }
+  },
+  {
+    "artifact_id": "comment_1545283912",
+    "extracted": {
+      "entities": [
+        {
+          "id": "pinecone",
+          "type": "Tool",
+          "name": "pinecone",
+          "aliases": []
+        },
+        {
+          "id": "api_key",
+          "type": "Issue",
+          "name": "api key",
+          "aliases": []
+        },
+        {
+          "id": "environment",
+          "type": "Issue",
+          "name": "environment",
+          "aliases": []
+        },
+        {
+          "id": "index",
+          "type": "Component",
+          "name": "index",
+          "aliases": []
+        },
+        {
+          "id": "ai",
+          "type": "Component",
+          "name": "ai",
+          "aliases": []
+        },
+        {
+          "id": "goals",
+          "type": "Component",
+          "name": "goals",
+          "aliases": []
+        }
+      ],
+      "claims": []
+    }
+  },
+  {
+    "artifact_id": "comment_1545978857",
+    "extracted": {
+      "entities": [
+        {
+          "id": "auto_gpt_workspace",
+          "type": "File",
+          "name": "auto_gpt_workspace",
+          "aliases": []
+        }
+      ],
+      "claims": [
+        {
+          "id": "1c0b2eb8-b102-40b0-bc88-19a275f30300",
+          "subject_entity_id": "auto_gpt_workspace",
+          "predicate": "removes_configuration",
+          "object_entity_id": null,
+          "valid_from": "2023-05-12T16:12:51Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "c2cf0458-f6b1-4bdd-97c0-37f78170d270",
+              "artifact_id": "comment_1545978857",
+              "excerpt": "i deleted the auto_gpt_workspace folder",
+              "char_start": 22,
+              "char_end": 61
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "artifact_id": "comment_1546444151",
+    "extracted": {
+      "entities": [
+        {
+          "id": "yashvardhn",
+          "type": "Person",
+          "name": "yashvardhn",
+          "aliases": []
+        },
+        {
+          "id": "comment",
+          "type": "File",
+          "name": "comment",
+          "aliases": []
+        },
+        {
+          "id": "op",
+          "type": "Person",
+          "name": "op",
+          "aliases": []
+        },
+        {
+          "id": "auto_gpt_workspace",
+          "type": "File",
+          "name": "auto_gpt_workspace",
+          "aliases": []
+        },
+        {
+          "id": "command_not_found_error",
+          "type": "Issue",
+          "name": "command not found error",
+          "aliases": []
+        }
+      ],
+      "claims": []
+    }
+  },
+  {
+    "artifact_id": "comment_1546518380",
+    "extracted": {
+      "entities": [
+        {
+          "id": "dudemyguy",
+          "type": "Person",
+          "name": "dudemyguy",
+          "aliases": []
+        },
+        {
+          "id": "autogpt",
+          "type": "Tool",
+          "name": "autogpt",
+          "aliases": []
+        },
+        {
+          "id": "openai",
+          "type": "Tool",
+          "name": "openai",
+          "aliases": []
+        },
+        {
+          "id": "workspace_folder",
+          "type": "File",
+          "name": "workspace folder",
+          "aliases": []
+        }
+      ],
+      "claims": [
+        {
+          "id": "4e264696-0e8b-47f0-a522-83c77a13409c",
+          "subject_entity_id": "dudemyguy",
+          "predicate": "assigned_to",
+          "object_entity_id": "autogpt",
+          "valid_from": "2023-05-13T04:03:27Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "9d6bf7d7-e743-4502-9736-8abf33d44c55",
+              "artifact_id": "comment_1546518380",
+              "excerpt": "yes, i got the command not found error when i launched autogpt second time",
+              "char_start": 11,
+              "char_end": 85
+            }
+          ]
+        },
+        {
+          "id": "f4520b30-48ef-41fd-922b-d8eba575da6c",
+          "subject_entity_id": "dudemyguy",
+          "predicate": "authored",
+          "object_entity_id": null,
+          "valid_from": "2023-05-13T04:03:27Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "1f990be7-481f-41a0-86a2-97dec629d004",
+              "artifact_id": "comment_1546518380",
+              "excerpt": "i created another api link for openAi",
+              "char_start": 87,
+              "char_end": 124
+            }
+          ]
+        },
+        {
+          "id": "8982708e-ce5c-4e7f-81bf-73320407d892",
+          "subject_entity_id": "dudemyguy",
+          "predicate": "authored",
+          "object_entity_id": null,
+          "valid_from": "2023-05-13T04:03:27Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "cd36b59d-1325-4cfe-bddf-99de225c6e71",
+              "artifact_id": "comment_1546518380",
+              "excerpt": "then restarted the autogpt",
+              "char_start": 159,
+              "char_end": 185
+            }
+          ]
+        },
+        {
+          "id": "dcda2fc0-7367-4efc-abdd-53c32198437a",
+          "subject_entity_id": "dudemyguy",
+          "predicate": "authored",
+          "object_entity_id": null,
+          "valid_from": "2023-05-13T04:03:27Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "0d41da28-cc1d-456f-8700-dec245e5c6ea",
+              "artifact_id": "comment_1546518380",
+              "excerpt": "i could be wrong but it worked for me",
+              "char_start": 266,
+              "char_end": 303
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "artifact_id": "comment_1546763915",
+    "extracted": {
+      "entities": [
+        {
+          "id": "auto_gpt_workspace",
+          "type": "Component",
+          "name": "auto_gpt_workspace",
+          "aliases": []
+        },
+        {
+          "id": "user",
+          "type": "Person",
+          "name": "user",
+          "aliases": []
+        },
+        {
+          "id": "system",
+          "type": "Tool",
+          "name": "system",
+          "aliases": []
+        },
+        {
+          "id": "commands",
+          "type": "File",
+          "name": "commands",
+          "aliases": []
+        }
+      ],
+      "claims": [
+        {
+          "id": "bfd78a5f-670f-46f5-98dc-c78cc6b5697a",
+          "subject_entity_id": "user",
+          "predicate": "assigned_to",
+          "object_entity_id": "auto_gpt_workspace",
+          "valid_from": "2023-05-13T22:50:56Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "ff5b83cd-6413-4a76-9ef8-ca026d94da94",
+              "artifact_id": "comment_1546763915",
+              "excerpt": "deleted the auto_gpt_workspace",
+              "char_start": 33,
+              "char_end": 63
+            }
+          ]
+        },
+        {
+          "id": "e813fa55-1eec-4387-a548-02633937e355",
+          "subject_entity_id": "system",
+          "predicate": "authored",
+          "object_entity_id": null,
+          "valid_from": "2023-05-13T22:50:56Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "ad19c65e-5f0b-48bd-9501-86a8c11b9801",
+              "artifact_id": "comment_1546763915",
+              "excerpt": "Asking user via keyboard...",
+              "char_start": 289,
+              "char_end": 316
+            }
+          ]
+        },
+        {
+          "id": "335a5a16-9976-47a6-86a6-e26224968925",
+          "subject_entity_id": "user",
+          "predicate": "suggests_change",
+          "object_entity_id": null,
+          "valid_from": "2023-05-13T22:50:56Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "9ee2d6dd-8d74-46c7-bb3a-2f9415cf09b7",
+              "artifact_id": "comment_1546763915",
+              "excerpt": "'y' to authorise command, 'y -N' to run N continuous commands, 's' to run self-feedback commands'n' to exit program",
+              "char_start": 143,
+              "char_end": 258
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "artifact_id": "comment_1547802896",
+    "extracted": {
+      "entities": [],
+      "claims": []
+    }
+  },
+  {
+    "artifact_id": "comment_1553216871",
+    "extracted": {
+      "entities": [
+        {
+          "id": "openai",
+          "type": "Tool",
+          "name": "openai",
+          "aliases": []
+        }
+      ],
+      "claims": [
+        {
+          "id": "9a74d732-0d96-421b-87db-5da2900bdad2",
+          "subject_entity_id": "openai",
+          "predicate": "authored",
+          "object_entity_id": null,
+          "valid_from": "2023-05-18T15:15:28Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "f8d03326-460c-4d6b-a3de-4e8d21a05cbd",
+              "artifact_id": "comment_1553216871",
+              "excerpt": "Add quotes to openai key as in \".....\"",
+              "char_start": 0,
+              "char_end": 38
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "artifact_id": "comment_1561606867",
+    "extracted": {
+      "entities": [
+        {
+          "id": "openai_key",
+          "type": "Tool",
+          "name": "openai key",
+          "aliases": []
+        }
+      ],
+      "claims": [
+        {
+          "id": "6119054f-4eb6-48c8-a353-902c55084023",
+          "subject_entity_id": "openai_key",
+          "predicate": "authored",
+          "object_entity_id": null,
+          "valid_from": "2023-05-24T17:00:26Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "a5f62b48-4cb6-49a6-a143-3bc2d0afaa04",
+              "artifact_id": "comment_1561606867",
+              "excerpt": "man, this just worked perfectly",
+              "char_start": 44,
+              "char_end": 75
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "artifact_id": "comment_1572340748",
+    "extracted": {
+      "entities": [
+        {
+          "id": "env_file",
+          "type": "File",
+          "name": "env file",
+          "aliases": []
+        }
+      ],
+      "claims": []
+    }
+  },
+  {
+    "artifact_id": "issue_4125",
+    "extracted": {
+      "entities": [
+        {
+          "id": "docker_compose",
+          "type": "Tool",
+          "name": "docker-compose",
+          "aliases": []
+        },
+        {
+          "id": "docker_compose_yml",
+          "type": "File",
+          "name": "docker-compose.yml",
+          "aliases": []
+        },
+        {
+          "id": "docker",
+          "type": "Tool",
+          "name": "docker",
+          "aliases": []
+        },
+        {
+          "id": "significant_gravitas_auto_gpt",
+          "type": "Repository",
+          "name": "significant-gravitas/auto-gpt",
+          "aliases": []
+        },
+        {
+          "id": "docker_compose_yml_documentation",
+          "type": "File",
+          "name": "docker-compose.yml documentation",
+          "aliases": []
+        }
+      ],
+      "claims": [
+        {
+          "id": "15145500-ef70-41c6-be27-dd7b51769646",
+          "subject_entity_id": "docker_compose",
+          "predicate": "fixes_issue",
+          "object_entity_id": null,
+          "valid_from": "2023-05-11T20:23:32Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "7904e1e8-83fe-410a-9c15-b389221ccc4e",
+              "artifact_id": "issue_4125",
+              "excerpt": "break config by creating folders",
+              "char_start": 33,
+              "char_end": 65
+            }
+          ]
+        },
+        {
+          "id": "c7028283-6a36-4e11-b117-32250ea3cf43",
+          "subject_entity_id": "docker_compose_yml_documentation",
+          "predicate": "updates_component",
+          "object_entity_id": null,
+          "valid_from": "2023-05-11T20:23:32Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "47a96f80-f3dc-4dab-9a16-dc216afccd6e",
+              "artifact_id": "issue_4125",
+              "excerpt": "use bind type",
+              "char_start": 404,
+              "char_end": 417
+            }
+          ]
+        },
+        {
+          "id": "f8609027-de35-46f4-950d-dfdafb58c835",
+          "subject_entity_id": "docker_compose_yml_documentation",
+          "predicate": "fixes_issue",
+          "object_entity_id": null,
+          "valid_from": "2023-05-11T20:23:32Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "596c8341-4fe5-4b61-9c26-97510c8f8dad",
+              "artifact_id": "issue_4125",
+              "excerpt": "require users to have the files already created",
+              "char_start": 430,
+              "char_end": 477
+            }
+          ]
+        },
+        {
+          "id": "7393152d-903e-4d52-b6b3-e18bcc7b3636",
+          "subject_entity_id": "docker_compose_yml",
+          "predicate": "authored",
+          "object_entity_id": null,
+          "valid_from": "2023-05-11T20:23:32Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "3af75314-ccdc-48cc-bfa1-b5f8113e6e0b",
+              "artifact_id": "issue_4125",
+              "excerpt": "Added default values to be empty dictionary",
+              "char_start": 593,
+              "char_end": 636
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "artifact_id": "comment_1544782124",
+    "extracted": {
+      "entities": [
+        {
+          "id": "user",
+          "type": "Person",
+          "name": "user",
+          "aliases": []
+        }
+      ],
+      "claims": [
+        {
+          "id": "a205aac5-5fcd-453e-be80-e6f53e2a0047",
+          "subject_entity_id": "user",
+          "predicate": "suggests_change",
+          "object_entity_id": null,
+          "valid_from": "2023-05-11T22:38:27Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "0c12d6d4-946f-4eff-9f35-5fad2aee98bc",
+              "artifact_id": "comment_1544782124",
+              "excerpt": "what if we specifically check for those files on start and tell the user specifically that those are missing?",
+              "char_start": 24,
+              "char_end": 133
+            }
+          ]
+        },
+        {
+          "id": "e647e196-0f16-4362-b5f7-3fc2f7a4fa50",
+          "subject_entity_id": "user",
+          "predicate": "suggests_change",
+          "object_entity_id": null,
+          "valid_from": "2023-05-11T22:38:27Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "0de02cdb-6791-42fd-a4f4-cdf575ef2716",
+              "artifact_id": "comment_1544782124",
+              "excerpt": "Most users don't read the stacktrace, like ever^^",
+              "char_start": 135,
+              "char_end": 184
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "artifact_id": "comment_1545654370",
+    "extracted": {
+      "entities": [
+        {
+          "id": "user",
+          "type": "Person",
+          "name": "user",
+          "aliases": []
+        },
+        {
+          "id": "files",
+          "type": "File",
+          "name": "files",
+          "aliases": []
+        },
+        {
+          "id": "ai_config",
+          "type": "File",
+          "name": "ai config",
+          "aliases": []
+        },
+        {
+          "id": "azure",
+          "type": "Tool",
+          "name": "azure",
+          "aliases": []
+        },
+        {
+          "id": "pr",
+          "type": "Tool",
+          "name": "pr",
+          "aliases": []
+        }
+      ],
+      "claims": [
+        {
+          "id": "91416e2a-392d-4c64-8816-0b543145009c",
+          "subject_entity_id": "user",
+          "predicate": "suggests_change",
+          "object_entity_id": null,
+          "valid_from": "2023-05-12T12:18:03Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "90218138-89b5-41bb-a1e3-6a7843cebb83",
+              "artifact_id": "comment_1545654370",
+              "excerpt": "what if we specifically check for those files on start and tell the user specifically that those are missing?",
+              "char_start": 26,
+              "char_end": 135
+            }
+          ]
+        },
+        {
+          "id": "24de5746-33b0-4576-ae9a-2cfb40c991e9",
+          "subject_entity_id": "user",
+          "predicate": "suggests_change",
+          "object_entity_id": null,
+          "valid_from": "2023-05-12T12:18:03Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "da7f916f-0ab4-4ce1-98b1-3f40fec0e07d",
+              "artifact_id": "comment_1545654370",
+              "excerpt": "Most users don't read the stacktrace, like ever^^",
+              "char_start": 136,
+              "char_end": 185
+            }
+          ]
+        },
+        {
+          "id": "97155ef6-c805-4758-acaa-aef312afa337",
+          "subject_entity_id": "user",
+          "predicate": "suggests_change",
+          "object_entity_id": null,
+          "valid_from": "2023-05-12T12:18:03Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "d294e148-9d17-4583-8337-1d25e6e22475",
+              "artifact_id": "comment_1545654370",
+              "excerpt": "The AI config is ok to be missing in the general case, it will be created.",
+              "char_start": 189,
+              "char_end": 263
+            }
+          ]
+        },
+        {
+          "id": "f7513773-ae25-4d71-9f74-eadfad8df1a5",
+          "subject_entity_id": "user",
+          "predicate": "suggests_change",
+          "object_entity_id": null,
+          "valid_from": "2023-05-12T12:18:03Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "b23cf517-200a-437e-ba17-521f84a43a5b",
+              "artifact_id": "comment_1545654370",
+              "excerpt": "For azure - that must be there if you want to use azure.",
+              "char_start": 264,
+              "char_end": 320
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "artifact_id": "comment_1554598377",
+    "extracted": {
+      "entities": [
+        {
+          "id": "wladastic",
+          "type": "Person",
+          "name": "wladastic",
+          "aliases": []
+        }
+      ],
+      "claims": [
+        {
+          "id": "d0345cd7-f07b-4e2b-8117-32b18686dfc5",
+          "subject_entity_id": "wladastic",
+          "predicate": "proposes_feature",
+          "object_entity_id": null,
+          "valid_from": "2023-05-19T13:45:16Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "c63e1d49-a7a0-4d17-ba74-e9ccea5d31b6",
+              "artifact_id": "comment_1554598377",
+              "excerpt": "happy to approve and get this in v0.3.2? I'll float it by azure testers",
+              "char_start": 11,
+              "char_end": 82
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "artifact_id": "comment_1556276183",
+    "extracted": {
+      "entities": [
+        {
+          "id": "azure",
+          "type": "Tool",
+          "name": "azure",
+          "aliases": []
+        }
+      ],
+      "claims": [
+        {
+          "id": "edf3f1c1-98d4-43d9-bf62-ce07d9f7daad",
+          "subject_entity_id": "azure",
+          "predicate": "authored",
+          "object_entity_id": null,
+          "valid_from": "2023-05-21T19:56:11Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "076392d5-8326-4c7f-8b8b-ace91b691af5",
+              "artifact_id": "comment_1556276183",
+              "excerpt": "I got azure access",
+              "char_start": 0,
+              "char_end": 18
+            }
+          ]
+        },
+        {
+          "id": "f91fef19-8fc9-4da2-9d63-953005bdfa3a",
+          "subject_entity_id": "azure",
+          "predicate": "depends_on",
+          "object_entity_id": null,
+          "valid_from": "2023-05-21T19:56:11Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "96c2cc2a-fecd-484b-9205-4feeded6f55c",
+              "artifact_id": "comment_1556276183",
+              "excerpt": "Azure works fine right now as far as I can tell",
+              "char_start": 111,
+              "char_end": 158
+            }
+          ]
+        },
+        {
+          "id": "c92ec2a4-7e2a-4e5f-910c-9847cdd64a83",
+          "subject_entity_id": "azure",
+          "predicate": "updates_component",
+          "object_entity_id": null,
+          "valid_from": "2023-05-21T19:56:11Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "85e16362-6115-4145-9440-8b7ffdca2feb",
+              "artifact_id": "comment_1556276183",
+              "excerpt": "Azure works fine right now as far as I can tell",
+              "char_start": 111,
+              "char_end": 158
+            }
+          ]
+        },
+        {
+          "id": "47ec7f8e-fbd0-4d24-95d9-b31b75603599",
+          "subject_entity_id": "azure",
+          "predicate": "assigned_to",
+          "object_entity_id": null,
+          "valid_from": "2023-05-21T19:56:11Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "40e4f7e0-cf75-4315-abf3-8c36d30f39eb",
+              "artifact_id": "comment_1556276183",
+              "excerpt": "Let me know if you need keys or me to test",
+              "char_start": 67,
+              "char_end": 109
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "artifact_id": "comment_1556280478",
+    "extracted": {
+      "entities": [
+        {
+          "id": "azure",
+          "type": "Tool",
+          "name": "azure",
+          "aliases": []
+        },
+        {
+          "id": "me",
+          "type": "Person",
+          "name": "me",
+          "aliases": []
+        }
+      ],
+      "claims": [
+        {
+          "id": "a5159ce6-498e-4417-a15e-fa4483cf7727",
+          "subject_entity_id": "me",
+          "predicate": "suggests_change",
+          "object_entity_id": null,
+          "valid_from": "2023-05-21T20:12:26Z",
+          "valid_to": null,
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "id": "9af08478-6af7-4ee2-b39f-7466cecd4ef1",
+              "artifact_id": "comment_1556280478",
+              "excerpt": "nothing here to test",
+              "char_start": 135,
+              "char_end": 155
+            }
+          ]
+        }
+      ]
     }
   }
 ]

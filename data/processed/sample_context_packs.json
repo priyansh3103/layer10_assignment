@@ -2,331 +2,389 @@
   "Who suggested configuration changes?": {
     "entities": [
       {
-        "id": "baseinfinity",
+        "id": "significant_gravitas",
         "type": "Person",
-        "name": "@BaseInfinity",
-        "aliases": [
-          "@BaseInfinity"
-        ]
+        "name": "significant-gravitas",
+        "aliases": []
       },
+      {
+        "id": "k_boikov",
+        "type": "Person",
+        "name": "k-boikov",
+        "aliases": []
+      },
+      {
+        "id": "autogpt",
+        "type": "Component",
+        "name": "autogpt",
+        "aliases": []
+      },
+      {
+        "id": "continuous_mode",
+        "type": "Component",
+        "name": "continuous mode",
+        "aliases": []
+      },
+      {
+        "id": "user",
+        "type": "Person",
+        "name": "user",
+        "aliases": []
+      },
+      {
+        "id": "auto_gpt_workspace",
+        "type": "File",
+        "name": "auto_gpt_workspace",
+        "aliases": []
+      },
+      {
+        "id": "system",
+        "type": "Tool",
+        "name": "system",
+        "aliases": []
+      },
+      {
+        "id": "docker_compose_yml_documentation",
+        "type": "File",
+        "name": "docker-compose.yml documentation",
+        "aliases": []
+      }
+    ],
+    "claims": [
+      {
+        "id": "335a5a16-9976-47a6-86a6-e26224968925",
+        "subject_entity_id": "user",
+        "predicate": "suggests_change",
+        "object_entity_id": null,
+        "valid_from": "2023-05-13T22:50:56Z",
+        "valid_to": null,
+        "confidence": 1.0,
+        "evidence": [
+          {
+            "artifact": "comment_1546763915",
+            "quote": "'y' to authorise command, 'y -N' to run N continuous commands, 's' to run self-feedback commands'n' to exit program"
+          },
+          {
+            "artifact": "comment_1544782124",
+            "quote": "what if we specifically check for those files on start and tell the user specifically that those are missing?"
+          },
+          {
+            "artifact": "comment_1544782124",
+            "quote": "Most users don't read the stacktrace, like ever^^"
+          },
+          {
+            "artifact": "comment_1545654370",
+            "quote": "what if we specifically check for those files on start and tell the user specifically that those are missing?"
+          },
+          {
+            "artifact": "comment_1545654370",
+            "quote": "Most users don't read the stacktrace, like ever^^"
+          },
+          {
+            "artifact": "comment_1545654370",
+            "quote": "The AI config is ok to be missing in the general case, it will be created."
+          },
+          {
+            "artifact": "comment_1545654370",
+            "quote": "For azure - that must be there if you want to use azure."
+          }
+        ],
+        "statement": "user suggests_change"
+      },
+      {
+        "id": "8dcbe86e-8820-49b0-9ab4-ddb44a9ea1b2",
+        "subject_entity_id": "user",
+        "predicate": "assigned_to",
+        "object_entity_id": "autogpt",
+        "valid_from": "2023-05-11T18:29:38Z",
+        "valid_to": "2023-05-13T22:50:56Z",
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "artifact": "issue_4119",
+            "quote": "When started in continuous mode, AutoGPT will still prompt the user about unconfigured plugins, which breaks the continuous flow."
+          }
+        ],
+        "statement": "user assigned_to autogpt"
+      },
+      {
+        "id": "bfd78a5f-670f-46f5-98dc-c78cc6b5697a",
+        "subject_entity_id": "user",
+        "predicate": "assigned_to",
+        "object_entity_id": "auto_gpt_workspace",
+        "valid_from": "2023-05-13T22:50:56Z",
+        "valid_to": null,
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "artifact": "comment_1546763915",
+            "quote": "deleted the auto_gpt_workspace"
+          }
+        ],
+        "statement": "user assigned_to auto_gpt_workspace"
+      },
+      {
+        "id": "d6c9a72d-ea1e-4ddd-801a-32de8fef38a2",
+        "subject_entity_id": "autogpt",
+        "predicate": "fixes_issue",
+        "object_entity_id": null,
+        "valid_from": "2023-05-11T18:29:38Z",
+        "valid_to": null,
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "artifact": "issue_4119",
+            "quote": "Added a check to the code that prompts the user about unconfigured plugins."
+          }
+        ],
+        "statement": "autogpt fixes_issue"
+      },
+      {
+        "id": "727c8c9d-b57c-4094-a41a-4673b80078fa",
+        "subject_entity_id": "continuous_mode",
+        "predicate": "authored",
+        "object_entity_id": "autogpt",
+        "valid_from": "2023-05-11T18:29:38Z",
+        "valid_to": null,
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "artifact": "issue_4119",
+            "quote": "When started in continuous mode, AutoGPT will still prompt the user about unconfigured plugins, which breaks the continuous flow."
+          }
+        ],
+        "statement": "continuous mode authored autogpt"
+      },
+      {
+        "id": "7fa01765-0271-418b-8339-65c729bb2217",
+        "subject_entity_id": "continuous_mode",
+        "predicate": "assigned_to",
+        "object_entity_id": "autogpt",
+        "valid_from": "2023-05-11T18:29:38Z",
+        "valid_to": null,
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "artifact": "issue_4119",
+            "quote": "Added a check to the code that prompts the user about unconfigured plugins."
+          }
+        ],
+        "statement": "continuous mode assigned_to autogpt"
+      },
+      {
+        "id": "e813fa55-1eec-4387-a548-02633937e355",
+        "subject_entity_id": "system",
+        "predicate": "authored",
+        "object_entity_id": null,
+        "valid_from": "2023-05-13T22:50:56Z",
+        "valid_to": null,
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "artifact": "comment_1546763915",
+            "quote": "Asking user via keyboard..."
+          }
+        ],
+        "statement": "system authored"
+      },
+      {
+        "id": "f8609027-de35-46f4-950d-dfdafb58c835",
+        "subject_entity_id": "docker_compose_yml_documentation",
+        "predicate": "fixes_issue",
+        "object_entity_id": null,
+        "valid_from": "2023-05-11T20:23:32Z",
+        "valid_to": null,
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "artifact": "issue_4125",
+            "quote": "require users to have the files already created"
+          }
+        ],
+        "statement": "docker-compose.yml documentation fixes_issue"
+      },
+      {
+        "id": "afe84da1-8a57-44e0-b549-6a9e451d01fe",
+        "subject_entity_id": "k_boikov",
+        "predicate": "authored",
+        "object_entity_id": null,
+        "valid_from": "2023-05-29T18:15:48Z",
+        "valid_to": null,
+        "confidence": 1.0,
+        "evidence": [
+          {
+            "artifact": "comment_1567403619",
+            "quote": "What if people want to intentionally limit the tokens they spend?"
+          },
+          {
+            "artifact": "comment_1567403619",
+            "quote": "Sometimes that helps when we have a bug and we don't calculate the limits correctly."
+          },
+          {
+            "artifact": "comment_1567403619",
+            "quote": "The only limit I think we should enforce if someone tries to play with their env and puts a limit higher than the model's max tokens."
+          },
+          {
+            "artifact": "comment_1567403619",
+            "quote": "that's a fair point."
+          }
+        ],
+        "statement": "k-boikov authored"
+      },
+      {
+        "id": "81a3646b-5ce9-4311-8646-3ef0ed720ab6",
+        "subject_entity_id": "significant_gravitas",
+        "predicate": "authored",
+        "object_entity_id": null,
+        "valid_from": "2023-05-16T20:26:12Z",
+        "valid_to": null,
+        "confidence": 0.9,
+        "evidence": [
+          {
+            "artifact": "comment_1550313219",
+            "quote": "Looks like tests are failing but not for my changes"
+          },
+          {
+            "artifact": "comment_1550313219",
+            "quote": "![Screen Shot 2023-05-16 at 1 25 11 PM](https://github.com/Significant-Gravitas/Auto-GPT/assets/1424113/3a8fc5a4-157a-4f05-9491-8c2d97cae7f8)"
+          },
+          {
+            "artifact": "comment_1550313219",
+            "quote": "![Screen Shot 2023-05-16 at 1 24 41 PM](https://github.com/Significant-Gravitas/Auto-GPT/assets/1424113/65727884-3e9d-47bf-b9bd-4a39edc4c4f6)"
+          }
+        ],
+        "statement": "significant-gravitas authored"
+      }
+    ],
+    "fallback_used": true,
+    "entity_name": "/users/account/documents/auto-gpt/auto-gpt-0.3.0/autogpt/__main__.py"
+  },
+  "What features were proposed for AutoGPT?": {
+    "entities": [
+      {
+        "id": "ntindle",
+        "type": "Person",
+        "name": "ntindle",
+        "aliases": []
+      }
+    ],
+    "claims": [
+      {
+        "id": "1ffce2d2-e8a6-436b-84e2-747958ccf7cd",
+        "subject_entity_id": "ntindle",
+        "predicate": "proposes_feature",
+        "object_entity_id": null,
+        "valid_from": "2023-05-15T09:21:29Z",
+        "valid_to": null,
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "artifact": "comment_1547493770",
+            "quote": "get this integrated with ntindle at this point"
+          }
+        ],
+        "statement": "ntindle proposes_feature"
+      },
+      {
+        "id": "640c138f-a93f-4729-a6af-e8e7fdf44d7b",
+        "subject_entity_id": "ntindle",
+        "predicate": "authored",
+        "object_entity_id": null,
+        "valid_from": "2023-05-21T01:05:39Z",
+        "valid_to": null,
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "artifact": "comment_1556055404",
+            "quote": "sorry for all the forced push commits, I couldn't run the same commands in CI as i could Locally and figured it would be faster to just git force push for meow versus attempting to run tests locally atm lol"
+          }
+        ],
+        "statement": "ntindle authored"
+      }
+    ],
+    "fallback_used": false,
+    "entity_name": "ntindle"
+  },
+  "What issues were fixed in the project?": {
+    "entities": [
+      {
+        "id": "component",
+        "type": "Component",
+        "name": "component",
+        "aliases": []
+      },
+      {
+        "id": "_4208",
+        "type": "Issue",
+        "name": "#4208",
+        "aliases": []
+      }
+    ],
+    "claims": [
+      {
+        "id": "3d32809d-5e40-421c-a81d-07ce61522ddc",
+        "subject_entity_id": "_4208",
+        "predicate": "fixes_issue",
+        "object_entity_id": "component",
+        "valid_from": "2023-07-14T16:22:28Z",
+        "valid_to": null,
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "artifact": "comment_1636088787",
+            "quote": "The \"summary memory\" was re-implemented by #4208, and as far as I can see that also addresses the issues fixed by your PR."
+          }
+        ],
+        "statement": "#4208 fixes_issue component"
+      }
+    ],
+    "fallback_used": false,
+    "entity_name": "#4208"
+  },
+  "What discussions involve Boostrix?": {
+    "entities": [
       {
         "id": "boostrix",
         "type": "Person",
-        "name": "Boostrix",
-        "aliases": [
-          "@Boostrix"
-        ]
-      },
-      {
-        "id": "issue_4128",
-        "type": "Issue",
-        "name": "4128",
-        "aliases": []
-      },
-      {
-        "id": "feat: set max token limits for better user experience",
-        "type": "Issue",
-        "name": "feat: set max token limits for better user experience",
+        "name": "boostrix",
         "aliases": []
       }
     ],
     "claims": [
       {
-        "id": "claim1",
-        "subject_entity_id": "baseinfinity",
-        "predicate": "proposes_feature",
+        "id": "5d841d33-4a93-441d-bb6f-acfcb32c1661",
+        "subject_entity_id": "boostrix",
+        "predicate": "fixes_issue",
         "object_entity_id": null,
-        "valid_from": "2023-05-11T23:27:30Z",
+        "valid_from": "2023-05-25T23:29:43Z",
         "valid_to": null,
-        "confidence": 1.0,
+        "confidence": 0.8,
         "evidence": [
           {
-            "artifact": "issue_4128",
-            "quote": "set max token limits for better user experience"
-          },
-          {
-            "artifact": "comment_1544849505",
-            "quote": "Shouldnt you also remove the variable from the .env template? I might be wrong"
+            "artifact": "comment_1563628611",
+            "quote": "i fixed the conflicts to include soft limits on top of the recent memory config changes"
           }
         ],
-        "statement": "@BaseInfinity proposes_feature"
+        "statement": "boostrix fixes_issue"
       },
       {
-        "id": "Claim_1",
-        "subject_entity_id": "issue_4128",
+        "id": "325a240a-8c67-4554-aba8-380e15962882",
+        "subject_entity_id": "boostrix",
         "predicate": "assigned_to",
-        "object_entity_id": "baseinfinity",
-        "valid_from": "2023-05-16T20:11:53Z",
-        "valid_to": null,
-        "confidence": 1.0,
-        "evidence": [
-          {
-            "artifact": "comment_1550297233",
-            "quote": "I'm not a fan of this change https://github.com/Significant-Gravitas/Auto-GPT/pull/4128/commits/31a3a477db4fb98464f5a8152a8dfc393ca57353 but I wasn't sure the best way to avoid a circular dependency without having to restructure things and since I'm new and wanting to keep this bitesized, I went for the above solution."
-          }
-        ],
-        "statement": "4128 assigned_to @BaseInfinity"
-      },
-      {
-        "id": "claim_1",
-        "subject_entity_id": "baseinfinity",
-        "predicate": "suggests_change",
         "object_entity_id": null,
-        "valid_from": "2023-05-20T19:46:54Z",
+        "valid_from": "2023-05-11T07:35:10Z",
         "valid_to": null,
-        "confidence": 1.0,
+        "confidence": 0.8,
         "evidence": [
           {
-            "artifact": "comment_1555980660",
-            "quote": "get to it before the end of the weekend"
-          },
-          {
-            "artifact": "comment_1566288460",
-            "quote": "I'll make suggested changes today and fix up the tests"
+            "artifact": "issue_4105",
+            "quote": "Thanks for creating this overview @Boostrix!"
           }
         ],
-        "statement": "@BaseInfinity suggests_change"
-      },
-      {
-        "id": "claim_1",
-        "subject_entity_id": "baseinfinity",
-        "predicate": "reports_issue",
-        "object_entity_id": null,
-        "valid_from": "2023-05-23T00:20:47Z",
-        "valid_to": null,
-        "confidence": 1.0,
-        "evidence": [
-          {
-            "artifact": "comment_1558259962",
-            "quote": "Derp, my fault, ill fixie"
-          }
-        ],
-        "statement": "@BaseInfinity reports_issue"
-      },
-      {
-        "id": "claim_2",
-        "subject_entity_id": "baseinfinity",
-        "predicate": "suggests_change",
-        "object_entity_id": "feat: set max token limits for better user experience",
-        "valid_from": "2023-05-31T22:03:00Z",
-        "valid_to": null,
-        "confidence": 1.0,
-        "evidence": [
-          {
-            "artifact": "issue_4128",
-            "quote": "I'm still letting people set custom limits in case they want to, I just make sure those custom limits are below a working threshold"
-          }
-        ],
-        "statement": "@BaseInfinity suggests_change feat: set max token limits for better user experience"
-      },
-      {
-        "id": "claim_5",
-        "subject_entity_id": "baseinfinity",
-        "predicate": "agrees_with",
-        "object_entity_id": "boostrix",
-        "valid_from": "2023-05-31T22:03:00Z",
-        "valid_to": null,
-        "confidence": 1.0,
-        "evidence": [
-          {
-            "artifact": "issue_4128",
-            "quote": "Correct me if I'm wrong but your way sounds like a better solution and is more future proof, if that's the case then I'm okay with closing this."
-          }
-        ],
-        "statement": "@BaseInfinity agrees_with Boostrix"
-      }
-    ]
-  },
-  "What features were proposed?": {
-    "entities": [
-      {
-        "id": "baseinfinity",
-        "type": "Person",
-        "name": "@BaseInfinity",
-        "aliases": [
-          "@BaseInfinity"
-        ]
-      },
-      {
-        "id": "boostrix",
-        "type": "Person",
-        "name": "Boostrix",
-        "aliases": [
-          "@Boostrix"
-        ]
-      },
-      {
-        "id": "issue_4128",
-        "type": "Issue",
-        "name": "4128",
-        "aliases": []
-      },
-      {
-        "id": "feat: set max token limits for better user experience",
-        "type": "Issue",
-        "name": "feat: set max token limits for better user experience",
-        "aliases": []
+        "statement": "boostrix assigned_to"
       }
     ],
-    "claims": [
-      {
-        "id": "claim1",
-        "subject_entity_id": "baseinfinity",
-        "predicate": "proposes_feature",
-        "object_entity_id": null,
-        "valid_from": "2023-05-11T23:27:30Z",
-        "valid_to": null,
-        "confidence": 1.0,
-        "evidence": [
-          {
-            "artifact": "issue_4128",
-            "quote": "set max token limits for better user experience"
-          },
-          {
-            "artifact": "comment_1544849505",
-            "quote": "Shouldnt you also remove the variable from the .env template? I might be wrong"
-          }
-        ],
-        "statement": "@BaseInfinity proposes_feature"
-      },
-      {
-        "id": "Claim_1",
-        "subject_entity_id": "issue_4128",
-        "predicate": "assigned_to",
-        "object_entity_id": "baseinfinity",
-        "valid_from": "2023-05-16T20:11:53Z",
-        "valid_to": null,
-        "confidence": 1.0,
-        "evidence": [
-          {
-            "artifact": "comment_1550297233",
-            "quote": "I'm not a fan of this change https://github.com/Significant-Gravitas/Auto-GPT/pull/4128/commits/31a3a477db4fb98464f5a8152a8dfc393ca57353 but I wasn't sure the best way to avoid a circular dependency without having to restructure things and since I'm new and wanting to keep this bitesized, I went for the above solution."
-          }
-        ],
-        "statement": "4128 assigned_to @BaseInfinity"
-      },
-      {
-        "id": "claim_1",
-        "subject_entity_id": "baseinfinity",
-        "predicate": "suggests_change",
-        "object_entity_id": null,
-        "valid_from": "2023-05-20T19:46:54Z",
-        "valid_to": null,
-        "confidence": 1.0,
-        "evidence": [
-          {
-            "artifact": "comment_1555980660",
-            "quote": "get to it before the end of the weekend"
-          },
-          {
-            "artifact": "comment_1566288460",
-            "quote": "I'll make suggested changes today and fix up the tests"
-          }
-        ],
-        "statement": "@BaseInfinity suggests_change"
-      },
-      {
-        "id": "claim_1",
-        "subject_entity_id": "baseinfinity",
-        "predicate": "reports_issue",
-        "object_entity_id": null,
-        "valid_from": "2023-05-23T00:20:47Z",
-        "valid_to": null,
-        "confidence": 1.0,
-        "evidence": [
-          {
-            "artifact": "comment_1558259962",
-            "quote": "Derp, my fault, ill fixie"
-          }
-        ],
-        "statement": "@BaseInfinity reports_issue"
-      },
-      {
-        "id": "claim_2",
-        "subject_entity_id": "baseinfinity",
-        "predicate": "suggests_change",
-        "object_entity_id": "feat: set max token limits for better user experience",
-        "valid_from": "2023-05-31T22:03:00Z",
-        "valid_to": null,
-        "confidence": 1.0,
-        "evidence": [
-          {
-            "artifact": "issue_4128",
-            "quote": "I'm still letting people set custom limits in case they want to, I just make sure those custom limits are below a working threshold"
-          }
-        ],
-        "statement": "@BaseInfinity suggests_change feat: set max token limits for better user experience"
-      },
-      {
-        "id": "claim_5",
-        "subject_entity_id": "baseinfinity",
-        "predicate": "agrees_with",
-        "object_entity_id": "boostrix",
-        "valid_from": "2023-05-31T22:03:00Z",
-        "valid_to": null,
-        "confidence": 1.0,
-        "evidence": [
-          {
-            "artifact": "issue_4128",
-            "quote": "Correct me if I'm wrong but your way sounds like a better solution and is more future proof, if that's the case then I'm okay with closing this."
-          }
-        ],
-        "statement": "@BaseInfinity agrees_with Boostrix"
-      }
-    ]
-  },
-  "What issues were reported?": {
-    "entities": [
-      {
-        "id": "auto-gpt",
-        "type": "Repository",
-        "name": "Auto-GPT",
-        "aliases": []
-      },
-      {
-        "id": "plugin support",
-        "type": "Repository",
-        "name": "plugin support",
-        "aliases": []
-      }
-    ],
-    "claims": [
-      {
-        "id": "claim_1",
-        "subject_entity_id": "auto-gpt",
-        "predicate": "proposes_feature",
-        "object_entity_id": "plugin support",
-        "valid_from": "2023-05-12T02:43:00Z",
-        "valid_to": null,
-        "confidence": 1.0,
-        "evidence": [
-          {
-            "artifact": "issue_4130",
-            "quote": "We are expecting to ship plugin support within the week (PR #757)."
-          }
-        ],
-        "statement": "Auto-GPT proposes_feature plugin support"
-      },
-      {
-        "id": "claim_2",
-        "subject_entity_id": "auto-gpt",
-        "predicate": "reports_issue",
-        "object_entity_id": null,
-        "valid_from": "2023-05-12T02:43:00Z",
-        "valid_to": null,
-        "confidence": 1.0,
-        "evidence": [
-          {
-            "artifact": "issue_4130",
-            "quote": "This pull request has conflicts with the base branch, please resolve those so we can evaluate the pull request."
-          },
-          {
-            "artifact": "issue_4130",
-            "quote": "This PR exceeds the recommended size of 200 lines. Please make sure you are NOT addressing multiple issues with one PR. Note this PR might be rejected due to its size"
-          }
-        ],
-        "statement": "Auto-GPT reports_issue"
-      }
-    ]
+    "fallback_used": false,
+    "entity_name": "boostrix"
   }
 }

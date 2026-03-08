@@ -1,190 +1,403 @@
 import json
 import os
+import numpy as np
 from typing import List, Dict, Any
+from sentence_transformers import SentenceTransformer
+from sklearn.metrics.pairwise import cosine_similarity
 
-GRAPH_PATH = os.path.join(os.path.dirname(__file__), '..', '..', 'data', 'processed', 'memory_graph.json')
+GRAPH_PATH = os.path.join(
+    os.path.dirname(__file__),
+    "..",
+    "..",
+    "data",
+    "processed",
+    "memory_graph.json",
+)
+
 
 class RetrievalService:
+
     def __init__(self):
+
         self.graph = {"entities": [], "claims": []}
         self.entity_map = {}
+
+        self.model = None
+        self.claim_embeddings = None
+        self.claim_texts = []
+
         self.load_graph()
+        self.build_embedding_index()
+
+    # -------------------------------------------------------
+    # Load graph
+    # -------------------------------------------------------
 
     def load_graph(self):
+
         if os.path.exists(GRAPH_PATH):
-            with open(GRAPH_PATH, 'r') as f:
+            with open(GRAPH_PATH, "r") as f:
                 self.graph = json.load(f)
-        # Build entity map for fast name resolution
-        self.entity_map = {e['id']: e for e in self.graph.get('entities', [])}
 
-    def normalize_entity_id(self, x: str) -> str:
-        """Unify handles, prefixes, and formatting (matches DedupService logic)."""
-        if not x:
-            return None
-        return x.lower().replace("@", "").replace("person_", "").strip()
-
-    def get_context_pack(self, query_entity: str = None) -> Dict[str, Any]:
-        """
-        Retrieves a 'Knowledge Pack' for a specific entity or the whole graph.
-        This provides the grounded factual context for any RAG task.
-        """
-        # Normalize target entity for lookup if provided
-        norm_query_entity = self.normalize_entity_id(query_entity) if query_entity else None
-
-        # Filter entities and claims for specific context
-        raw_claims = self.graph.get('claims', [])
-        if norm_query_entity:
-            raw_claims = [
-                c for c in raw_claims 
-                if (c['subject_entity_id'] and c['subject_entity_id'] == norm_query_entity) or 
-                   (c['object_entity_id'] and c['object_entity_id'] == norm_query_entity)
-            ]
-        
-        # Format claims with human-readable statements and evidence list
-        formatted_claims = []
-        entity_ids = set()
-        for c in raw_claims:
-            subj_id = c["subject_entity_id"]
-            obj_id = c["object_entity_id"]
-            
-            # Resolve Names
-            subj_name = self.entity_map.get(subj_id, {}).get("name", subj_id)
-            obj_name = self.entity_map.get(obj_id, {}).get("name", obj_id) if obj_id else None
-            
-            # Build Readable Statement
-            if obj_name:
-                statement = f"{subj_name} {c['predicate']} {obj_name}"
-            else:
-                statement = f"{subj_name} {c['predicate']}"
-            
-            # Format Evidence
-            evidence_list = [
-                {"artifact": ev["artifact_id"], "quote": ev["excerpt"]}
-                for ev in c.get("evidence", [])
-            ]
-            
-            # Update entity set for the final pack
-            if subj_id:
-                entity_ids.add(subj_id)
-            if obj_id:
-                entity_ids.add(obj_id)
-                
-            formatted_claims.append({
-                **c,
-                "statement": statement,
-                "evidence": evidence_list
-            })
-            
-        if norm_query_entity:
-            # For specific query, return only involved entities
-            related_entities = [e for e in self.graph['entities'] if e['id'] in entity_ids]
-        else:
-            # For global query, return all entities
-            related_entities = self.graph['entities']
-
-        return {
-            "entities": related_entities,
-            "claims": formatted_claims
+        self.entity_map = {
+            e["id"]: e for e in self.graph.get("entities", [])
         }
 
-    def search_entities(self, text: str) -> List[Dict[str, Any]]:
-        """Finds entities by name, ID, or aliases (simple fuzzy search)."""
-        search_text = text.lower()
+    # -------------------------------------------------------
+    # Embedding Index
+    # -------------------------------------------------------
+
+    def build_embedding_index(self):
+
+        claims = self.graph.get("claims", [])
+
+        if not claims:
+            return
+
+        print("Building embedding index...")
+
+        self.model = SentenceTransformer(
+            "sentence-transformers/all-MiniLM-L6-v2"
+        )
+
+        texts = []
+
+        for c in claims:
+
+            subj = self.entity_map.get(
+                c["subject_entity_id"], {}
+            ).get("name", c["subject_entity_id"])
+
+            obj = (
+                self.entity_map.get(
+                    c["object_entity_id"], {}
+                ).get("name", c["object_entity_id"])
+                if c["object_entity_id"]
+                else ""
+            )
+
+            text = f"{subj} {c['predicate']} {obj}"
+            texts.append(text)
+
+        self.claim_texts = texts
+        self.claim_embeddings = self.model.encode(texts)
+
+        print(f"Indexed {len(texts)} claims.")
+
+    # -------------------------------------------------------
+    # Normalization
+    # -------------------------------------------------------
+
+    def normalize_entity_id(self, x: str):
+
+        if not x:
+            return None
+
+        return (
+            x.lower()
+            .replace("@", "")
+            .replace("person_", "")
+            .strip()
+        )
+
+    # -------------------------------------------------------
+    # Entity Search
+    # -------------------------------------------------------
+
+    def search_entities(self, text: str):
+
+        text = text.lower()
+
         return [
-            e for e in self.graph['entities']
-            if search_text in e['id'].lower()
-            or search_text in e['name'].lower()
-            or search_text in " ".join(e.get("aliases", [])).lower()
+            e
+            for e in self.graph["entities"]
+            if text in e["id"].lower()
+            or text in e["name"].lower()
+            or text
+            in " ".join(e.get("aliases", [])).lower()
         ]
-    def parse_query(self, query: str) -> Dict[str, List[str]]:
-        """
-        Parses a natural language query into keywords and potential predicate hints.
-        """
-        # Cleanup: lower, remove punctuation (simple)
-        text = query.lower()
-        for char in "?!.,:;":
-            text = text.replace(char, "")
-        
-        tokens = text.split()
-        
-        # Stopwords to ignore
-        stopwords = {"who", "what", "the", "a", "an", "is", "was", "were", "where", "how", "did", "does", "of", "in", "to"}
-        keywords = [t for t in tokens if t not in stopwords and len(t) > 2]
-        
-        return {"keywords": keywords}
 
-    def search_claims(self, text: str):
-        """
-        Advanced claim search using query parsing, predicate mapping, and ranking.
-        """
-        parsed = self.parse_query(text)
-        keywords = parsed["keywords"]
-        
-        if not keywords:
-            return []
+    # -------------------------------------------------------
+    # Predicate Mapping
+    # -------------------------------------------------------
 
-        # Predicate expansion map
+    def map_predicates(self, keywords):
+
         predicate_map = {
+
+            # assignment
+            "assign": "assigned_to",
+            "assigned": "assigned_to",
+            "owner": "assigned_to",
+
+            # fixes
+            "fix": "fixes_issue",
+            "fixed": "fixes_issue",
+            "resolve": "fixes_issue",
+            "resolved": "fixes_issue",
+            "repair": "fixes_issue",
+
+            # issues
+            "issue": "reports_issue",
+            "report": "reports_issue",
+            "reported": "reports_issue",
+            "bug": "reports_issue",
+
+            # suggestions
             "suggest": "suggests_change",
             "suggested": "suggests_change",
             "change": "suggests_change",
             "changes": "suggests_change",
+            "improve": "suggests_change",
+            "improvement": "suggests_change",
+
+            # features
+            "feature": "proposes_feature",
             "propose": "proposes_feature",
             "proposed": "proposes_feature",
-            "feature": "proposes_feature",
-            "issue": "reports_issue",
-            "reported": "reports_issue",
-            "fix": "fixes_issue",
-            "fixed": "fixes_issue"
+            "add": "proposes_feature",
+
+            # updates
+            "update": "updates_component",
+            "updated": "updates_component",
+            "modify": "updates_component",
+            "modified": "updates_component",
+
+            # dependency
+            "depend": "depends_on",
+            "depends": "depends_on",
+            "dependency": "depends_on",
+
+            # authorship
+            "author": "authored",
+            "authored": "authored",
+            "created": "authored",
         }
 
-        # Identify target predicates from keywords
-        target_predicates = set()
+        preds = set()
+
         for k in keywords:
             if k in predicate_map:
-                target_predicates.add(predicate_map[k])
+                preds.add(predicate_map[k])
 
-        scored_results = []
+        return preds
 
-        for c in self.graph.get("claims", []):
+    # -------------------------------------------------------
+    # Query parsing
+    # -------------------------------------------------------
+
+    def parse_query(self, query):
+
+        text = query.lower()
+
+        for char in "?!.,:;":
+            text = text.replace(char, "")
+
+        tokens = text.split()
+
+        stopwords = {
+            "who",
+            "what",
+            "the",
+            "a",
+            "an",
+            "is",
+            "was",
+            "were",
+            "where",
+            "how",
+            "did",
+            "does",
+            "of",
+            "in",
+            "to",
+        }
+
+        keywords = [
+            t for t in tokens if t not in stopwords and len(t) > 2
+        ]
+
+        return keywords
+
+    # -------------------------------------------------------
+    # Embedding search
+    # -------------------------------------------------------
+
+    def embedding_search(self, query):
+
+        if self.claim_embeddings is None:
+            return []
+
+        query_vec = self.model.encode([query])
+
+        scores = cosine_similarity(
+            query_vec, self.claim_embeddings
+        )[0]
+
+        top_idx = np.argsort(scores)[::-1][:10]
+
+        return [
+            (scores[i], self.graph["claims"][i])
+            for i in top_idx
+        ]
+
+    # -------------------------------------------------------
+    # Claim search
+    # -------------------------------------------------------
+
+    def search_claims(self, query):
+
+        keywords = self.parse_query(query)
+
+        target_preds = self.map_predicates(keywords)
+
+        embedding_hits = self.embedding_search(query)
+
+        scored = []
+
+        for c in self.graph["claims"]:
+
             score = 0
-            
-            # 1. Predicate Match (High Boost)
-            if c["predicate"] in target_predicates:
-                score += 5
-            
-            # 2. Keyword Matches in metadata/evidence
+
             subj = c["subject_entity_id"]
             obj = c["object_entity_id"]
-            subj_name = self.entity_map.get(subj, {}).get("name", "").lower()
-            obj_name = self.entity_map.get(obj, {}).get("name", "").lower() if obj else ""
-            predicate = c["predicate"].lower()
-            
-            evidence_text = " ".join([ev.get("excerpt", "").lower() for ev in c.get("evidence", [])])
-            
-            # Check keywords against all text fields
-            searchable_blob = f"{subj_name} {obj_name} {predicate} {evidence_text}"
-            
-            for k in keywords:
-                if k in searchable_blob:
-                    score += 2
-                    
-            if score > 0:
-                scored_results.append((score, c))
 
-        # Sort by score descending
-        scored_results.sort(key=lambda x: x[0], reverse=True)
-        
-        return [item[1] for item in scored_results]
-if __name__ == "__main__":
-    retrieval = RetrievalService()
-    print(f"Retrieval engine online. Loaded {len(retrieval.graph['entities'])} potential memories.")
-    
-    # Test Normalization
-    for variant in ["@BaseInfinity", "person_baseinfinity", "BaseInfinity"]:
-        pack = retrieval.get_context_pack(variant)
-        print(f"Pack for '{variant}': {len(pack['claims'])} facts found.")
-    
-    # Test Alias Search
-    results = retrieval.search_entities("Boostrix")
-    print(f"Search 'Boostrix' (alias test): {[e['id'] for e in results]}")
+            subj_name = self.entity_map.get(
+                subj, {}
+            ).get("name", "").lower()
+
+            obj_name = (
+                self.entity_map.get(
+                    obj, {}
+                ).get("name", "").lower()
+                if obj
+                else ""
+            )
+
+            predicate = c["predicate"].lower()
+
+            evidence_text = " ".join(
+                ev.get("excerpt", "").lower()
+                for ev in c.get("evidence", [])
+            )
+
+            blob = f"{subj_name} {obj_name} {predicate} {evidence_text}"
+
+            # strong entity boost
+            if query.lower() in subj_name:
+                score += 10
+
+            if query.lower() in obj_name:
+                score += 10
+
+            # predicate boost
+            if predicate in target_preds:
+                score += 6
+
+            # keyword matches
+            for k in keywords:
+                if k in blob:
+                    score += 2
+
+            # confidence bonus
+            score += c.get("confidence", 0)
+
+            if score > 0:
+                scored.append((score, c))
+
+        # include embedding hits
+        for sim, claim in embedding_hits:
+            scored.append((sim * 3, claim))
+
+        scored.sort(key=lambda x: x[0], reverse=True)
+
+        results = []
+
+        seen = set()
+
+        for score, c in scored:
+
+            cid = c["id"]
+
+            if cid not in seen:
+                results.append(c)
+                seen.add(cid)
+
+            if len(results) >= 10:
+                break
+
+        return results
+
+    # -------------------------------------------------------
+    # Context Pack
+    # -------------------------------------------------------
+
+    def get_context_pack(self, query):
+
+        entity_hits = self.search_entities(query)
+
+        claims = []
+        fallback_used = False
+        entity_name = None
+
+        # If query matches entity
+        if entity_hits:
+
+            entity_id = entity_hits[0]["id"]
+            entity_name = entity_hits[0]["name"]
+
+            claims = [
+                c for c in self.graph["claims"]
+                if c["subject_entity_id"] == entity_id
+                or c["object_entity_id"] == entity_id
+            ]
+
+            # If entity has no claims → fallback
+            if not claims:
+                fallback_used = True
+                claims = self.search_claims(query)
+
+        else:
+            claims = self.search_claims(query)
+
+        entity_ids = set()
+        formatted_claims = []
+
+        for c in claims:
+
+            subj = c["subject_entity_id"]
+            obj = c["object_entity_id"]
+
+            subj_name = self.entity_map.get(subj, {}).get("name", subj)
+            obj_name = self.entity_map.get(obj, {}).get("name", obj) if obj else None
+
+            if obj_name:
+                statement = f"{subj_name} {c['predicate']} {obj_name}"
+            else:
+                statement = f"{subj_name} {c['predicate']}"
+
+            evidence = [
+                {"artifact": ev["artifact_id"], "quote": ev["excerpt"]}
+                for ev in c.get("evidence", [])
+            ]
+
+            entity_ids.add(subj)
+            if obj:
+                entity_ids.add(obj)
+
+            formatted_claims.append({
+                **c,
+                "statement": statement,
+                "evidence": evidence
+            })
+
+        related_entities = [
+            e for e in self.graph["entities"] if e["id"] in entity_ids
+        ]
+
+        return {
+            "entities": related_entities,
+            "claims": formatted_claims,
+            "fallback_used": fallback_used,
+            "entity_name": entity_name
+        }

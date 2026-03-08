@@ -1,163 +1,331 @@
 import os
 import json
+import re
 import time
-from typing import List, Dict, Any
-from dotenv import load_dotenv
-import instructor
-from groq import Groq
-from pydantic import BaseModel, Field
-
-# Add project root to path to import local modules
+import uuid
 import sys
-project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
-sys.path.append(project_root)
 
-from schema.ontology import Entity, Claim, Evidence, ExtractionPayload
+sys.path.append(os.path.join(os.path.dirname(__file__), "..",".."))
+
+from dotenv import load_dotenv
+from groq import Groq
 
 load_dotenv()
 
-client = instructor.from_groq(Groq(), mode=instructor.Mode.JSON)
+client = Groq(api_key=os.environ.get("GROQ_API_KEY"))
+
+MODEL = "llama-3.1-8b-instant"
+
+MAX_CHARS = 2500
+
+ALLOWED_TYPES = {
+    "Person","Issue","Component","Repository","Tool","File"
+}
+
+ALLOWED_PREDICATES = {
+    "authored",
+    "assigned_to",
+    "proposes_feature",
+    "reports_issue",
+    "suggests_change",
+    "fixes_issue",
+    "updates_component",
+    "depends_on",
+    "removes_configuration"
+}
 
 SYSTEM_PROMPT = """
-You are a high-level knowledge architect analyzing software engineering discussion threads.
-A thread is a collection of an Issue and its subsequent Comments.
+You analyze entire GitHub engineering discussions.
 
-YOUR GOAL:
-Extract high-level design decisions, feature proposals, bug reports, and architectural dependencies that emerge across the entire thread.
+Extract meaningful architectural decisions, issues, or engineering changes.
 
-ENTITY RULES:
-1. Allowed types: Person, Repository, Issue, Component, Tool, File.
-2. Focus on global entities (e.g., the library being used, the main component being discussed).
+Return JSON only.
 
-CLAIM RULES:
-1. Focus on SUBSTANTIAL claims only (Proposals, Decisions, Dependencies).
-2. `predicate` MUST be one of: proposes_feature, reports_issue, suggests_change, removes_configuration, updates_component, depends_on, fixes_issue.
-3. Every claim MUST be grounded in the text via literal excerpts.
-4. Set `object_entity_id` to null if there is no clear object.
-5. If subject_entity_id == object_entity_id, discard the claim.
+{
+ "entities":[{"name":"string","type":"Person|Issue|Component|Repository|Tool|File"}],
+ "claims":[
+   {
+     "subject_entity_id":"entity",
+     "predicate":"predicate",
+     "object_entity_id":"entity or null",
+     "evidence_excerpt":"quote"
+   }
+ ]
+}
+
+Use ONLY these predicates:
+
+authored
+assigned_to
+proposes_feature
+reports_issue
+suggests_change
+fixes_issue
+updates_component
+depends_on
+removes_configuration
+
+Ignore links as entities.
 """
 
-def extract_from_thread(thread_text: str, artifact_id: str) -> ExtractionPayload:
-    """Extract structured data from a combined thread text."""
-    try:
-        # Limited to first 6000 chars for threads to stay within bounds
-        cleaned_text = thread_text.strip()[:6000]
-        
-        response = client.chat.completions.create(
-            model="llama-3.1-8b-instant",
-            response_model=ExtractionPayload,
-            messages=[
-                {"role": "system", "content": SYSTEM_PROMPT},
-                {"role": "user", "content": f"THREAD CONTENT:\n{cleaned_text}"}
-            ],
-            temperature=0.1
-        )
 
-        # Basic filtering (similar to artifact-level)
-        valid_claims = []
-        for claim in response.claims:
-            # Remove self-referential claims or artifact references in IDs
-            FORBIDDEN_REF = ("issue_", "comment_")
-            if (claim.subject_entity_id == claim.object_entity_id or 
-                any(claim.subject_entity_id.startswith(p) for p in FORBIDDEN_REF)):
-                continue
-            
-            if claim.object_entity_id == "null":
-                claim.object_entity_id = None
-                
-            if claim.object_entity_id and (
-                claim.object_entity_id.startswith("issue_") or 
-                claim.object_entity_id.startswith("comment_")
-            ):
-                continue
-                
-            valid_evidence = []
-            for ev in claim.evidence:
-                if len(ev.excerpt.strip()) >= 10:
-                    ev.artifact_id = artifact_id
-                    valid_evidence.append(ev)
-            
-            if valid_evidence:
-                claim.evidence = valid_evidence
-                valid_claims.append(claim)
-        
-        response.claims = valid_claims[:5] # A bit more for threads
-        
-        # Filter entities
-        FORBIDDEN_PREFIXES = ("issue_", "comment_", "Person_", "person_", "Author", "author")
-        filtered_entities = [
-            e for e in response.entities 
-            if e.type != "URL" and not any(e.id.startswith(p) for p in FORBIDDEN_PREFIXES)
-        ]
+def normalize_name(name):
 
-        # remove duplicate entities per thread
-        unique_entities = {}
-        for e in filtered_entities:
-            unique_entities[e.id] = e
-
-        response.entities = list(unique_entities.values())
-
-        return response
-    except Exception as e:
-        print(f"Error extracting from thread {artifact_id}: {e}")
+    if not name:
         return None
 
+    name = name.strip().replace("@","").lower()
+
+    return name
+
+
+def make_entity_id(name):
+
+    return re.sub(r"[^a-z0-9_]", "_", name.lower())
+
+
+def repair_json(text):
+
+    if not text:
+        return None
+
+    text = text.replace("```json","").replace("```","")
+
+    start = text.find("{")
+
+    if start == -1:
+        return None
+
+    text = text[start:]
+
+    open_braces = text.count("{")
+    close_braces = text.count("}")
+
+    if close_braces < open_braces:
+        text += "}"*(open_braces-close_braces)
+
+    try:
+        return json.loads(text)
+    except:
+        return None
+
+
+def call_llm(prompt):
+
+    try:
+
+        r = client.chat.completions.create(
+            model=MODEL,
+            messages=[
+                {"role":"system","content":SYSTEM_PROMPT},
+                {"role":"user","content":prompt}
+            ],
+            temperature=0
+        )
+
+        return r.choices[0].message.content
+
+    except Exception as e:
+
+        print("LLM error:",e)
+        return None
+
+
+def build_threads(artifacts):
+
+    threads = {}
+    current_issue = None
+
+    for art in artifacts:
+
+        if art["id"].startswith("issue_"):
+            current_issue = art["id"]
+            threads[current_issue] = [art]
+
+        elif art["id"].startswith("comment_") and current_issue:
+            threads[current_issue].append(art)
+
+    return threads
+
+
+def clean_entities(raw_entities):
+
+    entities = {}
+
+    for e in raw_entities:
+
+        name = e.get("name")
+
+        if not name:
+            continue
+
+        if name.startswith("http"):
+            continue
+
+        etype = e.get("type")
+
+        if etype not in ALLOWED_TYPES:
+            continue
+
+        if "PR #" in name:
+            etype = "Issue"
+
+        norm = normalize_name(name)
+
+        eid = make_entity_id(norm)
+
+        entities[eid] = {
+            "id":eid,
+            "name":norm,
+            "type":etype,
+            "aliases":[]
+        }
+
+    return entities
+
+
+def clean_claims(raw_claims, entities):
+
+    entity_ids = set(entities.keys())
+
+    claims = []
+
+    for c in raw_claims:
+
+        subj = normalize_name(c.get("subject_entity_id"))
+        pred = c.get("predicate")
+        obj = normalize_name(c.get("object_entity_id"))
+        excerpt = c.get("evidence_excerpt")
+
+        if not subj or pred not in ALLOWED_PREDICATES:
+            continue
+
+        subj_id = make_entity_id(subj)
+
+        if subj_id not in entity_ids:
+            continue
+
+        obj_id = None
+
+        if obj:
+            temp = make_entity_id(obj)
+            if temp in entity_ids:
+                obj_id = temp
+
+        if not excerpt or len(excerpt) < 10:
+            continue
+
+        claims.append({
+            "id":str(uuid.uuid4()),
+            "subject_entity_id":subj_id,
+            "predicate":pred,
+            "object_entity_id":obj_id,
+            "evidence_excerpt":excerpt
+        })
+
+    return claims
+
+
+def expand_relationships(claims, entities):
+    """
+    Improvement: create additional relationships from
+    entity co-occurrence inside evidence excerpts.
+    """
+
+    entity_names = {v["name"]:k for k,v in entities.items()}
+
+    extra_claims = []
+
+    for claim in claims:
+
+        excerpt = claim["evidence_excerpt"].lower()
+
+        mentioned = []
+
+        for name,eid in entity_names.items():
+            if name in excerpt:
+                mentioned.append(eid)
+
+        for i in range(len(mentioned)):
+            for j in range(i+1,len(mentioned)):
+
+                extra_claims.append({
+                    "id":str(uuid.uuid4()),
+                    "subject_entity_id":mentioned[i],
+                    "predicate":"depends_on",
+                    "object_entity_id":mentioned[j],
+                    "evidence_excerpt":excerpt
+                })
+
+    claims.extend(extra_claims)
+
+    return claims
+
+
 def run_thread_pipeline():
-    DATA_DIR = os.path.join(os.path.dirname(__file__), '..', '..', 'data')
-    raw_path = os.path.join(DATA_DIR, 'raw', 'artifacts.json')
-    out_path = os.path.join(DATA_DIR, 'extracted', 'thread_payloads.json')
 
-    if not os.path.exists(raw_path):
-        print("No raw artifacts found.")
-        return
+    DATA_DIR = os.path.join(os.path.dirname(__file__), "..","..","data")
 
-    with open(raw_path, "r") as f:
+    raw_path = os.path.join(DATA_DIR,"raw","artifacts.json")
+
+    out_path = os.path.join(DATA_DIR,"extracted","thread_payloads.json")
+
+    with open(raw_path) as f:
         artifacts = json.load(f)
 
-    # Group by Issue (Thread)
-    # Artifacts have ids like issue_4130 or comment_1545026604
-    # We need to find which comments belong to which issues.
-    # For GitHub, comments usually come after the issue in the list 
-    # but a better way is to group them by the issue ID they relate to.
-    # In our provided artifacts.json, they are likely sequential or have some relation.
-    # Let's simple group by the FIRST issue we see until the next issue.
-    
-    threads = {}
-    current_issue_id = None
-    
-    for art in artifacts:
-        if art["id"].startswith("issue_"):
-            current_issue_id = art["id"]
-            threads[current_issue_id] = [art]
-        elif art["id"].startswith("comment_") and current_issue_id:
-            threads[current_issue_id].append(art)
+    threads = build_threads(artifacts)
 
-    print(f"Found {len(threads)} issue threads.")
-    
-    thread_payloads = []
-    
-    for issue_id, arts in threads.items():
-        print(f"Processing thread: {issue_id} ({len(arts)} items)")
-        
-        combined_text = ""
-        for a in arts:
-            combined_text += f"\n---\nAUTHOR: {a.get('author_id')}\nCONTENT:\n{a.get('content')}\n"
-        
-        payload = extract_from_thread(combined_text, issue_id)
-        if payload:
-            thread_payloads.append({
-                "thread_id": issue_id,
-                "extracted": payload.model_dump()
-            })
-            
-            # Save progressively
-            with open(out_path, "w") as f:
-                json.dump(thread_payloads, f, indent=2)
-        
-        print("Pacing... (5s)")
-        time.sleep(5)
+    results = []
 
-    print(f"Thread extraction complete. Saved to {out_path}")
+    for issue_id,items in threads.items():
+
+        combined = ""
+
+        for a in items:
+            combined += f"\nAUTHOR:{a.get('author_id')}\n{a.get('content')}\n"
+
+        combined = re.sub(r'\s+',' ',combined)[:MAX_CHARS]
+
+        prompt = f"""
+THREAD DISCUSSION:
+
+{combined}
+
+Extract architectural knowledge.
+"""
+
+        raw = call_llm(prompt)
+
+        data = repair_json(raw)
+
+        if not data:
+            print("Thread extraction failed:",issue_id)
+            continue
+
+        entities = clean_entities(data.get("entities",[]))
+
+        claims = clean_claims(data.get("claims",[]), entities)
+
+        # NEW IMPROVEMENT
+        claims = expand_relationships(claims, entities)
+
+        results.append({
+            "thread_id":issue_id,
+            "extracted":{
+                "entities":list(entities.values()),
+                "claims":claims
+            }
+        })
+
+        with open(out_path,"w") as f:
+            json.dump(results,f,indent=2)
+
+        print("Thread processed:",issue_id)
+
+        time.sleep(2)
+
+    print("Thread extraction complete")
+
 
 if __name__ == "__main__":
     run_thread_pipeline()

@@ -1,250 +1,357 @@
 import os
 import json
-import instructor
-from typing import Dict, Any
-import sys
-import time
 import re
+import uuid
+import time
+import sys
 
-# Ensure schema is importable
-sys.path.append(os.path.join(os.path.dirname(__file__), '..', '..'))
-from schema.ontology import ExtractionPayload
+sys.path.append(os.path.join(os.path.dirname(__file__), "..", ".."))
+
+from schema.ontology import ExtractionPayload, Entity, Claim, Evidence
 
 from dotenv import load_dotenv
 load_dotenv()
 
 from groq import Groq
 
-# Initialize Instructor patched Groq client
-client = instructor.from_groq(
-    Groq(api_key=os.environ.get("GROQ_API_KEY")),
-    mode=instructor.Mode.TOOLS
-)
+client = Groq(api_key=os.environ.get("GROQ_API_KEY"))
 
 MODEL = "llama-3.1-8b-instant"
 
-MAX_CHARS = 4000
+MAX_CHARS = 800
+MAX_RETRIES = 3
 
+PRONOUNS = {"i","you","they","them","someone","we","he","she"}
 
-def clean_content(text: str) -> str:
-    """Remove HTML comments and normalize whitespace."""
-    text = re.sub(r'<!--.*?-->', '', text, flags=re.DOTALL)
-    return "\n".join([line.strip() for line in text.splitlines() if line.strip()])
+USELESS_ENTITIES = {
+    "people",
+    "evening",
+    "variable",
+    "solution",
+    "error"
+}
 
+ALLOWED_TYPES = {"Person","Issue","Component","Repository","Tool","File"}
+
+ALLOWED_PREDICATES = {
+    "authored",
+    "assigned_to",
+    "proposes_feature",
+    "reports_issue",
+    "suggests_change",
+    "removes_configuration",
+    "updates_component",
+    "depends_on",
+    "fixes_issue"
+}
 
 SYSTEM_PROMPT = """
-You are a precise data extraction system mapping text into a Grounded Memory Graph.
+Extract software knowledge.
 
-STRUCTURAL RULES:
-1. Return a single JSON object matching the `ExtractionPayload` schema.
-2. `entities` and `claims` MUST be non-empty if the text contains useful information.
-3. Every entity MUST have a non-empty `id`, `type`, and `name`.
-4. Artifact IDs (e.g., issue_4128, comment_1544833388) are NOT entities. Never create entities for them.
-5. Metadata lines starting with "Author:" or "Date:" are NOT entities.
+Return JSON only.
 
-ENTITY RULES:
-1. Allowed entity types: Person, Repository, Issue, Component, Tool, File.
-2. Never create entities whose IDs start with: issue_, comment_.
-3. Do NOT create entities of type URL.
+Format:
 
-CLAIM RULES:
-1. `subject_entity_id` and `object_entity_id` MUST correspond to IDs in the `entities` list.
-2. `object_entity_id` must NOT be an artifact ID (starting with issue_ or comment_).
-3. If a claim has no clear object, set `object_entity_id` to null. Do NOT use empty strings.
-4. Do NOT create claims where `subject_entity_id` == `object_entity_id`.
-5. Extract only factual software knowledge (e.g., who is working on what, dependency relations, bug reports).
-6. `predicate` MUST be one of: authored, assigned_to, proposes_feature, reports_issue, suggests_change, removes_configuration, updates_component, depends_on, fixes_issue.
+{
+ "entities":[{"name":"string","type":"Person|Issue|Component|Repository|Tool|File"}],
+ "claims":[
+   {
+     "subject":"entity name",
+     "predicate":"predicate",
+     "object":"entity name or null",
+     "excerpt":"direct quote"
+   }
+ ]
+}
 
-EVIDENCE RULES:
-1. Every claim MUST have exactly one `Evidence` object.
-2. The `excerpt` MUST be a direct, literal quote from the text.
+Allowed predicates:
+
+authored
+assigned_to
+proposes_feature
+reports_issue
+suggests_change
+removes_configuration
+updates_component
+depends_on
+fixes_issue
 """
 
 
-def extract_from_artifact(artifact: Dict[str, Any]) -> ExtractionPayload:
-    """
-    Pass artifact to LLM and enforce schema.
-    """
-    clean_text = clean_content(artifact["content"])[:MAX_CHARS]
+def normalize_name(name):
 
-    full_text_for_llm = (
-        f"Author: {artifact['author_id']}\n"
-        f"Date: {artifact['created_at']}\n\n"
-        f"{clean_text}"
-    )
+    if not name:
+        return None
 
-    prompt = f"""
-Analyze the following artifact and extract Entities, Claims, and Evidence.
+    name = name.lower().strip()
 
-ARTIFACT ID: {artifact['id']}
+    name = name.replace("@","")
 
-TEXT:
-{full_text_for_llm}
-"""
+    return name
+
+
+def make_entity_id(name):
+
+    return re.sub(r"[^a-z0-9_]", "_", name.lower())
+
+
+def repair_json(text):
+
+    if not text:
+        return None
+
+    text = text.replace("```json","").replace("```","")
+
+    start = text.find("{")
+
+    if start == -1:
+        return None
+
+    text = text[start:]
+
+    open_braces = text.count("{")
+    close_braces = text.count("}")
+
+    if close_braces < open_braces:
+        text += "}"*(open_braces-close_braces)
 
     try:
-        response = client.chat.completions.create(
-            model=MODEL,
-            response_model=ExtractionPayload,
-            messages=[
-                {"role": "system", "content": SYSTEM_PROMPT},
-                {"role": "user", "content": prompt}
-            ],
-            max_retries=3
-        )
-
-        # Validate claims
-        valid_claims = []
-        ALLOWED_PREDICATES = {
-            "authored", "assigned_to", "proposes_feature", "reports_issue",
-            "suggests_change", "removes_configuration", "updates_component",
-            "depends_on", "fixes_issue"
-        }
-
-        for claim in response.claims:
-            # Filter predicates
-            if claim.predicate not in ALLOWED_PREDICATES:
-                continue
-
-            # Normalize "null" string to None
-            if claim.object_entity_id == "null":
-                claim.object_entity_id = None
-
-            if claim.subject_entity_id == "null":
-                continue
-
-            # Remove self-referential claims or artifact references in IDs
-            FORBIDDEN_REF = ("issue_", "comment_")
-            if (claim.subject_entity_id == claim.object_entity_id or 
-                any(claim.subject_entity_id.startswith(p) for p in FORBIDDEN_REF)):
-                continue
-
-            # Discard claims referencing artifact IDs as objects
-            if claim.object_entity_id and (
-                claim.object_entity_id.startswith("issue_") or 
-                claim.object_entity_id.startswith("comment_")
-            ):
-                continue
-
-            valid_evidence = []
-
-            for ev in claim.evidence:
-                # Reject weak evidence (too short)
-                if len(ev.excerpt.strip()) < 10:
-                    continue
-
-                ev.artifact_id = artifact["id"]
-
-                start_idx = artifact["content"].find(ev.excerpt)
-
-                if start_idx != -1:
-                    ev.char_start = start_idx
-                    ev.char_end = start_idx + len(ev.excerpt)
-                    valid_evidence.append(ev)
-
-            if valid_evidence:
-                claim.evidence = valid_evidence
-                valid_claims.append(claim)
-
-        # Limit to 3 claims per artifact
-        response.claims = valid_claims[:3]
-
-        # Filter entities
-        FORBIDDEN_PREFIXES = ("issue_", "comment_", "Person_", "person_", "Author", "author")
-        filtered_entities = [
-            e for e in response.entities 
-            if e.type != "URL" and not any(e.id.startswith(p) for p in FORBIDDEN_PREFIXES)
-        ]
-
-        # remove duplicate entities per artifact
-        unique_entities = {}
-        for e in filtered_entities:
-            unique_entities[e.id] = e
-
-        response.entities = list(unique_entities.values())
-
-        return response
-
-    except Exception as e:
-        print(f"Failed to extract from {artifact['id']}: {e}")
+        return json.loads(text)
+    except:
         return None
 
 
+def call_llm(prompt):
+
+    for attempt in range(MAX_RETRIES):
+
+        try:
+
+            r = client.chat.completions.create(
+                model=MODEL,
+                messages=[
+                    {"role":"system","content":SYSTEM_PROMPT},
+                    {"role":"user","content":prompt}
+                ],
+                temperature=0
+            )
+
+            return r.choices[0].message.content
+
+        except Exception as e:
+
+            print("Retrying:",e)
+
+            time.sleep(2**attempt)
+
+    return None
+
+
+def clean_text(text):
+
+    text = re.sub(r'<!--.*?-->', '', text, flags=re.DOTALL)
+
+    return " ".join(text.split())
+
+
+def extract_entities(raw_entities):
+
+    entities = {}
+
+    for e in raw_entities:
+
+        name = normalize_name(e.get("name"))
+
+        if not name:
+            continue
+
+        # remove pronouns
+        if name in PRONOUNS:
+            continue
+
+        # remove sentence-like garbage entities
+        if len(name.split()) > 5:
+            continue
+
+        etype = e.get("type")
+
+        if etype not in ALLOWED_TYPES:
+            continue
+
+        eid = make_entity_id(name)
+
+        entities[eid] = Entity(
+            id=eid,
+            name=name,
+            type=etype,
+            aliases=[]
+        )
+
+    return entities
+
+
+def extract_claims(raw_claims, entities, artifact):
+
+    claims = []
+
+    for c in raw_claims:
+
+        subj = normalize_name(c.get("subject"))
+
+        if not subj:
+            continue
+
+        pred = c.get("predicate")
+
+        if pred not in ALLOWED_PREDICATES:
+            continue
+
+        obj = normalize_name(c.get("object"))
+
+        subj_id = make_entity_id(subj)
+
+        if subj_id not in entities:
+            continue
+
+        obj_id = None
+
+        if obj and obj != "null":
+
+            obj_id = make_entity_id(obj)
+
+            if obj_id not in entities:
+                obj_id = None
+
+        excerpt = c.get("excerpt")
+
+        if not excerpt or len(excerpt) < 10:
+            continue
+
+        start = artifact["content"].find(excerpt)
+
+        if start == -1:
+            continue
+
+        evidence = Evidence(
+            id=str(uuid.uuid4()),
+            artifact_id=artifact["id"],
+            excerpt=excerpt,
+            char_start=start,
+            char_end=start+len(excerpt)
+        )
+
+        claim = Claim(
+            id=str(uuid.uuid4()),
+            subject_entity_id=subj_id,
+            predicate=pred,
+            object_entity_id=obj_id,
+            valid_from=artifact["created_at"],
+            valid_to=None,
+            confidence=0.8,
+            evidence=[evidence]
+        )
+
+        claims.append(claim)
+
+    return claims
+
+
+def filter_useless_entities(entities, claims):
+
+    used = set()
+
+    for c in claims:
+        used.add(c.subject_entity_id)
+        if c.object_entity_id:
+            used.add(c.object_entity_id)
+
+    filtered = []
+
+    for e in entities:
+
+        if e.name in USELESS_ENTITIES and e.id not in used:
+            continue
+
+        filtered.append(e)
+
+    return filtered
+
+
+def extract_from_artifact(artifact):
+
+    text = clean_text(artifact["content"])[:MAX_CHARS]
+
+    prompt = f"""
+TEXT:
+
+{text}
+
+Extract entities and claims.
+"""
+
+    raw = call_llm(prompt)
+
+    data = repair_json(raw)
+
+    if not data:
+
+        print("JSON parse failed")
+
+        return None
+
+    entities = extract_entities(data.get("entities",[]))
+
+    claims = extract_claims(data.get("claims",[]), entities, artifact)
+
+    entity_list = list(entities.values())
+
+    entity_list = filter_useless_entities(entity_list, claims)
+
+    return ExtractionPayload(
+        entities=entity_list,
+        claims=claims[:4]
+    )
+
+
 def run_pipeline():
-    DATA_DIR = os.path.join(os.path.dirname(__file__), '..', '..', 'data')
-    raw_path = os.path.join(DATA_DIR, 'raw', 'artifacts.json')
-    out_path = os.path.join(DATA_DIR, 'extracted', 'payloads.json')
-    lock_path = os.path.join(DATA_DIR, 'extraction.lock')
 
-    if os.path.exists(lock_path):
-        print(f"Extraction already in progress (lock exists at {lock_path}). Exiting.")
-        return
+    DATA_DIR = os.path.join(os.path.dirname(__file__), "..","..","data")
 
-    try:
-        with open(lock_path, "w") as f:
-            f.write(str(os.getpid()))
+    raw_path = os.path.join(DATA_DIR,"raw","artifacts.json")
 
-        os.makedirs(os.path.dirname(out_path), exist_ok=True)
+    out_path = os.path.join(DATA_DIR,"extracted","payloads.json")
 
-        if not os.path.exists(raw_path):
-            print("No raw artifacts found. Run ingestion first.")
-            return
+    with open(raw_path) as f:
+        artifacts = json.load(f)
 
-        with open(raw_path, "r") as f:
-            artifacts = json.load(f)
+    results = []
 
-        if not os.environ.get("GROQ_API_KEY"):
-            print("Skipping LLM extraction, GROQ_API_KEY not set.")
-            return
+    for art in artifacts:
 
-        print(f"Starting extraction for {len(artifacts)} artifacts...")
+        author = art.get("author_id","").lower()
 
-        extracted_data = []
+        if "[bot]" in author:
+            continue
 
-        # Resume previous progress
-        if os.path.exists(out_path):
-            try:
-                with open(out_path, "r") as f:
-                    extracted_data = json.load(f)
-                    print(f"Loaded {len(extracted_data)} existing extractions.")
-            except Exception:
-                print("Failed to load previous payloads.")
+        print("Processing",art["id"])
 
-        already_done = {item["artifact_id"] for item in extracted_data}
-        
-        for idx, art in enumerate(artifacts):
+        payload = extract_from_artifact(art)
 
-            if art["id"] in already_done:
-                continue
+        if payload:
 
-            author = art.get("author_id", "").lower()
+            results.append({
+                "artifact_id":art["id"],
+                "extracted":payload.model_dump()
+            })
 
-            # Skip bot artifacts
-            if "[bot]" in author:
-                print(f"Skipping bot artifact: {art['id']} ({art['author_id']})")
-                continue
+            with open(out_path,"w") as f:
+                json.dump(results,f,indent=2)
 
-            print(f"Processing ({idx+1}/{len(artifacts)}): {art['id']}")
+        time.sleep(1)
 
-            payload = extract_from_artifact(art)
-
-            if payload:
-                extracted_data.append({
-                    "artifact_id": art["id"],
-                    "extracted": payload.model_dump()
-                })
-
-                with open(out_path, "w") as f:
-                    json.dump(extracted_data, f, indent=2)
-
-            print("Pacing... (5s)")
-            time.sleep(5)
-
-        print(f"Extraction complete. Total artifacts processed: {len(extracted_data)}")
-    finally:
-        if os.path.exists(lock_path):
-            os.remove(lock_path)
+    print("Extraction finished")
 
 
 if __name__ == "__main__":
+
     run_pipeline()
