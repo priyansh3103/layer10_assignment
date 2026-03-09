@@ -147,8 +147,17 @@ def process_all_data():
 
     payloads_path = os.path.join(DATA_DIR, 'extracted', 'payloads.json')
     thread_payloads_path = os.path.join(DATA_DIR, 'extracted', 'thread_payloads.json')
+    raw_artifacts_path = os.path.join(DATA_DIR, 'raw', 'artifacts.json')
 
     output_path = os.path.join(DATA_DIR, 'processed', 'memory_graph.json')
+
+    # Build thread_id -> created_at from raw artifacts (issue = thread root)
+    thread_created_at = {}
+    if os.path.exists(raw_artifacts_path):
+        with open(raw_artifacts_path) as f:
+            for art in json.load(f):
+                if art.get("id", "").startswith("issue_"):
+                    thread_created_at[art["id"]] = art.get("created_at", "2020-01-01T00:00:00Z")
 
     service = DedupService()
 
@@ -186,7 +195,33 @@ def process_all_data():
         for c in extracted.get("claims", []):
 
             try:
-                service.add_claim(Claim(**c))
+                if "thread_id" in item:
+                    # Thread-level claim: convert evidence_excerpt -> full Claim shape
+                    thread_id = item["thread_id"]
+                    excerpt = c.get("evidence_excerpt") or ""
+                    if len(excerpt) < 10:
+                        continue
+                    full_claim = {
+                        "id": c.get("id"),
+                        "subject_entity_id": c.get("subject_entity_id"),
+                        "predicate": c.get("predicate"),
+                        "object_entity_id": c.get("object_entity_id"),
+                        "valid_from": thread_created_at.get(thread_id, "2020-01-01T00:00:00Z"),
+                        "valid_to": None,
+                        "confidence": 0.8,
+                        "evidence": [
+                            {
+                                "artifact_id": thread_id,
+                                "excerpt": excerpt,
+                                "char_start": None,
+                                "char_end": None,
+                            }
+                        ],
+                    }
+                    service.add_claim(Claim(**full_claim))
+                else:
+                    # Artifact-level claim: already has valid_from and evidence
+                    service.add_claim(Claim(**c))
             except Exception as err:
                 print("Claim error:", err)
 

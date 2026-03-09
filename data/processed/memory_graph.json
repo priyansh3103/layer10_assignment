@@ -1,6 +1,6 @@
 {
   "schema_version": "1.1",
-  "generated_at": "2026-03-08T22:08:34.825215",
+  "generated_at": "2026-03-09T00:24:08.348891",
   "entities": [
     {
       "id": "feature_basic_proxy_test_7",
@@ -1757,7 +1757,7 @@
       "object_entity_id": null,
       "valid_from": "2023-05-16T20:11:53Z",
       "valid_to": null,
-      "confidence": 0.8,
+      "confidence": 0.9,
       "evidence": [
         {
           "id": "bded53fd-4599-4279-b363-14d5b383150c",
@@ -1772,6 +1772,13 @@
           "excerpt": "If you think something important is missing from this comparison, please leave a comment below or bring it up [on Discord](https://discord.com/channels/1092243196446249134/1095817829405704305)!",
           "char_start": 365,
           "char_end": 558
+        },
+        {
+          "id": "ev_8d2e7066",
+          "artifact_id": "issue_4122",
+          "excerpt": "We are expecting to ship plugin support within the week (PR #757).",
+          "char_start": null,
+          "char_end": null
         }
       ]
     },
@@ -1886,7 +1893,7 @@
       "object_entity_id": null,
       "valid_from": "2023-05-25T23:29:43Z",
       "valid_to": null,
-      "confidence": 0.8,
+      "confidence": 1.0,
       "evidence": [
         {
           "id": "03cb33dd-3c22-4f8e-bab5-caec402e7955",
@@ -1894,6 +1901,27 @@
           "excerpt": "i fixed the conflicts to include soft limits on top of the recent memory config changes",
           "char_start": 23,
           "char_end": 110
+        },
+        {
+          "id": "ev_6e751018",
+          "artifact_id": "issue_4112",
+          "excerpt": "Resources: * https://github.com/Significant-Gravitas/Auto-GPT-Plugin-Template",
+          "char_start": null,
+          "char_end": null
+        },
+        {
+          "id": "ev_777d7a97",
+          "artifact_id": "issue_4112",
+          "excerpt": "Check out our [wiki page on Contributing](https://github.com/Significant-Gravitas/Auto-GPT/wiki/Contributing)",
+          "char_start": null,
+          "char_end": null
+        },
+        {
+          "id": "ev_bb5349b3",
+          "artifact_id": "issue_4112",
+          "excerpt": "For guidance on committing only the specific lines you have changed, refer to this helpful video: https://youtu.be/8-hSNHHbiZg",
+          "char_start": null,
+          "char_end": null
         }
       ]
     },
@@ -2429,7 +2457,7 @@
       "object_entity_id": null,
       "valid_from": "2023-06-01T22:09:07Z",
       "valid_to": null,
-      "confidence": 0.9,
+      "confidence": 1.0,
       "evidence": [
         {
           "id": "82388c8a-fcda-46be-b660-af2f30b90621",
@@ -2451,6 +2479,13 @@
           "excerpt": "We would appreciate your feedback and can update the documentation accordingly.",
           "char_start": 106,
           "char_end": 185
+        },
+        {
+          "id": "ev_8d336f15",
+          "artifact_id": "issue_4109",
+          "excerpt": "Author:@ZylerKade",
+          "char_start": null,
+          "char_end": null
         }
       ]
     },
@@ -2793,6 +2828,13 @@
           "excerpt": "Added a check to the code that prompts the user about unconfigured plugins.",
           "char_start": 209,
           "char_end": 284
+        },
+        {
+          "id": "ev_3c30c737",
+          "artifact_id": "issue_4109",
+          "excerpt": "9. News message loads, but then followed by \"frozen runpy\" error.",
+          "char_start": null,
+          "char_end": null
         }
       ]
     },
@@ -3409,1100 +3451,3973 @@
           "char_end": 109
         }
       ]
+    },
+    {
+      "id": "c23351e5-1ddf-4626-bc5c-919ca9825479",
+      "subject_entity_id": "wayne_hamadi",
+      "predicate": "authored",
+      "object_entity_id": null,
+      "valid_from": "2023-05-12T02:42:33Z",
+      "valid_to": null,
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "id": "ev_c2421727",
+          "artifact_id": "issue_4130",
+          "excerpt": "Title: Feature/basic proxy test 7",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "bdbe8d04-4349-4f21-a8df-f912211de2fd",
+      "subject_entity_id": "wayne_hamadi",
+      "predicate": "proposes_feature",
+      "object_entity_id": null,
+      "valid_from": "2023-05-12T02:42:33Z",
+      "valid_to": null,
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "id": "ev_bba65b15",
+          "artifact_id": "issue_4130",
+          "excerpt": "Title: Feature/basic proxy test 7",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "f7a1e7a5-9a53-4040-8bd6-3866f07207ad",
+      "subject_entity_id": "significant_gravitas_auto_gpt",
+      "predicate": "updates_component",
+      "object_entity_id": "auto_gpt",
+      "valid_from": "2023-05-12T02:42:33Z",
+      "valid_to": null,
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "id": "ev_abed7470",
+          "artifact_id": "issue_4130",
+          "excerpt": "We are expecting to ship plugin support within the week (PR #757)",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "6eb6728d-0e71-4209-adae-b3fda79508f4",
+      "subject_entity_id": "significant_gravitas_auto_gpt",
+      "predicate": "removes_configuration",
+      "object_entity_id": null,
+      "valid_from": "2023-05-12T02:42:33Z",
+      "valid_to": null,
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "id": "ev_fb5d63d7",
+          "artifact_id": "issue_4130",
+          "excerpt": "At the moment any non-essential commands are not being merged.",
+          "char_start": null,
+          "char_end": null
+        },
+        {
+          "id": "ev_e45f23b8",
+          "artifact_id": "issue_4130",
+          "excerpt": "Do not include any unrelated or 'extra' modifications.",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "59b08c47-7a42-4034-b4be-a0ac017d36bf",
+      "subject_entity_id": "significant_gravitas_auto_gpt",
+      "predicate": "depends_on",
+      "object_entity_id": "significant_gravitas_auto_gpt_plugin_template",
+      "valid_from": "2023-05-12T02:42:33Z",
+      "valid_to": null,
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "id": "ev_1802be46",
+          "artifact_id": "issue_4130",
+          "excerpt": "Resources: * https://github.com/Significant-Gravitas/Auto-GPT-Plugin-Template",
+          "char_start": null,
+          "char_end": null
+        },
+        {
+          "id": "ev_d693665d",
+          "artifact_id": "issue_4100",
+          "excerpt": "We are expecting to ship plugin support within the week (PR #757).",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "6df332f3-ded9-467e-9ce3-92a029d9da9a",
+      "subject_entity_id": "significant_gravitas_auto_gpt",
+      "predicate": "suggests_change",
+      "object_entity_id": null,
+      "valid_from": "2023-05-12T02:42:33Z",
+      "valid_to": null,
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "id": "ev_f214a11c",
+          "artifact_id": "issue_4130",
+          "excerpt": "We are expecting to ship plugin support within the week (PR #757)",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "2c6e4ad8-4481-4917-b06f-ec8bcebb7da0",
+      "subject_entity_id": "significant_gravitas_auto_gpt",
+      "predicate": "fixes_issue",
+      "object_entity_id": "pr__757",
+      "valid_from": "2023-05-12T02:42:33Z",
+      "valid_to": null,
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "id": "ev_352bd53e",
+          "artifact_id": "issue_4130",
+          "excerpt": "We are expecting to ship plugin support within the week (PR #757)",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "4c0e94e6-2f2f-4209-bc49-524b814e13e5",
+      "subject_entity_id": "auto_gpt",
+      "predicate": "depends_on",
+      "object_entity_id": "significant_gravitas_auto_gpt_plugin_template",
+      "valid_from": "2023-05-12T02:42:33Z",
+      "valid_to": null,
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "id": "ev_98bbc7f9",
+          "artifact_id": "issue_4130",
+          "excerpt": "resources: * https://github.com/significant-gravitas/auto-gpt-plugin-template",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "5635e5e7-aeef-4324-8cdf-01262a0bc601",
+      "subject_entity_id": "auto_gpt",
+      "predicate": "depends_on",
+      "object_entity_id": "significant_gravitas_auto_gpt",
+      "valid_from": "2023-05-12T02:42:33Z",
+      "valid_to": null,
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "id": "ev_ecf18434",
+          "artifact_id": "issue_4130",
+          "excerpt": "resources: * https://github.com/significant-gravitas/auto-gpt-plugin-template",
+          "char_start": null,
+          "char_end": null
+        },
+        {
+          "id": "ev_862ee1f1",
+          "artifact_id": "issue_4113",
+          "excerpt": "check out our [wiki page on contributing](https://github.com/significant-gravitas/auto-gpt/wiki/contributing)",
+          "char_start": null,
+          "char_end": null
+        },
+        {
+          "id": "ev_5310b5f5",
+          "artifact_id": "issue_4121",
+          "excerpt": "check out our [wiki page on contributing](https://github.com/significant-gravitas/auto-gpt/wiki/contributing)",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "5224a7b3-a3b0-4465-ab6d-617c924829a1",
+      "subject_entity_id": "significant_gravitas_auto_gpt_plugin_template",
+      "predicate": "depends_on",
+      "object_entity_id": "significant_gravitas_auto_gpt",
+      "valid_from": "2023-05-12T02:42:33Z",
+      "valid_to": null,
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "id": "ev_48ace7bd",
+          "artifact_id": "issue_4130",
+          "excerpt": "resources: * https://github.com/significant-gravitas/auto-gpt-plugin-template",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "775dd232-9d1e-479b-9e11-7794bbc685ac",
+      "subject_entity_id": "baseinfinity",
+      "predicate": "authored",
+      "object_entity_id": null,
+      "valid_from": "2023-05-11T23:27:30Z",
+      "valid_to": null,
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "id": "ev_bf40715c",
+          "artifact_id": "issue_4128",
+          "excerpt": "<!-- \u26a0\ufe0f At the moment any non-essential commands are not being merged. If you want to add non-essential commands to Auto-GPT, please create a plugin instead. We are expecting to ship plugin support within the week (PR #757). -->",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "26276010-44cc-4c8a-a240-68849e1e756c",
+      "subject_entity_id": "baseinfinity",
+      "predicate": "proposes_feature",
+      "object_entity_id": null,
+      "valid_from": "2023-05-11T23:27:30Z",
+      "valid_to": null,
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "id": "ev_ebcb840c",
+          "artifact_id": "issue_4128",
+          "excerpt": "### Background Every day we see people come into the discord explaining how they ran into a token limit because most people are still on a 3.0/3.5 key. The maintainer's built the app to assume 8000 token limit due to gpt4 key and atm this just causes friction because in reality, most people do not have a 4.0 key To meet in the middle we will respect the user's token limit but compare it to the max token limit based off the smart/fast llvm model and set a limit 15% less to ensure we take into account the prompt and package",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "71024f17-586f-4556-a821-9b8d5b15de77",
+      "subject_entity_id": "baseinfinity",
+      "predicate": "suggests_change",
+      "object_entity_id": null,
+      "valid_from": "2023-05-11T23:27:30Z",
+      "valid_to": null,
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "id": "ev_47df0638",
+          "artifact_id": "issue_4128",
+          "excerpt": "### Changes Use the model's max_token_limits for both fast/smart llvm",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "5966c4de-4f23-4ec3-a084-295fe9f41268",
+      "subject_entity_id": "baseinfinity",
+      "predicate": "fixes_issue",
+      "object_entity_id": null,
+      "valid_from": "2023-05-11T23:27:30Z",
+      "valid_to": null,
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "id": "ev_2c509c51",
+          "artifact_id": "issue_4128",
+          "excerpt": "### Test Plan i updated failing tests",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "99d2780b-a079-4ae7-83ea-fc7ac42908be",
+      "subject_entity_id": "baseinfinity",
+      "predicate": "updates_component",
+      "object_entity_id": "auto_gpt",
+      "valid_from": "2023-05-11T23:27:30Z",
+      "valid_to": null,
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "id": "ev_2430c415",
+          "artifact_id": "issue_4128",
+          "excerpt": "Use the model's max_token_limits for both fast/smart llvm",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "de54b866-e9c2-464a-b1d3-028596cbd417",
+      "subject_entity_id": "auto_gpt",
+      "predicate": "depends_on",
+      "object_entity_id": "pr__757",
+      "valid_from": "2023-05-11T23:27:30Z",
+      "valid_to": null,
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "id": "ev_16f2ec2d",
+          "artifact_id": "issue_4128",
+          "excerpt": "<!-- \u26a0\ufe0f at the moment any non-essential commands are not being merged. if you want to add non-essential commands to auto-gpt, please create a plugin instead. we are expecting to ship plugin support within the week (pr #757). -->",
+          "char_start": null,
+          "char_end": null
+        },
+        {
+          "id": "ev_793d9cf3",
+          "artifact_id": "issue_4112",
+          "excerpt": "if you want to add non-essential commands to auto-gpt, please create a plugin instead. we are expecting to ship plugin support within the week (pr #757)",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "b23a825d-478f-417b-a157-df5bf6396569",
+      "subject_entity_id": "auto_gpt",
+      "predicate": "updates_component",
+      "object_entity_id": "get_hyperlinks",
+      "valid_from": "2023-05-11T19:10:48Z",
+      "valid_to": null,
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "id": "ev_cce80678",
+          "artifact_id": "issue_4122",
+          "excerpt": "I just changed the description of command `get_hyperlinks` from `Get text summary` to `Get hyperlinks`.",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "8813f279-c71a-4988-977f-a86392986e12",
+      "subject_entity_id": "significant_gravitas",
+      "predicate": "authored",
+      "object_entity_id": "auto_gpt",
+      "valid_from": "2023-05-11T19:10:48Z",
+      "valid_to": null,
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "id": "ev_4636a45c",
+          "artifact_id": "issue_4122",
+          "excerpt": "We are expecting to ship plugin support within the week (PR #757).",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "9a055b24-b2a1-4193-942f-3523f79a50b3",
+      "subject_entity_id": "sicongzhao",
+      "predicate": "authored",
+      "object_entity_id": "get_hyperlinks",
+      "valid_from": "2023-05-11T19:10:48Z",
+      "valid_to": null,
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "id": "ev_c5821c07",
+          "artifact_id": "issue_4122",
+          "excerpt": "I was testing out this software, and found an inconsistency in the activity log.",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "4c03590a-cf4c-4d3a-8f51-a82a08441337",
+      "subject_entity_id": "sicongzhao",
+      "predicate": "fixes_issue",
+      "object_entity_id": null,
+      "valid_from": "2023-05-11T19:10:48Z",
+      "valid_to": null,
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "id": "ev_cc9f9572",
+          "artifact_id": "issue_4122",
+          "excerpt": "Because my edit was an inconsistency of a text description, the edit should be intuitive and not causing any misunderstanding.",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "ad420c4b-59b1-485f-9dd8-d657739192c8",
+      "subject_entity_id": "waynehamadi",
+      "predicate": "authored",
+      "object_entity_id": null,
+      "valid_from": "2023-05-11T02:15:28Z",
+      "valid_to": null,
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "id": "ev_b29d2b24",
+          "artifact_id": "issue_4100",
+          "excerpt": "At the moment any non-essential commands are not being merged. If you want to add non-essential commands to Auto-GPT, please create a plugin instead.",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "185c3437-080c-4733-a2b1-29c8e97d0f9f",
+      "subject_entity_id": "waynehamadi",
+      "predicate": "proposes_feature",
+      "object_entity_id": null,
+      "valid_from": "2023-05-11T02:15:28Z",
+      "valid_to": null,
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "id": "ev_0d1893b7",
+          "artifact_id": "issue_4100",
+          "excerpt": "basic proxy more info coming",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "1b393cbc-03b6-44fc-b3ac-f13e6441bbd8",
+      "subject_entity_id": "waynehamadi",
+      "predicate": "suggests_change",
+      "object_entity_id": "significant_gravitas_auto_gpt_plugin_template",
+      "valid_from": "2023-05-11T02:15:28Z",
+      "valid_to": null,
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "id": "ev_02d05499",
+          "artifact_id": "issue_4100",
+          "excerpt": "We are expecting to ship plugin support within the week (PR #757).",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "dc1b17cc-19ce-4ee5-a45a-e0e70d07a21d",
+      "subject_entity_id": "waynehamadi",
+      "predicate": "removes_configuration",
+      "object_entity_id": null,
+      "valid_from": "2023-05-11T02:15:28Z",
+      "valid_to": null,
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "id": "ev_a61b4f69",
+          "artifact_id": "issue_4100",
+          "excerpt": "At the moment any non-essential commands are not being merged.",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "b2125d1d-f8e0-4a26-bc55-f3086dd719e3",
+      "subject_entity_id": "travelagent",
+      "predicate": "authored",
+      "object_entity_id": "rgdub",
+      "valid_from": "2023-05-11T03:22:42Z",
+      "valid_to": null,
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "id": "ev_db2cf40a",
+          "artifact_id": "issue_4102",
+          "excerpt": "Steps to reproduce",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "ffb7c09f-f35f-43ae-8a4d-037264b2305c",
+      "subject_entity_id": "rgdub",
+      "predicate": "proposes_feature",
+      "object_entity_id": "travelagent",
+      "valid_from": "2023-05-11T03:22:42Z",
+      "valid_to": null,
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "id": "ev_428ee250",
+          "artifact_id": "issue_4102",
+          "excerpt": "Firstly, the AI Agent could consider presenting the user with a few different flight and hotel options, rather than just the lowest cost option.",
+          "char_start": null,
+          "char_end": null
+        },
+        {
+          "id": "ev_afe1727d",
+          "artifact_id": "issue_4102",
+          "excerpt": "Additionally, the AI Agent could provide more information about the specific constraints that it is using to find the lowest cost options,",
+          "char_start": null,
+          "char_end": null
+        },
+        {
+          "id": "ev_b05c0e7d",
+          "artifact_id": "issue_4102",
+          "excerpt": "Finally, the AI Agent could consider incorporating user feedback and preferences into its decision-making process,",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "adaef9c8-49ea-4a3f-967d-bc7c77319c1e",
+      "subject_entity_id": "auto_gpt",
+      "predicate": "authored",
+      "object_entity_id": "rgdub",
+      "valid_from": "2023-05-11T03:22:42Z",
+      "valid_to": "2023-05-11T19:20:59Z",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "id": "ev_89a63343",
+          "artifact_id": "issue_4102",
+          "excerpt": "Which version of Auto-GPT are you using?",
+          "char_start": null,
+          "char_end": null
+        },
+        {
+          "id": "ev_25544c07",
+          "artifact_id": "issue_4102",
+          "excerpt": "GPT-3 or GPT-4?",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "92750d1f-6424-4da0-94fb-af62b2c1d9be",
+      "subject_entity_id": "exy02",
+      "predicate": "authored",
+      "object_entity_id": "json_decoder_issue",
+      "valid_from": "2023-05-11T05:32:59Z",
+      "valid_to": null,
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "id": "ev_1f709eac",
+          "artifact_id": "issue_4104",
+          "excerpt": "This PR helps address multiple issues regarding json decode issues (e.g. #1407 , #4091, #4052, etc)",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "588e955a-b34c-48c3-b43d-0f008442153b",
+      "subject_entity_id": "exy02",
+      "predicate": "suggests_change",
+      "object_entity_id": "update_running_summary__",
+      "valid_from": "2023-05-11T05:32:59Z",
+      "valid_to": null,
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "id": "ev_8cea4520",
+          "artifact_id": "issue_4104",
+          "excerpt": "1) Cleaned up update_running_summary() logic - Pre-filter new_events for only non-'user' events - Each event was not being manipulated at the list level, adjusted logic to modify each event within new_events",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "c67f6696-0786-4f9b-b0fd-1e423e7e8df2",
+      "subject_entity_id": "exy02",
+      "predicate": "suggests_change",
+      "object_entity_id": "get_newly_trimmed_messages__",
+      "valid_from": "2023-05-11T05:32:59Z",
+      "valid_to": null,
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "id": "ev_8f4e0546",
+          "artifact_id": "issue_4104",
+          "excerpt": "2) Minor change to improve get_newly_trimmed_messages() (I can move this to a separate PR if needed) - Index slicing seems more appropriate here rather than list comprehension",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "3759f868-6c64-452c-bffa-d9fb118f7d80",
+      "subject_entity_id": "exy02",
+      "predicate": "fixes_issue",
+      "object_entity_id": null,
+      "valid_from": "2023-05-11T05:32:59Z",
+      "valid_to": null,
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "id": "ev_cd222bd9",
+          "artifact_id": "issue_4104",
+          "excerpt": "Added try/except logic to handle json load errors and log said errors appropriately",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "7b64d85a-2931-4e84-b4d4-7651700c2fa0",
+      "subject_entity_id": "exy02",
+      "predicate": "updates_component",
+      "object_entity_id": "update_running_summary__",
+      "valid_from": "2023-05-11T05:32:59Z",
+      "valid_to": null,
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "id": "ev_77a559d4",
+          "artifact_id": "issue_4104",
+          "excerpt": "Implemented .pop() in lieu of .remove(), index-based removal ensures consistent deletion of each target event",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "0e5e89a4-82cc-4b31-8579-5d666fc4c134",
+      "subject_entity_id": "exy02",
+      "predicate": "updates_component",
+      "object_entity_id": "get_newly_trimmed_messages__",
+      "valid_from": "2023-05-11T05:32:59Z",
+      "valid_to": null,
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "id": "ev_b471d033",
+          "artifact_id": "issue_4104",
+          "excerpt": "Minor change to improve get_newly_trimmed_messages() (I can move this to a separate PR if needed)",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "487c07e8-3d8a-40bb-b70a-227dd5bedf68",
+      "subject_entity_id": "boostrix",
+      "predicate": "proposes_feature",
+      "object_entity_id": "autogpt_core",
+      "valid_from": "2023-05-11T07:35:10Z",
+      "valid_to": "2023-05-11T10:07:39Z",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "id": "ev_ed0414d4",
+          "artifact_id": "issue_4105",
+          "excerpt": "the easiest way to realize this seems to be `autogpt.core` (#4770)",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "3835a631-0449-4d52-8e6f-9cbd7af3946b",
+      "subject_entity_id": "boostrix",
+      "predicate": "authored",
+      "object_entity_id": null,
+      "valid_from": "2023-05-11T07:35:10Z",
+      "valid_to": "2023-05-11T14:21:53Z",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "id": "ev_f3e7bc77",
+          "artifact_id": "issue_4105",
+          "excerpt": "State management, persistence and resumption ### Objectives",
+          "char_start": null,
+          "char_end": null
+        },
+        {
+          "id": "ev_5bb5b23f",
+          "artifact_id": "issue_4107",
+          "excerpt": "Before we can start managing the workflow of the agent, we have to give it some more structure.",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "045c2023-4d21-4fb6-8589-fc1190f6d345",
+      "subject_entity_id": "pwuts",
+      "predicate": "authored",
+      "object_entity_id": null,
+      "valid_from": "2023-05-11T07:35:10Z",
+      "valid_to": null,
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "id": "ev_e800ca2e",
+          "artifact_id": "issue_4105",
+          "excerpt": "Thanks for creating this overview @Boostrix! <3",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "f538324a-5f14-4f48-bd9f-99dc309922bc",
+      "subject_entity_id": "github_actions_bot_",
+      "predicate": "authored",
+      "object_entity_id": null,
+      "valid_from": "2023-05-11T07:35:10Z",
+      "valid_to": null,
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "id": "ev_1ebe97d2",
+          "artifact_id": "issue_4105",
+          "excerpt": "This issue has automatically been marked as _stale_ because it has not had any activity in the last 50 days.",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "26cbb421-7cea-4eeb-8422-eb462d796e00",
+      "subject_entity_id": "rsrrrrrr",
+      "predicate": "authored",
+      "object_entity_id": null,
+      "valid_from": "2023-05-11T08:19:24Z",
+      "valid_to": null,
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "id": "ev_898ddfdd",
+          "artifact_id": "issue_4106",
+          "excerpt": "At the moment any non-essential commands are not being merged. If you want to add non-essential commands to Auto-GPT, please create a plugin instead.",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "4b561239-7b0c-4a02-97cc-ac677d8be6a8",
+      "subject_entity_id": "rsrrrrrr",
+      "predicate": "proposes_feature",
+      "object_entity_id": null,
+      "valid_from": "2023-05-11T08:19:24Z",
+      "valid_to": null,
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "id": "ev_fe038219",
+          "artifact_id": "issue_4106",
+          "excerpt": "We are expecting to ship plugin support within the week (PR #757).",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "f61c865f-6469-4649-89a2-2ea45fbcfcb6",
+      "subject_entity_id": "boostrix",
+      "predicate": "proposes_feature",
+      "object_entity_id": null,
+      "valid_from": "2023-05-11T10:07:39Z",
+      "valid_to": null,
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "id": "ev_04c4dea7",
+          "artifact_id": "issue_4107",
+          "excerpt": "The different ways to implement this can generally be subdivided into 3 groups:",
+          "char_start": null,
+          "char_end": null
+        },
+        {
+          "id": "ev_a096258b",
+          "artifact_id": "issue_4107",
+          "excerpt": "2. Planning mechanism that is part of the agent loop",
+          "char_start": null,
+          "char_end": null
+        },
+        {
+          "id": "ev_8157d404",
+          "artifact_id": "issue_4112",
+          "excerpt": "might be useful to some folks - at least could make it into the docs to demonstrate how to extend the current command manager with custom commands",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "16dbb3ee-b53c-4be1-ae91-e5c4859d78b7",
+      "subject_entity_id": "boostrix",
+      "predicate": "suggests_change",
+      "object_entity_id": null,
+      "valid_from": "2023-05-11T10:07:39Z",
+      "valid_to": null,
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "id": "ev_9ce22d60",
+          "artifact_id": "issue_4107",
+          "excerpt": "Extra step in the agent\u2019s loop to evaluate progress and update the plan / to-do list.",
+          "char_start": null,
+          "char_end": null
+        },
+        {
+          "id": "ev_54d4f43c",
+          "artifact_id": "issue_4107",
+          "excerpt": "Parallel thread that evaluates the agent\u2019s performance and intervenes / gives feedback when needed.",
+          "char_start": null,
+          "char_end": null
+        },
+        {
+          "id": "ev_caae8239",
+          "artifact_id": "issue_4107",
+          "excerpt": "Add output fields to the executive prompt through which the agent communicates its qualitative & quantitative assessment of the previous step.",
+          "char_start": null,
+          "char_end": null
+        },
+        {
+          "id": "ev_e3a16cb5",
+          "artifact_id": "issue_4112",
+          "excerpt": "mainly useful to save bandwidth (API tokens), so that Python code can be compiled first before being executed",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "c00ee841-85ce-415f-954d-34213de3f4cb",
+      "subject_entity_id": "agent",
+      "predicate": "depends_on",
+      "object_entity_id": "executive_prompt",
+      "valid_from": "2023-05-11T10:07:39Z",
+      "valid_to": null,
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "id": "ev_4d70bc6b",
+          "artifact_id": "issue_4107",
+          "excerpt": "The executive prompt is used to manage the agent\u2019s plan and to-do list.",
+          "char_start": null,
+          "char_end": null
+        },
+        {
+          "id": "ev_9c3ee276",
+          "artifact_id": "issue_4107",
+          "excerpt": "add output fields to the executive prompt through which the agent communicates its qualitative & quantitative assessment of the previous step.",
+          "char_start": null,
+          "char_end": null
+        },
+        {
+          "id": "ev_8c161422",
+          "artifact_id": "issue_4107",
+          "excerpt": "the executive prompt is used to manage the agent\u2019s plan and to-do list.",
+          "char_start": null,
+          "char_end": null
+        },
+        {
+          "id": "ev_446346a4",
+          "artifact_id": "issue_4107",
+          "excerpt": "add output fields to the executive prompt through which the agent can manage its plan / to-do list",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "04fcd8f4-39de-4d94-9cef-578db5d888a1",
+      "subject_entity_id": "executive_prompt",
+      "predicate": "updates_component",
+      "object_entity_id": "output_fields",
+      "valid_from": "2023-05-11T10:07:39Z",
+      "valid_to": null,
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "id": "ev_c710e454",
+          "artifact_id": "issue_4107",
+          "excerpt": "Add output fields to the executive prompt through which the agent can manage its plan / to-do list",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "258ae8fd-f8dc-40a4-8e4c-69f862d93c68",
+      "subject_entity_id": "boostrix",
+      "predicate": "removes_configuration",
+      "object_entity_id": "commands",
+      "valid_from": "2023-05-11T10:07:39Z",
+      "valid_to": null,
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "id": "ev_ef11d994",
+          "artifact_id": "issue_4107",
+          "excerpt": "This approach seems non-ideal for a couple of reasons:",
+          "char_start": null,
+          "char_end": null
+        },
+        {
+          "id": "ev_363e0eba",
+          "artifact_id": "issue_4107",
+          "excerpt": "Does not require extra steps just for self-management \u2192 limited additional overhead",
+          "char_start": null,
+          "char_end": null
+        },
+        {
+          "id": "ev_3fddc8b0",
+          "artifact_id": "issue_4107",
+          "excerpt": "This adds yet another function to the already complex prompt.",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "f10f20d0-acca-449e-a502-75c69a7b2058",
+      "subject_entity_id": "boostrix",
+      "predicate": "removes_configuration",
+      "object_entity_id": "discord",
+      "valid_from": "2023-05-11T10:07:39Z",
+      "valid_to": null,
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "id": "ev_11b5238f",
+          "artifact_id": "issue_4107",
+          "excerpt": "If you think something important is missing from this comparison, please leave a comment below or bring it up [on Discord](https://discord.com/channels/1092243196446249134/1095817829405704305)!",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "2b1448aa-49b3-4f5c-89d7-26e2eb495e51",
+      "subject_entity_id": "agent",
+      "predicate": "depends_on",
+      "object_entity_id": "plan",
+      "valid_from": "2023-05-11T10:07:39Z",
+      "valid_to": null,
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "id": "ev_e7254b1b",
+          "artifact_id": "issue_4107",
+          "excerpt": "2. planning mechanism that is part of the agent loop",
+          "char_start": null,
+          "char_end": null
+        },
+        {
+          "id": "ev_80b9e9e3",
+          "artifact_id": "issue_4107",
+          "excerpt": "extra step in the agent\u2019s loop to evaluate progress and update the plan / to-do list.",
+          "char_start": null,
+          "char_end": null
+        },
+        {
+          "id": "ev_4a478cb0",
+          "artifact_id": "issue_4107",
+          "excerpt": "the executive prompt is used to manage the agent\u2019s plan and to-do list.",
+          "char_start": null,
+          "char_end": null
+        },
+        {
+          "id": "ev_f176d365",
+          "artifact_id": "issue_4107",
+          "excerpt": "add output fields to the executive prompt through which the agent can manage its plan / to-do list",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "35e9a091-38cf-4b85-9d3a-d6602e7ae455",
+      "subject_entity_id": "agent",
+      "predicate": "depends_on",
+      "object_entity_id": "to_do_list",
+      "valid_from": "2023-05-11T10:07:39Z",
+      "valid_to": null,
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "id": "ev_e2de09d1",
+          "artifact_id": "issue_4107",
+          "excerpt": "extra step in the agent\u2019s loop to evaluate progress and update the plan / to-do list.",
+          "char_start": null,
+          "char_end": null
+        },
+        {
+          "id": "ev_1294aadb",
+          "artifact_id": "issue_4107",
+          "excerpt": "the executive prompt is used to manage the agent\u2019s plan and to-do list.",
+          "char_start": null,
+          "char_end": null
+        },
+        {
+          "id": "ev_c3acff08",
+          "artifact_id": "issue_4107",
+          "excerpt": "add output fields to the executive prompt through which the agent can manage its plan / to-do list",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "dc28696c-9007-4750-ae26-fc94c6e45c53",
+      "subject_entity_id": "plan",
+      "predicate": "depends_on",
+      "object_entity_id": "to_do_list",
+      "valid_from": "2023-05-11T10:07:39Z",
+      "valid_to": null,
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "id": "ev_74b7d942",
+          "artifact_id": "issue_4107",
+          "excerpt": "extra step in the agent\u2019s loop to evaluate progress and update the plan / to-do list.",
+          "char_start": null,
+          "char_end": null
+        },
+        {
+          "id": "ev_fa4b91bb",
+          "artifact_id": "issue_4107",
+          "excerpt": "the executive prompt is used to manage the agent\u2019s plan and to-do list.",
+          "char_start": null,
+          "char_end": null
+        },
+        {
+          "id": "ev_35d28b22",
+          "artifact_id": "issue_4107",
+          "excerpt": "add output fields to the executive prompt through which the agent can manage its plan / to-do list",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "17c1be56-a612-4645-afbb-5113567eec3a",
+      "subject_entity_id": "agent",
+      "predicate": "depends_on",
+      "object_entity_id": "output_fields",
+      "valid_from": "2023-05-11T10:07:39Z",
+      "valid_to": null,
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "id": "ev_6ee121f1",
+          "artifact_id": "issue_4107",
+          "excerpt": "add output fields to the executive prompt through which the agent communicates its qualitative & quantitative assessment of the previous step.",
+          "char_start": null,
+          "char_end": null
+        },
+        {
+          "id": "ev_06e927e7",
+          "artifact_id": "issue_4107",
+          "excerpt": "add output fields to the executive prompt through which the agent can manage its plan / to-do list",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "81f8dee6-a1f5-4b11-8411-85c6058a0c49",
+      "subject_entity_id": "executive_prompt",
+      "predicate": "depends_on",
+      "object_entity_id": "output_fields",
+      "valid_from": "2023-05-11T10:07:39Z",
+      "valid_to": null,
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "id": "ev_a5039e93",
+          "artifact_id": "issue_4107",
+          "excerpt": "add output fields to the executive prompt through which the agent communicates its qualitative & quantitative assessment of the previous step.",
+          "char_start": null,
+          "char_end": null
+        },
+        {
+          "id": "ev_9270ebba",
+          "artifact_id": "issue_4107",
+          "excerpt": "add output fields to the executive prompt through which the agent can manage its plan / to-do list",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "581506c5-9ef7-495a-bfeb-70028f059a2a",
+      "subject_entity_id": "executive_prompt",
+      "predicate": "depends_on",
+      "object_entity_id": "plan",
+      "valid_from": "2023-05-11T10:07:39Z",
+      "valid_to": null,
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "id": "ev_564713f0",
+          "artifact_id": "issue_4107",
+          "excerpt": "the executive prompt is used to manage the agent\u2019s plan and to-do list.",
+          "char_start": null,
+          "char_end": null
+        },
+        {
+          "id": "ev_55035e60",
+          "artifact_id": "issue_4107",
+          "excerpt": "add output fields to the executive prompt through which the agent can manage its plan / to-do list",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "9af605ec-49cb-477f-aa35-a559a92a39b6",
+      "subject_entity_id": "executive_prompt",
+      "predicate": "depends_on",
+      "object_entity_id": "to_do_list",
+      "valid_from": "2023-05-11T10:07:39Z",
+      "valid_to": null,
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "id": "ev_6fa6b2ab",
+          "artifact_id": "issue_4107",
+          "excerpt": "the executive prompt is used to manage the agent\u2019s plan and to-do list.",
+          "char_start": null,
+          "char_end": null
+        },
+        {
+          "id": "ev_c53720cf",
+          "artifact_id": "issue_4107",
+          "excerpt": "add output fields to the executive prompt through which the agent can manage its plan / to-do list",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "3548d1d2-9195-4009-8f8f-4a138d3a598f",
+      "subject_entity_id": "plan",
+      "predicate": "depends_on",
+      "object_entity_id": "output_fields",
+      "valid_from": "2023-05-11T10:07:39Z",
+      "valid_to": null,
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "id": "ev_306ebea9",
+          "artifact_id": "issue_4107",
+          "excerpt": "add output fields to the executive prompt through which the agent can manage its plan / to-do list",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "d0011c0c-d6fb-4b39-aae6-a7893db2d0bb",
+      "subject_entity_id": "to_do_list",
+      "predicate": "depends_on",
+      "object_entity_id": "output_fields",
+      "valid_from": "2023-05-11T10:07:39Z",
+      "valid_to": null,
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "id": "ev_83f29c37",
+          "artifact_id": "issue_4107",
+          "excerpt": "add output fields to the executive prompt through which the agent can manage its plan / to-do list",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "9fb1431b-f217-4351-a6ce-781fcb864acb",
+      "subject_entity_id": "nidhiw3",
+      "predicate": "authored",
+      "object_entity_id": "qdrant_db",
+      "valid_from": "2023-05-11T12:48:04Z",
+      "valid_to": null,
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "id": "ev_4de77927",
+          "artifact_id": "issue_4108",
+          "excerpt": "Added Support for QDrant DB",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "1d29bbd1-a9e1-410e-a166-15b808d23b05",
+      "subject_entity_id": "nidhiw3",
+      "predicate": "proposes_feature",
+      "object_entity_id": "qdrant_db",
+      "valid_from": "2023-05-11T12:48:04Z",
+      "valid_to": null,
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "id": "ev_b43c898c",
+          "artifact_id": "issue_4108",
+          "excerpt": "This plugin enables users to store data in Qdrant's highly scalable index and retrieve data points based on their similarity to a query data point.",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "7a2a3c76-663e-4212-bc16-59eea01bb429",
+      "subject_entity_id": "nidhiw3",
+      "predicate": "suggests_change",
+      "object_entity_id": "qdrant_db",
+      "valid_from": "2023-05-11T12:48:04Z",
+      "valid_to": null,
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "id": "ev_33acd10f",
+          "artifact_id": "issue_4108",
+          "excerpt": "Added a Qdrant memory module that will help to store and retrieve data points in the Qdrant index.",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "3c77caa9-276a-4399-97e8-eede4381145b",
+      "subject_entity_id": "nidhiw3",
+      "predicate": "fixes_issue",
+      "object_entity_id": "qdrant_db",
+      "valid_from": "2023-05-11T12:48:04Z",
+      "valid_to": null,
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "id": "ev_e749eef7",
+          "artifact_id": "issue_4108",
+          "excerpt": "I have tested the code on different prompts like Lawyer-GPT and Dev-GPT . The data gets stored in the vector indexes.",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "a65232f5-375c-462a-8307-e2cc3b69a710",
+      "subject_entity_id": "nidhiw3",
+      "predicate": "updates_component",
+      "object_entity_id": "auto_gpt",
+      "valid_from": "2023-05-11T12:48:04Z",
+      "valid_to": null,
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "id": "ev_134864e3",
+          "artifact_id": "issue_4108",
+          "excerpt": "You can configure the Qdrant Memory by modifying your Auto-GPT .env file (`.env`).",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "f21edf89-b1c5-4134-a674-314c17ae504a",
+      "subject_entity_id": "nidhiw3",
+      "predicate": "depends_on",
+      "object_entity_id": "qdrant_client",
+      "valid_from": "2023-05-11T12:48:04Z",
+      "valid_to": null,
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "id": "ev_e3cb056b",
+          "artifact_id": "issue_4108",
+          "excerpt": "To use the Qdrant Memory , you need to have the following dependencies installed: - qdrant-client",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "041f1718-a469-43d3-8692-546bbedb3cee",
+      "subject_entity_id": "nidhiw3",
+      "predicate": "removes_configuration",
+      "object_entity_id": null,
+      "valid_from": "2023-05-11T12:48:04Z",
+      "valid_to": null,
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "id": "ev_778508da",
+          "artifact_id": "issue_4108",
+          "excerpt": "<!-- Submit these as separate Pull Requests, they are the easiest to merge! -->",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "14fc61de-951d-4c56-bf82-4bb0a5f8e2c1",
+      "subject_entity_id": "zylerkade",
+      "predicate": "reports_issue",
+      "object_entity_id": null,
+      "valid_from": "2023-05-11T13:04:38Z",
+      "valid_to": null,
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "id": "ev_2c71a61a",
+          "artifact_id": "issue_4109",
+          "excerpt": "### \u26a0\ufe0f Search for existing issues first \u26a0\ufe0f - [X] I have searched the existing issues, and there is no existing issue for my problem",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "d3f01488-627e-40e5-8e9d-3ff4fb4c163b",
+      "subject_entity_id": "zylerkade",
+      "predicate": "proposes_feature",
+      "object_entity_id": null,
+      "valid_from": "2023-05-11T13:04:38Z",
+      "valid_to": null,
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "id": "ev_b858e71f",
+          "artifact_id": "issue_4109",
+          "excerpt": "NEWS: Plugin support \ud83d\udd0c NEWS: Auto-GPT now has support for plugins! With plugins, you can extend Auto-GPT's abilities, adding support for third-party services and more.",
+          "char_start": null,
+          "char_end": null
+        },
+        {
+          "id": "ev_81fedd22",
+          "artifact_id": "issue_4109",
+          "excerpt": "NEWS: Changes to Docker configuration \ud83d\udc0b NEWS: The workdir has been changed from /home/appuser to /app.",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "7b30e64d-1cac-484e-8deb-c8b48d939e83",
+      "subject_entity_id": "zylerkade",
+      "predicate": "suggests_change",
+      "object_entity_id": null,
+      "valid_from": "2023-05-11T13:04:38Z",
+      "valid_to": null,
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "id": "ev_70280d8f",
+          "artifact_id": "issue_4109",
+          "excerpt": "NEWS: Be sure to update any volume mounts",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "0fd7c57e-b123-44a7-af31-d7214b7e1a7b",
+      "subject_entity_id": "autogpt",
+      "predicate": "depends_on",
+      "object_entity_id": "python",
+      "valid_from": "2023-05-11T13:04:38Z",
+      "valid_to": "2023-05-11T18:29:38Z",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "id": "ev_01b436c7",
+          "artifact_id": "issue_4109",
+          "excerpt": "1. Latest versions of Python and PIP installed",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "a3b26ae0-eae5-4d2d-9865-8fe9d02c0670",
+      "subject_entity_id": "autogpt",
+      "predicate": "depends_on",
+      "object_entity_id": "gpt_4",
+      "valid_from": "2023-05-11T13:04:38Z",
+      "valid_to": "2023-05-11T18:29:38Z",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "id": "ev_a8431966",
+          "artifact_id": "issue_4109",
+          "excerpt": "GPT-3 or GPT-4? GPT-4",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "ec5b8260-e935-43e5-b1b6-e16919856d5d",
+      "subject_entity_id": "autogpt",
+      "predicate": "updates_component",
+      "object_entity_id": null,
+      "valid_from": "2023-05-11T13:04:38Z",
+      "valid_to": null,
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "id": "ev_2fa23679",
+          "artifact_id": "issue_4109",
+          "excerpt": "NEWS: Plugin support \ud83d\udd0c NEWS: Auto-GPT now has support for plugins! With plugins, you can extend Auto-GPT's abilities, adding support for third-party services and more.",
+          "char_start": null,
+          "char_end": null
+        },
+        {
+          "id": "ev_1ad52e39",
+          "artifact_id": "issue_4109",
+          "excerpt": "NEWS: Changes to Docker configuration \ud83d\udc0b NEWS: The workdir has been changed from /home/appuser to /app.",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "f4bf0549-c5fe-4a1c-9c0c-8b221bf7a206",
+      "subject_entity_id": "vs_code",
+      "predicate": "depends_on",
+      "object_entity_id": "containers",
+      "valid_from": "2023-05-11T13:04:38Z",
+      "valid_to": null,
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "id": "ev_9e70d98b",
+          "artifact_id": "issue_4109",
+          "excerpt": "Trying to use/run with VS Code + Containers works fine, but using CMD does not.",
+          "char_start": null,
+          "char_end": null
+        },
+        {
+          "id": "ev_d78f1a62",
+          "artifact_id": "issue_4109",
+          "excerpt": "trying to use/run with vs code + containers works fine, but using cmd does not.",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "9b32acab-70be-42c7-af01-54c6db410d5b",
+      "subject_entity_id": "filippoispanico",
+      "predicate": "authored",
+      "object_entity_id": null,
+      "valid_from": "2023-05-11T14:19:57Z",
+      "valid_to": null,
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "id": "ev_a10f7f9e",
+          "artifact_id": "issue_4111",
+          "excerpt": "AUTHOR:@FilippoIspanico Title: first commit",
+          "char_start": null,
+          "char_end": null
+        },
+        {
+          "id": "ev_16b3e427",
+          "artifact_id": "issue_4113",
+          "excerpt": "At the moment any non-essential commands are not being merged. If you want to add non-essential commands to Auto-GPT, please create a plugin instead.",
+          "char_start": null,
+          "char_end": null
+        },
+        {
+          "id": "ev_8ffacffc",
+          "artifact_id": "issue_4113",
+          "excerpt": "We are expecting to ship plugin support within the week (PR #757).",
+          "char_start": null,
+          "char_end": null
+        },
+        {
+          "id": "ev_cdbd36d6",
+          "artifact_id": "issue_4113",
+          "excerpt": "We've recently noticed an increase in pull requests focusing on combining multiple changes.",
+          "char_start": null,
+          "char_end": null
+        },
+        {
+          "id": "ev_ea719c03",
+          "artifact_id": "issue_4113",
+          "excerpt": "To ensure the quality of our repository, we kindly ask you to adhere to the following guidelines when submitting PRs:",
+          "char_start": null,
+          "char_end": null
+        },
+        {
+          "id": "ev_c51d3a4e",
+          "artifact_id": "issue_4113",
+          "excerpt": "Focus on a single, specific change.",
+          "char_start": null,
+          "char_end": null
+        },
+        {
+          "id": "ev_46876d4f",
+          "artifact_id": "issue_4113",
+          "excerpt": "Do not include any unrelated or 'extra' modifications.",
+          "char_start": null,
+          "char_end": null
+        },
+        {
+          "id": "ev_a465006b",
+          "artifact_id": "issue_4113",
+          "excerpt": "Provide clear documentation and explanations of the changes made.",
+          "char_start": null,
+          "char_end": null
+        },
+        {
+          "id": "ev_40b8a9a6",
+          "artifact_id": "issue_4113",
+          "excerpt": "Ensure diffs are limited to the intended lines \u2014 no applying preferred formatting styles or line endings (unless that's what the PR is about).",
+          "char_start": null,
+          "char_end": null
+        },
+        {
+          "id": "ev_3b96a70c",
+          "artifact_id": "issue_4113",
+          "excerpt": "For guidance on committing only the specific lines you have changed, refer to this helpful video: https://youtu.be/8-hSNHHbiZg",
+          "char_start": null,
+          "char_end": null
+        },
+        {
+          "id": "ev_fce8fec3",
+          "artifact_id": "issue_4113",
+          "excerpt": "Check out our [wiki page on Contributing](https://github.com/Significant-Gravitas/Auto-GPT/wiki/Contributing)",
+          "char_start": null,
+          "char_end": null
+        },
+        {
+          "id": "ev_2429f187",
+          "artifact_id": "issue_4113",
+          "excerpt": "By following these guidelines, your PRs are more likely to be merged quickly after testing, as long as they align with the project's overall direction.",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "b5898bc7-1a57-4fef-a752-df38fedcdd7a",
+      "subject_entity_id": "vercel_bot_",
+      "predicate": "assigned_to",
+      "object_entity_id": "docs",
+      "valid_from": "2023-05-11T14:19:57Z",
+      "valid_to": "2023-05-11T20:23:32Z",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "id": "ev_5e337604",
+          "artifact_id": "issue_4111",
+          "excerpt": "1 Ignored Deployment | Name | Status | Preview | Comments | Updated (UTC) | | :--- | :----- | :------ | :------- | :------ | | **docs** | \u2b1c\ufe0f Ignored ([Inspect](https://vercel.com/auto-gpt/docs/8WNFdC3RUiDu97y4jRLe2LhKUugt)) | | | May 11, 2023 2:20pm |",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "f0048494-7e0c-441d-b932-c2bfa3824eec",
+      "subject_entity_id": "boostrix",
+      "predicate": "authored",
+      "object_entity_id": "pr__757",
+      "valid_from": "2023-05-11T14:21:53Z",
+      "valid_to": null,
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "id": "ev_16f9c76e",
+          "artifact_id": "issue_4112",
+          "excerpt": "If you want to add non-essential commands to Auto-GPT, please create a plugin instead. We are expecting to ship plugin support within the week (PR #757)",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "ade05822-17c2-4cca-a756-a44a7f3694c4",
+      "subject_entity_id": "auto_gpt",
+      "predicate": "depends_on",
+      "object_entity_id": "wiki_page_on_contributing",
+      "valid_from": "2023-05-11T14:34:44Z",
+      "valid_to": "2023-05-11T19:20:59Z",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "id": "ev_574512ad",
+          "artifact_id": "issue_4113",
+          "excerpt": "check out our [wiki page on contributing](https://github.com/significant-gravitas/auto-gpt/wiki/contributing)",
+          "char_start": null,
+          "char_end": null
+        },
+        {
+          "id": "ev_2c324513",
+          "artifact_id": "issue_4121",
+          "excerpt": "check out our [wiki page on contributing](https://github.com/significant-gravitas/auto-gpt/wiki/contributing)",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "9f78d07d-299a-4e7c-88ee-0178e0264ed8",
+      "subject_entity_id": "significant_gravitas_auto_gpt",
+      "predicate": "depends_on",
+      "object_entity_id": "wiki_page_on_contributing",
+      "valid_from": "2023-05-11T14:34:44Z",
+      "valid_to": null,
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "id": "ev_cabaf6b9",
+          "artifact_id": "issue_4113",
+          "excerpt": "check out our [wiki page on contributing](https://github.com/significant-gravitas/auto-gpt/wiki/contributing)",
+          "char_start": null,
+          "char_end": null
+        },
+        {
+          "id": "ev_62929b30",
+          "artifact_id": "issue_4121",
+          "excerpt": "check out our [wiki page on contributing](https://github.com/significant-gravitas/auto-gpt/wiki/contributing)",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "89c61105-71ca-4df7-82cb-de70a7cef13a",
+      "subject_entity_id": "zylerkade",
+      "predicate": "authored",
+      "object_entity_id": "auto_gpt",
+      "valid_from": "2023-05-11T15:42:50Z",
+      "valid_to": null,
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "id": "ev_877e4ffa",
+          "artifact_id": "issue_4115",
+          "excerpt": "Keeps Crashing After a Few Responses (Even on Small Chunks, Not Based on Large Chunks)",
+          "char_start": null,
+          "char_end": null
+        },
+        {
+          "id": "ev_13a52e31",
+          "artifact_id": "issue_4115",
+          "excerpt": "Running it like normal in VS Code + Container.",
+          "char_start": null,
+          "char_end": null
+        },
+        {
+          "id": "ev_246b21bb",
+          "artifact_id": "issue_4115",
+          "excerpt": "It doesn't seem like chunk size has anything to do with it as it was able to process large chunks fine in a previous prompt before it crashed on a small chunk, but then when I ran it again it crashed after only 3 prompt cycles on a single/small chunk.",
+          "char_start": null,
+          "char_end": null
+        },
+        {
+          "id": "ev_196d8cc2",
+          "artifact_id": "issue_4115",
+          "excerpt": "First time was able to go through 10 prompt cycles before crashing, second time it was only able to do 3 before crashing.",
+          "char_start": null,
+          "char_end": null
+        },
+        {
+          "id": "ev_c9d3610f",
+          "artifact_id": "issue_4115",
+          "excerpt": "And yes, I have the **Paid** API account (which worked beautifully with no issues in AutoGPT v0.2.2, and not to be mistaken with the ChatGPT4 Plus paid account) with GPT-4 API access.",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "f127cf0f-813d-4247-a447-ac38fdddbd1a",
+      "subject_entity_id": "auto_gpt",
+      "predicate": "depends_on",
+      "object_entity_id": "gpt_4",
+      "valid_from": "2023-05-11T15:42:50Z",
+      "valid_to": "2023-05-11T19:20:59Z",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "id": "ev_38fd871f",
+          "artifact_id": "issue_4115",
+          "excerpt": "And yes, I have the **Paid** API account (which worked beautifully with no issues in AutoGPT v0.2.2, and not to be mistaken with the ChatGPT4 Plus paid account) with GPT-4 API access.",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "58d4248e-1774-44a7-8c79-a42aacf8c8b4",
+      "subject_entity_id": "auto_gpt",
+      "predicate": "fixes_issue",
+      "object_entity_id": null,
+      "valid_from": "2023-05-11T15:42:50Z",
+      "valid_to": "2023-05-11T19:20:59Z",
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "id": "ev_e891bfa6",
+          "artifact_id": "issue_4115",
+          "excerpt": "Keeps Crashing After a Few Responses (Even on Small Chunks, Not Based on Large Chunks)",
+          "char_start": null,
+          "char_end": null
+        },
+        {
+          "id": "ev_cc0f630e",
+          "artifact_id": "issue_4115",
+          "excerpt": "First time was able to go through 10 prompt cycles before crashing, second time it was only able to do 3 before crashing.",
+          "char_start": null,
+          "char_end": null
+        },
+        {
+          "id": "ev_65a79646",
+          "artifact_id": "issue_4115",
+          "excerpt": "Adding chunk 1 / 1 to memory",
+          "char_start": null,
+          "char_end": null
+        },
+        {
+          "id": "ev_afeea01d",
+          "artifact_id": "issue_4115",
+          "excerpt": "Summarizing chunk 1 / 1 of length 5363 characters, or 1197 tokens",
+          "char_start": null,
+          "char_end": null
+        },
+        {
+          "id": "ev_b69f317d",
+          "artifact_id": "issue_4115",
+          "excerpt": "Added chunk 1 summary to memory, of length 1053 characters",
+          "char_start": null,
+          "char_end": null
+        },
+        {
+          "id": "ev_c7c56a61",
+          "artifact_id": "issue_4115",
+          "excerpt": "Summarized 1 chunks.",
+          "char_start": null,
+          "char_end": null
+        },
+        {
+          "id": "ev_37cc0cc6",
+          "artifact_id": "issue_4115",
+          "excerpt": "SYSTEM: Command browse_website returned: (",
+          "char_start": null,
+          "char_end": null
+        },
+        {
+          "id": "ev_69791a96",
+          "artifact_id": "issue_4115",
+          "excerpt": "The website I browsed did not provide the information I was looking for.",
+          "char_start": null,
+          "char_end": null
+        },
+        {
+          "id": "ev_0aebbf8c",
+          "artifact_id": "issue_4120",
+          "excerpt": "I can use a search engine to find websites that list estate sales in the area.",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "b7e8e4b8-8a6c-4ea5-bd39-39c6b618b5cd",
+      "subject_entity_id": "auto_gpt",
+      "predicate": "suggests_change",
+      "object_entity_id": null,
+      "valid_from": "2023-05-11T15:42:50Z",
+      "valid_to": null,
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "id": "ev_bae4dd32",
+          "artifact_id": "issue_4115",
+          "excerpt": "It doesn't seem like chunk size has anything to do with it as it was able to process large chunks fine in a previous prompt before it crashed on a small chunk, but then when I ran it again it crashed after only 3 prompt cycles on a single/small chunk.",
+          "char_start": null,
+          "char_end": null
+        },
+        {
+          "id": "ev_5544b8af",
+          "artifact_id": "issue_4115",
+          "excerpt": "And yes, I have the **Paid** API account (which worked beautifully with no issues in AutoGPT v0.2.2, and not to be mistaken with the ChatGPT4 Plus paid account) with GPT-4 API access.",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "d46040fb-fa0a-482b-9e38-64c16ac2e1fc",
+      "subject_entity_id": "zylerkade",
+      "predicate": "assigned_to",
+      "object_entity_id": "auto_gpt",
+      "valid_from": "2023-05-11T15:42:50Z",
+      "valid_to": null,
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "id": "ev_532e2197",
+          "artifact_id": "issue_4115",
+          "excerpt": "### Current behavior \ud83d\ude2f -=-=-=-=-=-=-= COMMAND AUTHORISED BY USER -=-=-=-=-=-=-= Text length: 5363 characters",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "652a3fe2-5f31-43ec-8305-744f0e78eea6",
+      "subject_entity_id": "gpt_4",
+      "predicate": "depends_on",
+      "object_entity_id": "chatgpt4_plus",
+      "valid_from": "2023-05-11T15:42:50Z",
+      "valid_to": null,
+      "confidence": 0.7,
+      "evidence": [
+        {
+          "id": "ev_79cb2082",
+          "artifact_id": "issue_4115",
+          "excerpt": "and yes, i have the **paid** api account (which worked beautifully with no issues in autogpt v0.2.2, and not to be mistaken with the chatgpt4 plus paid account) with gpt-4 api access.",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "abc7275b-5304-4fa6-9dab-adefef28a0f4",
+      "subject_entity_id": "loguninv",
+      "predicate": "authored",
+      "object_entity_id": null,
+      "valid_from": "2023-05-11T18:07:18Z",
+      "valid_to": null,
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "id": "ev_5d61f069",
+          "artifact_id": "issue_4118",
+          "excerpt": "TypeError: 'type' object is not subscriptable after ./run.sh command",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "84cf8052-5e5c-405a-b0cc-f5a16d42c369",
+      "subject_entity_id": "loguninv",
+      "predicate": "reports_issue",
+      "object_entity_id": null,
+      "valid_from": "2023-05-11T18:07:18Z",
+      "valid_to": null,
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "id": "ev_8d1628b0",
+          "artifact_id": "issue_4118",
+          "excerpt": "TypeError: 'type' object is not subscriptable after ./run.sh command",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "1c7cc15e-a550-423e-86f6-7f9a7562f4e4",
+      "subject_entity_id": "loguninv",
+      "predicate": "assigned_to",
+      "object_entity_id": "auto_gpt",
+      "valid_from": "2023-05-11T18:07:18Z",
+      "valid_to": null,
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "id": "ev_7c0cf172",
+          "artifact_id": "issue_4118",
+          "excerpt": "Which version of Auto-GPT are you using? Latest Release",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "07e05cb7-9d37-4e47-81c3-6bf509cb8d83",
+      "subject_entity_id": "loguninv",
+      "predicate": "suggests_change",
+      "object_entity_id": "autogpt",
+      "valid_from": "2023-05-11T18:07:18Z",
+      "valid_to": null,
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "id": "ev_53631f80",
+          "artifact_id": "issue_4118",
+          "excerpt": "Steps to reproduce \ud83d\udd79 ./run.sh command in terminal",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "82d689e6-00e3-4204-830c-6aacc469c4df",
+      "subject_entity_id": "loguninv",
+      "predicate": "fixes_issue",
+      "object_entity_id": null,
+      "valid_from": "2023-05-11T18:07:18Z",
+      "valid_to": null,
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "id": "ev_0f7d9fbc",
+          "artifact_id": "issue_4118",
+          "excerpt": "Steps to reproduce \ud83d\udd79 ./run.sh command in terminal",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "74c7d4e9-c94f-4d69-b163-74637db6de49",
+      "subject_entity_id": "loguninv",
+      "predicate": "updates_component",
+      "object_entity_id": "agent",
+      "valid_from": "2023-05-11T18:07:18Z",
+      "valid_to": null,
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "id": "ev_3d6afbf4",
+          "artifact_id": "issue_4118",
+          "excerpt": "Steps to reproduce \ud83d\udd79 ./run.sh command in terminal",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "1748bf48-7944-4c9e-a2d4-19ed2d87971b",
+      "subject_entity_id": "loguninv",
+      "predicate": "depends_on",
+      "object_entity_id": "agentmanager",
+      "valid_from": "2023-05-11T18:07:18Z",
+      "valid_to": null,
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "id": "ev_21a6023b",
+          "artifact_id": "issue_4118",
+          "excerpt": "Steps to reproduce \ud83d\udd79 ./run.sh command in terminal",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "2b66e5db-c2f7-47d1-a577-0a0ce19c7616",
+      "subject_entity_id": "loguninv",
+      "predicate": "removes_configuration",
+      "object_entity_id": "message",
+      "valid_from": "2023-05-11T18:07:18Z",
+      "valid_to": null,
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "id": "ev_5ec3aea7",
+          "artifact_id": "issue_4118",
+          "excerpt": "Steps to reproduce \ud83d\udd79 ./run.sh command in terminal",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "c2a675a2-0c69-4dc0-8d9f-49752054c0f1",
+      "subject_entity_id": "loguninv",
+      "predicate": "removes_configuration",
+      "object_entity_id": "create_chat",
+      "valid_from": "2023-05-11T18:07:18Z",
+      "valid_to": null,
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "id": "ev_3ae5be04",
+          "artifact_id": "issue_4118",
+          "excerpt": "Steps to reproduce \ud83d\udd79 ./run.sh command in terminal",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "5b6c276e-29cd-4e6b-8242-26a44de7be40",
+      "subject_entity_id": "typeerror",
+      "predicate": "depends_on",
+      "object_entity_id": "run_sh",
+      "valid_from": "2023-05-11T18:07:18Z",
+      "valid_to": null,
+      "confidence": 0.7,
+      "evidence": [
+        {
+          "id": "ev_402496b7",
+          "artifact_id": "issue_4118",
+          "excerpt": "typeerror: 'type' object is not subscriptable after ./run.sh command",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "71899703-a499-4e3d-9955-4d321e30f256",
+      "subject_entity_id": "lc0rp",
+      "predicate": "authored",
+      "object_entity_id": "autogpt",
+      "valid_from": "2023-05-11T18:29:38Z",
+      "valid_to": null,
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "id": "ev_430baa0a",
+          "artifact_id": "issue_4119",
+          "excerpt": "Added a check to the code that prompts the user about unconfigured plugins.",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "d8b1f940-52cc-49b4-8afd-41c5f7792a43",
+      "subject_entity_id": "lc0rp",
+      "predicate": "proposes_feature",
+      "object_entity_id": "continuous_mode",
+      "valid_from": "2023-05-11T18:29:38Z",
+      "valid_to": null,
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "id": "ev_04453835",
+          "artifact_id": "issue_4119",
+          "excerpt": "Skip plugin prompts if continuous mode",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "9b359d1b-e34c-4c73-86e0-5e01c3fb4c07",
+      "subject_entity_id": "autogpt",
+      "predicate": "depends_on",
+      "object_entity_id": "continuous_mode",
+      "valid_from": "2023-05-11T18:29:38Z",
+      "valid_to": null,
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "id": "ev_139a84f0",
+          "artifact_id": "issue_4119",
+          "excerpt": "When started in continuous mode, AutoGPT will still prompt the user about unconfigured plugins",
+          "char_start": null,
+          "char_end": null
+        },
+        {
+          "id": "ev_d5bcc4af",
+          "artifact_id": "issue_4119",
+          "excerpt": "when started in continuous mode, autogpt will still prompt the user about unconfigured plugins",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "011e1e88-f6e8-4830-a090-c26f209739d5",
+      "subject_entity_id": "lc0rp",
+      "predicate": "suggests_change",
+      "object_entity_id": "continuous_mode",
+      "valid_from": "2023-05-11T18:29:38Z",
+      "valid_to": null,
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "id": "ev_f0087462",
+          "artifact_id": "issue_4119",
+          "excerpt": "Added a check to the code that prompts the user about unconfigured plugins.",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "bc356854-d8bd-4086-92f5-f28bae7e7039",
+      "subject_entity_id": "mikeliao89",
+      "predicate": "authored",
+      "object_entity_id": null,
+      "valid_from": "2023-05-11T18:50:28Z",
+      "valid_to": null,
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "id": "ev_f9e3a37c",
+          "artifact_id": "issue_4120",
+          "excerpt": "Command google returned: [] Located In USA.",
+          "char_start": null,
+          "char_end": null
+        },
+        {
+          "id": "ev_026780fb",
+          "artifact_id": "issue_4120",
+          "excerpt": "I have searched the existing issues, and there is no existing issue for my problem",
+          "char_start": null,
+          "char_end": null
+        },
+        {
+          "id": "ev_509ae54a",
+          "artifact_id": "issue_4120",
+          "excerpt": "I tried different version of autogpt including master and stable. all comes with no result from google search.",
+          "char_start": null,
+          "char_end": null
+        },
+        {
+          "id": "ev_45e4c963",
+          "artifact_id": "issue_4120",
+          "excerpt": "autogpt should be able to search through google and find results. but the results are just []",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "21ebc03e-41ab-43b9-8a96-d33f272f2907",
+      "subject_entity_id": "auto_gpt",
+      "predicate": "depends_on",
+      "object_entity_id": "google",
+      "valid_from": "2023-05-11T18:50:28Z",
+      "valid_to": "2023-05-11T19:20:59Z",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "id": "ev_68732b1d",
+          "artifact_id": "issue_4120",
+          "excerpt": "I can use a search engine to find websites that list estate sales in the area.",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "9f16797c-1324-4b10-b757-8c7ae93b39a5",
+      "subject_entity_id": "mikeliao89",
+      "predicate": "proposes_feature",
+      "object_entity_id": "auto_gpt",
+      "valid_from": "2023-05-11T18:50:28Z",
+      "valid_to": null,
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "id": "ev_ba3966a8",
+          "artifact_id": "issue_4120",
+          "excerpt": "autogpt should be able to search through google and find results.",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "453c1f3e-a76b-4f24-8aff-1083cbdf18e4",
+      "subject_entity_id": "mikeliao89",
+      "predicate": "reports_issue",
+      "object_entity_id": "auto_gpt",
+      "valid_from": "2023-05-11T18:50:28Z",
+      "valid_to": null,
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "id": "ev_91f17e0a",
+          "artifact_id": "issue_4120",
+          "excerpt": "I tried different version of autogpt including master and stable. all comes with no result from google search.",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "cf7ef71c-84f1-4f30-9c0d-2833bb121d29",
+      "subject_entity_id": "mikeliao89",
+      "predicate": "suggests_change",
+      "object_entity_id": "auto_gpt",
+      "valid_from": "2023-05-11T18:50:28Z",
+      "valid_to": null,
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "id": "ev_603ab121",
+          "artifact_id": "issue_4120",
+          "excerpt": "I should save all relevant information to files to avoid exceeding my short term memory limit.",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "6e80d53f-7b2d-4a15-ac72-4546cf1234f0",
+      "subject_entity_id": "rihp",
+      "predicate": "authored",
+      "object_entity_id": "significant_gravitas_auto_gpt",
+      "valid_from": "2023-05-11T18:54:37Z",
+      "valid_to": null,
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "id": "ev_56cce8dc",
+          "artifact_id": "issue_4121",
+          "excerpt": "At the moment any non-essential commands are not being merged.",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "93c581ac-6240-45a4-9ba5-2d4a99f5cabd",
+      "subject_entity_id": "rihp",
+      "predicate": "proposes_feature",
+      "object_entity_id": null,
+      "valid_from": "2023-05-11T18:54:37Z",
+      "valid_to": null,
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "id": "ev_73b47bb1",
+          "artifact_id": "issue_4121",
+          "excerpt": "We are expecting to ship plugin support within the week (PR #757).",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "d43dde3a-a7da-4610-9dca-899de24bdae3",
+      "subject_entity_id": "rihp",
+      "predicate": "suggests_change",
+      "object_entity_id": null,
+      "valid_from": "2023-05-11T18:54:37Z",
+      "valid_to": null,
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "id": "ev_82aeb39f",
+          "artifact_id": "issue_4121",
+          "excerpt": "Do not include any unrelated or \"extra\" modifications.",
+          "char_start": null,
+          "char_end": null
+        },
+        {
+          "id": "ev_a39980f6",
+          "artifact_id": "issue_4121",
+          "excerpt": "Provide clear documentation and explanations of the changes made.",
+          "char_start": null,
+          "char_end": null
+        },
+        {
+          "id": "ev_70250934",
+          "artifact_id": "issue_4121",
+          "excerpt": "Ensure diffs are limited to the intended lines \u2014 no applying preferred formatting styles or line endings (unless that's what the PR is about).",
+          "char_start": null,
+          "char_end": null
+        },
+        {
+          "id": "ev_15b7e890",
+          "artifact_id": "issue_4121",
+          "excerpt": "Check out our [wiki page on Contributing](https://github.com/Significant-Gravitas/Auto-GPT/wiki/Contributing)",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "f6e7d06c-9e88-4635-b908-d0c06ea50de9",
+      "subject_entity_id": "auto_gpt",
+      "predicate": "authored",
+      "object_entity_id": "0bvio",
+      "valid_from": "2023-05-11T19:20:59Z",
+      "valid_to": null,
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "id": "ev_caccb1af",
+          "artifact_id": "issue_4124",
+          "excerpt": "I have searched the existing issues, and there is no existing issue for my problem",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "43027a18-fddf-477d-8ce0-23091781c930",
+      "subject_entity_id": "0bvio",
+      "predicate": "reports_issue",
+      "object_entity_id": "auto_gpt",
+      "valid_from": "2023-05-11T19:20:59Z",
+      "valid_to": null,
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "id": "ev_79f1e022",
+          "artifact_id": "issue_4124",
+          "excerpt": "Error 'command' object is not a dictionary",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "76bb027a-af59-43bf-9eed-5c2bb06b2ea4",
+      "subject_entity_id": "0bvio",
+      "predicate": "proposes_feature",
+      "object_entity_id": "auto_gpt",
+      "valid_from": "2023-05-11T19:20:59Z",
+      "valid_to": null,
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "id": "ev_288f3284",
+          "artifact_id": "issue_4124",
+          "excerpt": "I can use the 'google' command to search for information on a specific topic and the 'browse_website' command to browse a specific website for information.",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "1c728c46-30d2-405a-8e44-8c903217c1a1",
+      "subject_entity_id": "0bvio",
+      "predicate": "suggests_change",
+      "object_entity_id": "auto_gpt",
+      "valid_from": "2023-05-11T19:20:59Z",
+      "valid_to": null,
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "id": "ev_4e6c0278",
+          "artifact_id": "issue_4124",
+          "excerpt": "I need to be more proactive in understanding the user's intent and purpose to ensure that my actions align with their goals.",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "65e59c86-e45b-4534-9ef0-cce7ca8333fe",
+      "subject_entity_id": "auto_gpt",
+      "predicate": "fixes_issue",
+      "object_entity_id": "command",
+      "valid_from": "2023-05-11T19:20:59Z",
+      "valid_to": null,
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "id": "ev_a246aa5d",
+          "artifact_id": "issue_4124",
+          "excerpt": "Use the 'google' command to search for information on a specific topic.",
+          "char_start": null,
+          "char_end": null
+        },
+        {
+          "id": "ev_49d26ace",
+          "artifact_id": "issue_4124",
+          "excerpt": "Use the 'browse_website' command to browse a specific website for information.",
+          "char_start": null,
+          "char_end": null
+        },
+        {
+          "id": "ev_6391c076",
+          "artifact_id": "issue_4124",
+          "excerpt": "Use the 'get_hyperlinks' command to get a list of hyperlinks on a webpage.",
+          "char_start": null,
+          "char_end": null
+        },
+        {
+          "id": "ev_ed8b917c",
+          "artifact_id": "issue_4124",
+          "excerpt": "Use the 'get_text_summary' command to get a summary of the text on a webpage.",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "4b5b3584-4694-4a58-9bcb-20357bd3979c",
+      "subject_entity_id": "auto_gpt",
+      "predicate": "depends_on",
+      "object_entity_id": "chrome",
+      "valid_from": "2023-05-11T19:20:59Z",
+      "valid_to": null,
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "id": "ev_cc12c1d9",
+          "artifact_id": "issue_4124",
+          "excerpt": "it is likely Chrome is not installed on the default path but I do not know howw to fix these issues.",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "21fe5318-b7b1-4319-9992-d9bb394b8143",
+      "subject_entity_id": "google",
+      "predicate": "depends_on",
+      "object_entity_id": "command",
+      "valid_from": "2023-05-11T19:20:59Z",
+      "valid_to": null,
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "id": "ev_2bb6604a",
+          "artifact_id": "issue_4124",
+          "excerpt": "i can use the 'google' command to search for information on a specific topic and the 'browse_website' command to browse a specific website for information.",
+          "char_start": null,
+          "char_end": null
+        },
+        {
+          "id": "ev_5689c1af",
+          "artifact_id": "issue_4124",
+          "excerpt": "use the 'google' command to search for information on a specific topic.",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "319360fd-2500-4b24-8699-b3a2367fc25c",
+      "subject_entity_id": "k_boikov",
+      "predicate": "authored",
+      "object_entity_id": "docker_compose",
+      "valid_from": "2023-05-11T20:23:32Z",
+      "valid_to": null,
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "id": "ev_62b8fa5b",
+          "artifact_id": "issue_4125",
+          "excerpt": "Switch the Volume type in docker-compose.yml documentation to use bind type.",
+          "char_start": null,
+          "char_end": null
+        },
+        {
+          "id": "ev_25bcb15a",
+          "artifact_id": "issue_4125",
+          "excerpt": "Added default values to be empty dictionary in case uses have created the files but left them empty preventing this error:",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "80d94a0b-d1cd-434b-ade7-2b3ddaf3730d",
+      "subject_entity_id": "k_boikov",
+      "predicate": "proposes_feature",
+      "object_entity_id": null,
+      "valid_from": "2023-05-11T20:23:32Z",
+      "valid_to": null,
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "id": "ev_a3b64252",
+          "artifact_id": "issue_4125",
+          "excerpt": "Switch the Volume type in docker-compose.yml documentation to use bind type.",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "cc250d11-ab48-4194-ae10-288b97808a54",
+      "subject_entity_id": "k_boikov",
+      "predicate": "suggests_change",
+      "object_entity_id": null,
+      "valid_from": "2023-05-11T20:23:32Z",
+      "valid_to": null,
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "id": "ev_a19a1a87",
+          "artifact_id": "issue_4125",
+          "excerpt": "Added default values to be empty dictionary in case uses have created the files but left them empty preventing this error:",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "5eb1e757-0f4a-4bbe-9382-0bb1c385e826",
+      "subject_entity_id": "vercel_bot_",
+      "predicate": "assigned_to",
+      "object_entity_id": null,
+      "valid_from": "2023-05-11T20:23:32Z",
+      "valid_to": null,
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "id": "ev_7a738500",
+          "artifact_id": "issue_4125",
+          "excerpt": "- [x] My pull request is atomic and focuses on a single change.",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "6a744697-4e53-4744-af37-3b8b7c633eb0",
+      "subject_entity_id": "codecov_bot_",
+      "predicate": "assigned_to",
+      "object_entity_id": null,
+      "valid_from": "2023-05-11T20:23:32Z",
+      "valid_to": null,
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "id": "ev_36903e02",
+          "artifact_id": "issue_4125",
+          "excerpt": "## [Codecov](https://app.codecov.io/gh/Significant-Gravitas/Auto-GPT/pull/4125?src=pr&el=h1",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
+    },
+    {
+      "id": "a7619076-3eca-4683-a0df-cede89963e10",
+      "subject_entity_id": "docker_compose_yml",
+      "predicate": "depends_on",
+      "object_entity_id": "docker",
+      "valid_from": "2023-05-11T20:23:32Z",
+      "valid_to": null,
+      "confidence": 0.7,
+      "evidence": [
+        {
+          "id": "ev_1d300e3c",
+          "artifact_id": "issue_4125",
+          "excerpt": "switch the volume type in docker-compose.yml documentation to use bind type.",
+          "char_start": null,
+          "char_end": null
+        }
+      ]
     }
   ],
   "audit_log": {
     "entity_merges": [
       {
-        "timestamp": "2026-03-08T22:08:34.818026",
+        "timestamp": "2026-03-09T00:24:08.342949",
         "source": "llms",
         "target": "llms"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.818239",
+        "timestamp": "2026-03-09T00:24:08.343157",
         "source": "sub-dict",
         "target": "sub-dict"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.818247",
+        "timestamp": "2026-03-09T00:24:08.343167",
         "source": "command interface",
         "target": "command interface"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.818251",
+        "timestamp": "2026-03-09T00:24:08.343172",
         "source": "settings",
         "target": "settings"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.818256",
+        "timestamp": "2026-03-09T00:24:08.343177",
         "source": "system message",
         "target": "system message"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.818262",
+        "timestamp": "2026-03-09T00:24:08.343184",
         "source": "ntindle",
         "target": "ntindle"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.818281",
+        "timestamp": "2026-03-09T00:24:08.343203",
         "source": "significant-gravitas",
         "target": "significant-gravitas"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.818301",
+        "timestamp": "2026-03-09T00:24:08.343221",
         "source": "ntindle",
         "target": "ntindle"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.818316",
+        "timestamp": "2026-03-09T00:24:08.343235",
         "source": "discord",
         "target": "discord"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.818326",
+        "timestamp": "2026-03-09T00:24:08.343245",
         "source": "auto-gpt",
         "target": "auto-gpt"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.818330",
+        "timestamp": "2026-03-09T00:24:08.343249",
         "source": "pwuts",
         "target": "pwuts"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.818369",
+        "timestamp": "2026-03-09T00:24:08.343290",
         "source": "pull request",
         "target": "pull request"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.818373",
+        "timestamp": "2026-03-09T00:24:08.343295",
         "source": "k-boikov",
         "target": "k-boikov"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.818377",
+        "timestamp": "2026-03-09T00:24:08.343299",
         "source": "ntindle",
         "target": "ntindle"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.818393",
+        "timestamp": "2026-03-09T00:24:08.343313",
         "source": "pr quality checklist",
         "target": "pr quality checklist"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.818398",
+        "timestamp": "2026-03-09T00:24:08.343317",
         "source": "pull request",
         "target": "pull request"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.818402",
+        "timestamp": "2026-03-09T00:24:08.343321",
         "source": "llm",
         "target": "llm"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.818412",
+        "timestamp": "2026-03-09T00:24:08.343332",
         "source": "auto-gpt",
         "target": "auto-gpt"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.818431",
+        "timestamp": "2026-03-09T00:24:08.343353",
         "source": "gpt-4",
         "target": "gpt-4"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.818434",
+        "timestamp": "2026-03-09T00:24:08.343357",
         "source": "gsp",
         "target": "gsp"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.818438",
+        "timestamp": "2026-03-09T00:24:08.343361",
         "source": "ord",
         "target": "ord"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.818442",
+        "timestamp": "2026-03-09T00:24:08.343365",
         "source": "gleacher center",
         "target": "gleacher center"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.818450",
+        "timestamp": "2026-03-09T00:24:08.343373",
         "source": "pr",
         "target": "pr"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.818475",
+        "timestamp": "2026-03-09T00:24:08.343395",
         "source": "pr",
         "target": "pr"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.818484",
+        "timestamp": "2026-03-09T00:24:08.343405",
         "source": "pr",
         "target": "pr"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.818491",
+        "timestamp": "2026-03-09T00:24:08.343411",
         "source": "pwuts",
         "target": "pwuts"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.818497",
+        "timestamp": "2026-03-09T00:24:08.343414",
         "source": "boostrix",
         "target": "boostrix"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.818503",
+        "timestamp": "2026-03-09T00:24:08.343420",
         "source": "pr quality checklist",
         "target": "pr quality checklist"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.818507",
+        "timestamp": "2026-03-09T00:24:08.343424",
         "source": "pull request",
         "target": "pull request"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.818524",
+        "timestamp": "2026-03-09T00:24:08.343439",
         "source": "discord",
         "target": "discord"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.818540",
+        "timestamp": "2026-03-09T00:24:08.343457",
         "source": "autogpt",
         "target": "autogpt"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.818544",
+        "timestamp": "2026-03-09T00:24:08.343461",
         "source": "llm",
         "target": "llm"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.818552",
+        "timestamp": "2026-03-09T00:24:08.343469",
         "source": "significant-gravitas",
         "target": "significant-gravitas"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.818556",
+        "timestamp": "2026-03-09T00:24:08.343473",
         "source": "discord",
         "target": "discord"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.818573",
+        "timestamp": "2026-03-09T00:24:08.343490",
         "source": "autogpt",
         "target": "autogpt"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.818582",
+        "timestamp": "2026-03-09T00:24:08.343499",
         "source": "pr",
         "target": "pr"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.818592",
+        "timestamp": "2026-03-09T00:24:08.343509",
         "source": "auto-gpt",
         "target": "auto-gpt"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.818596",
+        "timestamp": "2026-03-09T00:24:08.343513",
         "source": "python",
         "target": "python"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.818601",
+        "timestamp": "2026-03-09T00:24:08.343520",
         "source": "gpt-4",
         "target": "gpt-4"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.818608",
+        "timestamp": "2026-03-09T00:24:08.343527",
         "source": "pip",
         "target": "pip"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.818630",
+        "timestamp": "2026-03-09T00:24:08.343549",
         "source": "cmd",
         "target": "cmd"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.818636",
+        "timestamp": "2026-03-09T00:24:08.343555",
         "source": "zylerkade",
         "target": "zylerkade"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.818642",
+        "timestamp": "2026-03-09T00:24:08.343561",
         "source": "python",
         "target": "python"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.818648",
+        "timestamp": "2026-03-09T00:24:08.343567",
         "source": "pr",
         "target": "pr"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.818666",
+        "timestamp": "2026-03-09T00:24:08.343582",
         "source": "pull request",
         "target": "pull request"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.818685",
+        "timestamp": "2026-03-09T00:24:08.343603",
         "source": "auto-gpt",
         "target": "auto-gpt"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.818689",
+        "timestamp": "2026-03-09T00:24:08.343607",
         "source": "gpt-3",
         "target": "gpt-3"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.818692",
+        "timestamp": "2026-03-09T00:24:08.343611",
         "source": "gpt-4",
         "target": "gpt-4"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.818701",
+        "timestamp": "2026-03-09T00:24:08.343620",
         "source": "auto-gpt",
         "target": "auto-gpt"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.818732",
+        "timestamp": "2026-03-09T00:24:08.343654",
         "source": "pyenv",
         "target": "pyenv"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.818736",
+        "timestamp": "2026-03-09T00:24:08.343657",
         "source": "homebrew",
         "target": "homebrew"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.818740",
+        "timestamp": "2026-03-09T00:24:08.343661",
         "source": "shell",
         "target": "shell"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.818743",
+        "timestamp": "2026-03-09T00:24:08.343665",
         "source": "python",
         "target": "python"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.818747",
+        "timestamp": "2026-03-09T00:24:08.343669",
         "source": "auto-gpt",
         "target": "auto-gpt"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.818751",
+        "timestamp": "2026-03-09T00:24:08.343673",
         "source": "terminal",
         "target": "terminal"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.818754",
+        "timestamp": "2026-03-09T00:24:08.343676",
         "source": "account",
         "target": "account"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.818765",
+        "timestamp": "2026-03-09T00:24:08.343684",
         "source": "openai",
         "target": "openai"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.818771",
+        "timestamp": "2026-03-09T00:24:08.343689",
         "source": "python",
         "target": "python"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.818776",
+        "timestamp": "2026-03-09T00:24:08.343695",
         "source": "pip",
         "target": "pip"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.818780",
+        "timestamp": "2026-03-09T00:24:08.343699",
         "source": "pyenv",
         "target": "pyenv"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.818787",
+        "timestamp": "2026-03-09T00:24:08.343706",
         "source": "traceback",
         "target": "traceback"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.818793",
+        "timestamp": "2026-03-09T00:24:08.343712",
         "source": "dotenv",
         "target": "dotenv"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.818797",
+        "timestamp": "2026-03-09T00:24:08.343716",
         "source": "account",
         "target": "account"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.818800",
+        "timestamp": "2026-03-09T00:24:08.343719",
         "source": "autogpt",
         "target": "autogpt"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.818808",
+        "timestamp": "2026-03-09T00:24:08.343727",
         "source": "autogpt",
         "target": "autogpt"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.818817",
+        "timestamp": "2026-03-09T00:24:08.343737",
         "source": "user",
         "target": "user"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.818821",
+        "timestamp": "2026-03-09T00:24:08.343741",
         "source": "user",
         "target": "user"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.818832",
+        "timestamp": "2026-03-09T00:24:08.343748",
         "source": "auto-gpt",
         "target": "auto-gpt"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.818836",
+        "timestamp": "2026-03-09T00:24:08.343752",
         "source": "gpt-3.5",
         "target": "gpt-3.5"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.818843",
+        "timestamp": "2026-03-09T00:24:08.343759",
         "source": "autogpt",
         "target": "autogpt"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.818868",
+        "timestamp": "2026-03-09T00:24:08.343791",
         "source": "autogpt",
         "target": "autogpt"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.818876",
+        "timestamp": "2026-03-09T00:24:08.343798",
         "source": "github",
         "target": "github"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.818883",
+        "timestamp": "2026-03-09T00:24:08.343806",
         "source": "autogpt",
         "target": "autogpt"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.818887",
+        "timestamp": "2026-03-09T00:24:08.343810",
         "source": "issue",
         "target": "issue"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.818899",
+        "timestamp": "2026-03-09T00:24:08.343822",
         "source": "deedy5",
         "target": "deedy5"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.818903",
+        "timestamp": "2026-03-09T00:24:08.343826",
         "source": "duckduckgo_search",
         "target": "duckduckgo_search"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.818914",
+        "timestamp": "2026-03-09T00:24:08.343837",
         "source": "deedy5",
         "target": "deedy5"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.818918",
+        "timestamp": "2026-03-09T00:24:08.343841",
         "source": "autogpt",
         "target": "autogpt"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.818923",
+        "timestamp": "2026-03-09T00:24:08.343847",
         "source": "google",
         "target": "google"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.818927",
+        "timestamp": "2026-03-09T00:24:08.343851",
         "source": "autogpt",
         "target": "autogpt"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.818931",
+        "timestamp": "2026-03-09T00:24:08.343854",
         "source": "docker-compose",
         "target": "docker-compose"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.818935",
+        "timestamp": "2026-03-09T00:24:08.343858",
         "source": "google",
         "target": "google"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.818938",
+        "timestamp": "2026-03-09T00:24:08.343862",
         "source": "duckduckgo-search",
         "target": "duckduckgo_search"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.818956",
+        "timestamp": "2026-03-09T00:24:08.343875",
         "source": "significant-gravitas/auto-gpt",
         "target": "significant-gravitas/auto-gpt"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.818961",
+        "timestamp": "2026-03-09T00:24:08.343879",
         "source": "pip",
         "target": "pip"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.818968",
+        "timestamp": "2026-03-09T00:24:08.343886",
         "source": "command",
         "target": "command"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.818975",
+        "timestamp": "2026-03-09T00:24:08.343893",
         "source": "duckduckgo_search",
         "target": "duckduckgo_search"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819014",
+        "timestamp": "2026-03-09T00:24:08.343934",
         "source": "pull request",
         "target": "pull request"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819018",
+        "timestamp": "2026-03-09T00:24:08.343938",
         "source": "pr quality checklist",
         "target": "pr quality checklist"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819026",
+        "timestamp": "2026-03-09T00:24:08.343948",
         "source": "github",
         "target": "github"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819030",
+        "timestamp": "2026-03-09T00:24:08.343953",
         "source": "significant-gravitas/auto-gpt",
         "target": "significant-gravitas/auto-gpt"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819033",
+        "timestamp": "2026-03-09T00:24:08.343956",
         "source": "auto-gpt",
         "target": "auto-gpt"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819041",
+        "timestamp": "2026-03-09T00:24:08.343964",
         "source": "rfes",
         "target": "rfes"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819064",
+        "timestamp": "2026-03-09T00:24:08.343985",
         "source": "pr quality checklist",
         "target": "pr quality checklist"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819068",
+        "timestamp": "2026-03-09T00:24:08.343989",
         "source": "auto-gpt",
         "target": "auto-gpt"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819072",
+        "timestamp": "2026-03-09T00:24:08.343993",
         "source": "llm",
         "target": "llm"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819076",
+        "timestamp": "2026-03-09T00:24:08.343997",
         "source": "auto-gpt",
         "target": "auto-gpt"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819080",
+        "timestamp": "2026-03-09T00:24:08.344001",
         "source": "gpt-3.5",
         "target": "gpt-3.5"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819088",
+        "timestamp": "2026-03-09T00:24:08.344008",
         "source": "pr",
         "target": "pr"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819092",
+        "timestamp": "2026-03-09T00:24:08.344012",
         "source": "github",
         "target": "github"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819095",
+        "timestamp": "2026-03-09T00:24:08.344016",
         "source": "pr",
         "target": "pr"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819099",
+        "timestamp": "2026-03-09T00:24:08.344019",
         "source": "command/argument validation",
         "target": "command/argument validation"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819104",
+        "timestamp": "2026-03-09T00:24:08.344025",
         "source": "autogpt",
         "target": "autogpt"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819108",
+        "timestamp": "2026-03-09T00:24:08.344029",
         "source": ".env.template",
         "target": ".env template"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819112",
+        "timestamp": "2026-03-09T00:24:08.344032",
         "source": ".env",
         "target": ".env"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819117",
+        "timestamp": "2026-03-09T00:24:08.344038",
         "source": "chrome",
         "target": "chrome"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819123",
+        "timestamp": "2026-03-09T00:24:08.344043",
         "source": "pinecone",
         "target": "pinecone"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819127",
+        "timestamp": "2026-03-09T00:24:08.344047",
         "source": "api key",
         "target": "api key"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819141",
+        "timestamp": "2026-03-09T00:24:08.344064",
         "source": "comment",
         "target": "comment"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819147",
+        "timestamp": "2026-03-09T00:24:08.344070",
         "source": "auto_gpt_workspace",
         "target": "auto_gpt_workspace"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819155",
+        "timestamp": "2026-03-09T00:24:08.344078",
         "source": "autogpt",
         "target": "autogpt"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819158",
+        "timestamp": "2026-03-09T00:24:08.344081",
         "source": "openai",
         "target": "openai"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819164",
+        "timestamp": "2026-03-09T00:24:08.344087",
         "source": "auto_gpt_workspace",
         "target": "auto_gpt_workspace"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819168",
+        "timestamp": "2026-03-09T00:24:08.344092",
         "source": "user",
         "target": "user"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819173",
+        "timestamp": "2026-03-09T00:24:08.344098",
         "source": "commands",
         "target": "commands"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819177",
+        "timestamp": "2026-03-09T00:24:08.344102",
         "source": "openai",
         "target": "openai"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819186",
+        "timestamp": "2026-03-09T00:24:08.344110",
         "source": "docker-compose",
         "target": "docker-compose"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819194",
+        "timestamp": "2026-03-09T00:24:08.344116",
         "source": "docker",
         "target": "docker"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819198",
+        "timestamp": "2026-03-09T00:24:08.344119",
         "source": "significant-gravitas/auto-gpt",
         "target": "significant-gravitas/auto-gpt"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819211",
+        "timestamp": "2026-03-09T00:24:08.344125",
         "source": "user",
         "target": "user"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819215",
+        "timestamp": "2026-03-09T00:24:08.344129",
         "source": "user",
         "target": "user"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819224",
+        "timestamp": "2026-03-09T00:24:08.344138",
         "source": "pr",
         "target": "pr"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819230",
+        "timestamp": "2026-03-09T00:24:08.344144",
         "source": "azure",
         "target": "azure"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819233",
+        "timestamp": "2026-03-09T00:24:08.344148",
         "source": "azure",
         "target": "azure"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819240",
+        "timestamp": "2026-03-09T00:24:08.344158",
         "source": "auto-gpt",
         "target": "auto-gpt"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819246",
+        "timestamp": "2026-03-09T00:24:08.344164",
         "source": "significant-gravitas/auto-gpt",
         "target": "significant-gravitas/auto-gpt"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819253",
+        "timestamp": "2026-03-09T00:24:08.344171",
         "source": "auto-gpt",
         "target": "auto-gpt"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819257",
+        "timestamp": "2026-03-09T00:24:08.344175",
         "source": "significant-gravitas",
         "target": "significant-gravitas"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819261",
+        "timestamp": "2026-03-09T00:24:08.344179",
         "source": "pr #757",
         "target": "pr #757"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819267",
+        "timestamp": "2026-03-09T00:24:08.344185",
         "source": "auto-gpt",
         "target": "auto-gpt"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819271",
+        "timestamp": "2026-03-09T00:24:08.344189",
         "source": "get_hyperlinks",
         "target": "get_hyperlinks"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819274",
+        "timestamp": "2026-03-09T00:24:08.344192",
         "source": "significant-gravitas",
         "target": "significant-gravitas"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819282",
+        "timestamp": "2026-03-09T00:24:08.344200",
         "source": "auto-gpt",
         "target": "auto-gpt"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819286",
+        "timestamp": "2026-03-09T00:24:08.344204",
         "source": "significant-gravitas/auto-gpt-plugin-template",
         "target": "significant-gravitas/auto-gpt-plugin-template"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819289",
+        "timestamp": "2026-03-09T00:24:08.344207",
         "source": "significant-gravitas/auto-gpt",
         "target": "significant-gravitas/auto-gpt"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819293",
+        "timestamp": "2026-03-09T00:24:08.344211",
         "source": "pr #757",
         "target": "pr #757"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819299",
+        "timestamp": "2026-03-09T00:24:08.344217",
         "source": "travelagent",
         "target": "travelagent"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819302",
+        "timestamp": "2026-03-09T00:24:08.344220",
         "source": "auto-gpt",
         "target": "auto-gpt"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819315",
+        "timestamp": "2026-03-09T00:24:08.344233",
         "source": "pr quality checklist",
         "target": "pr quality checklist"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819319",
+        "timestamp": "2026-03-09T00:24:08.344237",
         "source": "boostrix",
         "target": "boostrix"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819323",
+        "timestamp": "2026-03-09T00:24:08.344241",
         "source": "pwuts",
         "target": "pwuts"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819327",
+        "timestamp": "2026-03-09T00:24:08.344245",
         "source": "autogpt.core",
         "target": "autogpt.core"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819334",
+        "timestamp": "2026-03-09T00:24:08.344252",
         "source": "auto-gpt",
         "target": "auto-gpt"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819338",
+        "timestamp": "2026-03-09T00:24:08.344256",
         "source": "significant-gravitas",
         "target": "significant-gravitas"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819342",
+        "timestamp": "2026-03-09T00:24:08.344260",
         "source": "pr #757",
         "target": "pr #757"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819345",
+        "timestamp": "2026-03-09T00:24:08.344263",
         "source": "boostrix",
         "target": "boostrix"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819349",
+        "timestamp": "2026-03-09T00:24:08.344267",
         "source": "agent",
         "target": "agent"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819353",
+        "timestamp": "2026-03-09T00:24:08.344271",
         "source": "executive prompt",
         "target": "executive prompt"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819357",
+        "timestamp": "2026-03-09T00:24:08.344275",
         "source": "plan",
         "target": "plan"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819361",
+        "timestamp": "2026-03-09T00:24:08.344279",
         "source": "to-do list",
         "target": "to-do list"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819364",
+        "timestamp": "2026-03-09T00:24:08.344282",
         "source": "commands",
         "target": "commands"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819370",
+        "timestamp": "2026-03-09T00:24:08.344288",
         "source": "discord",
         "target": "discord"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819376",
+        "timestamp": "2026-03-09T00:24:08.344294",
         "source": "qdrant db",
         "target": "qdrant db"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819379",
+        "timestamp": "2026-03-09T00:24:08.344297",
         "source": "auto-gpt",
         "target": "auto-gpt"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819383",
+        "timestamp": "2026-03-09T00:24:08.344301",
         "source": "qdrant-client",
         "target": "qdrant-client"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819387",
+        "timestamp": "2026-03-09T00:24:08.344305",
         "source": "vercel[bot]",
         "target": "vercel[bot]"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819391",
+        "timestamp": "2026-03-09T00:24:08.344309",
         "source": "zylerkade",
         "target": "zylerkade"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819395",
+        "timestamp": "2026-03-09T00:24:08.344312",
         "source": "autogpt",
         "target": "autogpt"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819398",
+        "timestamp": "2026-03-09T00:24:08.344316",
         "source": "python",
         "target": "python"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819402",
+        "timestamp": "2026-03-09T00:24:08.344320",
         "source": "gpt-4",
         "target": "gpt-4"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819409",
+        "timestamp": "2026-03-09T00:24:08.344327",
         "source": "github",
         "target": "github"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819415",
+        "timestamp": "2026-03-09T00:24:08.344333",
         "source": "vercel[bot]",
         "target": "vercel[bot]"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819421",
+        "timestamp": "2026-03-09T00:24:08.344339",
         "source": "boostrix",
         "target": "boostrix"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819425",
+        "timestamp": "2026-03-09T00:24:08.344342",
         "source": "auto-gpt",
         "target": "auto-gpt"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819428",
+        "timestamp": "2026-03-09T00:24:08.344346",
         "source": "python",
         "target": "python"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819432",
+        "timestamp": "2026-03-09T00:24:08.344350",
         "source": "pr #757",
         "target": "pr #757"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819436",
+        "timestamp": "2026-03-09T00:24:08.344353",
         "source": "filippoispanico",
         "target": "filippoispanico"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819439",
+        "timestamp": "2026-03-09T00:24:08.344357",
         "source": "auto-gpt",
         "target": "auto-gpt"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819443",
+        "timestamp": "2026-03-09T00:24:08.344361",
         "source": "significant-gravitas/auto-gpt-plugin-template",
         "target": "significant-gravitas/auto-gpt-plugin-template"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819447",
+        "timestamp": "2026-03-09T00:24:08.344364",
         "source": "significant-gravitas/auto-gpt",
         "target": "significant-gravitas/auto-gpt"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819453",
+        "timestamp": "2026-03-09T00:24:08.344370",
         "source": "zylerkade",
         "target": "zylerkade"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819456",
+        "timestamp": "2026-03-09T00:24:08.344374",
         "source": "auto-gpt",
         "target": "auto-gpt"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819460",
+        "timestamp": "2026-03-09T00:24:08.344377",
         "source": "gpt-4",
         "target": "gpt-4"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819464",
+        "timestamp": "2026-03-09T00:24:08.344381",
         "source": "vs code",
         "target": "vs code"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819471",
+        "timestamp": "2026-03-09T00:24:08.344388",
         "source": "gpt-3",
         "target": "gpt-3"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819480",
+        "timestamp": "2026-03-09T00:24:08.344398",
         "source": "typeerror",
         "target": "typeerror"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819488",
+        "timestamp": "2026-03-09T00:24:08.344403",
         "source": "auto-gpt",
         "target": "auto-gpt"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819492",
+        "timestamp": "2026-03-09T00:24:08.344407",
         "source": "gpt-3.5",
         "target": "gpt-3.5"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819496",
+        "timestamp": "2026-03-09T00:24:08.344410",
         "source": "autogpt",
         "target": "autogpt"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819500",
+        "timestamp": "2026-03-09T00:24:08.344414",
         "source": "agent",
         "target": "agent"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819509",
+        "timestamp": "2026-03-09T00:24:08.344423",
         "source": "macos",
         "target": "macos"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819512",
+        "timestamp": "2026-03-09T00:24:08.344427",
         "source": "python",
         "target": "python"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819520",
+        "timestamp": "2026-03-09T00:24:08.344434",
         "source": "autogpt",
         "target": "autogpt"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819524",
+        "timestamp": "2026-03-09T00:24:08.344438",
         "source": "continuous mode",
         "target": "continuous mode"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819529",
+        "timestamp": "2026-03-09T00:24:08.344443",
         "source": "docs",
         "target": "docs"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819537",
+        "timestamp": "2026-03-09T00:24:08.344450",
         "source": "auto-gpt",
         "target": "auto-gpt"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819540",
+        "timestamp": "2026-03-09T00:24:08.344454",
         "source": "google",
         "target": "google"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819544",
+        "timestamp": "2026-03-09T00:24:08.344458",
         "source": "gpt-3.5",
         "target": "gpt-3.5"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819548",
+        "timestamp": "2026-03-09T00:24:08.344461",
         "source": "windows",
         "target": "windows"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819552",
+        "timestamp": "2026-03-09T00:24:08.344465",
         "source": "rihp",
         "target": "rihp"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819555",
+        "timestamp": "2026-03-09T00:24:08.344469",
         "source": "auto-gpt",
         "target": "auto-gpt"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819559",
+        "timestamp": "2026-03-09T00:24:08.344473",
         "source": "significant-gravitas/auto-gpt-plugin-template",
         "target": "significant-gravitas/auto-gpt-plugin-template"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819563",
+        "timestamp": "2026-03-09T00:24:08.344477",
         "source": "significant-gravitas/auto-gpt",
         "target": "significant-gravitas/auto-gpt"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819567",
+        "timestamp": "2026-03-09T00:24:08.344480",
         "source": "wiki page on contributing",
         "target": "wiki page on contributing"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819570",
+        "timestamp": "2026-03-09T00:24:08.344484",
         "source": "auto-gpt",
         "target": "auto-gpt"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819576",
+        "timestamp": "2026-03-09T00:24:08.344492",
         "source": "gpt-3.5",
         "target": "gpt-3.5"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819580",
+        "timestamp": "2026-03-09T00:24:08.344496",
         "source": "chrome",
         "target": "chrome"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819583",
+        "timestamp": "2026-03-09T00:24:08.344500",
         "source": "google",
         "target": "google"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819587",
+        "timestamp": "2026-03-09T00:24:08.344503",
         "source": "command",
         "target": "command"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819593",
+        "timestamp": "2026-03-09T00:24:08.344509",
         "source": "k-boikov",
         "target": "k-boikov"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819596",
+        "timestamp": "2026-03-09T00:24:08.344513",
         "source": "vercel[bot]",
         "target": "vercel[bot]"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819602",
+        "timestamp": "2026-03-09T00:24:08.344519",
         "source": "docker-compose.yml",
         "target": "docker-compose.yml"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819617",
+        "timestamp": "2026-03-09T00:24:08.344523",
         "source": "docker compose",
         "target": "docker-compose"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819621",
+        "timestamp": "2026-03-09T00:24:08.344526",
         "source": "docker",
         "target": "docker"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819625",
+        "timestamp": "2026-03-09T00:24:08.344530",
         "source": "auto-gpt",
         "target": "auto-gpt"
       }
     ],
     "claim_merges": [
       {
-        "timestamp": "2026-03-08T22:08:34.819772",
+        "timestamp": "2026-03-09T00:24:08.344680",
         "key": "significant_gravitas|authored|null"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819788",
+        "timestamp": "2026-03-09T00:24:08.344695",
         "key": "significant_gravitas|authored|null"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819851",
+        "timestamp": "2026-03-09T00:24:08.344754",
         "key": "k_boikov|authored|null"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819859",
+        "timestamp": "2026-03-09T00:24:08.344762",
         "key": "k_boikov|authored|null"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.819867",
+        "timestamp": "2026-03-09T00:24:08.344770",
         "key": "k_boikov|authored|null"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.820053",
+        "timestamp": "2026-03-09T00:24:08.344970",
         "key": "significant_gravitas|proposes_feature|null"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.820124",
+        "timestamp": "2026-03-09T00:24:08.345044",
         "key": "zylerkade|authored|null"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.820131",
+        "timestamp": "2026-03-09T00:24:08.345051",
         "key": "zylerkade|authored|null"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.820396",
+        "timestamp": "2026-03-09T00:24:08.345327",
         "key": "dudemyguy|authored|null"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.820403",
+        "timestamp": "2026-03-09T00:24:08.345334",
         "key": "dudemyguy|authored|null"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.820494",
+        "timestamp": "2026-03-09T00:24:08.345431",
         "key": "user|suggests_change|null"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.820501",
+        "timestamp": "2026-03-09T00:24:08.345438",
         "key": "user|suggests_change|null"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.820509",
+        "timestamp": "2026-03-09T00:24:08.345446",
         "key": "user|suggests_change|null"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.820516",
+        "timestamp": "2026-03-09T00:24:08.345456",
         "key": "user|suggests_change|null"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.820523",
+        "timestamp": "2026-03-09T00:24:08.345464",
         "key": "user|suggests_change|null"
       },
       {
-        "timestamp": "2026-03-08T22:08:34.820531",
+        "timestamp": "2026-03-09T00:24:08.345471",
         "key": "user|suggests_change|null"
+      },
+      {
+        "timestamp": "2026-03-09T00:24:08.345651",
+        "key": "significant_gravitas_auto_gpt|removes_configuration|null"
+      },
+      {
+        "timestamp": "2026-03-09T00:24:08.345905",
+        "key": "significant_gravitas|proposes_feature|null"
+      },
+      {
+        "timestamp": "2026-03-09T00:24:08.345979",
+        "key": "significant_gravitas_auto_gpt|depends_on|significant_gravitas_auto_gpt_plugin_template"
+      },
+      {
+        "timestamp": "2026-03-09T00:24:08.346026",
+        "key": "rgdub|proposes_feature|travelagent"
+      },
+      {
+        "timestamp": "2026-03-09T00:24:08.346038",
+        "key": "rgdub|proposes_feature|travelagent"
+      },
+      {
+        "timestamp": "2026-03-09T00:24:08.346067",
+        "key": "auto_gpt|authored|rgdub"
+      },
+      {
+        "timestamp": "2026-03-09T00:24:08.346327",
+        "key": "boostrix|authored|null"
+      },
+      {
+        "timestamp": "2026-03-09T00:24:08.346358",
+        "key": "boostrix|proposes_feature|null"
+      },
+      {
+        "timestamp": "2026-03-09T00:24:08.346387",
+        "key": "boostrix|suggests_change|null"
+      },
+      {
+        "timestamp": "2026-03-09T00:24:08.346398",
+        "key": "boostrix|suggests_change|null"
+      },
+      {
+        "timestamp": "2026-03-09T00:24:08.346463",
+        "key": "boostrix|removes_configuration|commands"
+      },
+      {
+        "timestamp": "2026-03-09T00:24:08.346475",
+        "key": "boostrix|removes_configuration|commands"
+      },
+      {
+        "timestamp": "2026-03-09T00:24:08.346522",
+        "key": "agent|depends_on|plan"
+      },
+      {
+        "timestamp": "2026-03-09T00:24:08.346569",
+        "key": "agent|depends_on|executive_prompt"
+      },
+      {
+        "timestamp": "2026-03-09T00:24:08.346617",
+        "key": "agent|depends_on|executive_prompt"
+      },
+      {
+        "timestamp": "2026-03-09T00:24:08.346628",
+        "key": "agent|depends_on|plan"
+      },
+      {
+        "timestamp": "2026-03-09T00:24:08.346640",
+        "key": "agent|depends_on|to_do_list"
+      },
+      {
+        "timestamp": "2026-03-09T00:24:08.346690",
+        "key": "plan|depends_on|to_do_list"
+      },
+      {
+        "timestamp": "2026-03-09T00:24:08.346702",
+        "key": "agent|depends_on|executive_prompt"
+      },
+      {
+        "timestamp": "2026-03-09T00:24:08.346713",
+        "key": "agent|depends_on|plan"
+      },
+      {
+        "timestamp": "2026-03-09T00:24:08.346724",
+        "key": "agent|depends_on|to_do_list"
+      },
+      {
+        "timestamp": "2026-03-09T00:24:08.346736",
+        "key": "agent|depends_on|output_fields"
+      },
+      {
+        "timestamp": "2026-03-09T00:24:08.346747",
+        "key": "executive_prompt|depends_on|plan"
+      },
+      {
+        "timestamp": "2026-03-09T00:24:08.346759",
+        "key": "executive_prompt|depends_on|to_do_list"
+      },
+      {
+        "timestamp": "2026-03-09T00:24:08.346770",
+        "key": "executive_prompt|depends_on|output_fields"
+      },
+      {
+        "timestamp": "2026-03-09T00:24:08.346781",
+        "key": "plan|depends_on|to_do_list"
+      },
+      {
+        "timestamp": "2026-03-09T00:24:08.346974",
+        "key": "zylerkade|authored|null"
+      },
+      {
+        "timestamp": "2026-03-09T00:24:08.347022",
+        "key": "zylerkade|proposes_feature|null"
+      },
+      {
+        "timestamp": "2026-03-09T00:24:08.347113",
+        "key": "autogpt|updates_component|null"
+      },
+      {
+        "timestamp": "2026-03-09T00:24:08.347125",
+        "key": "autogpt|fixes_issue|null"
+      },
+      {
+        "timestamp": "2026-03-09T00:24:08.347155",
+        "key": "vs_code|depends_on|containers"
+      },
+      {
+        "timestamp": "2026-03-09T00:24:08.347203",
+        "key": "boostrix|proposes_feature|null"
+      },
+      {
+        "timestamp": "2026-03-09T00:24:08.347236",
+        "key": "boostrix|suggests_change|null"
+      },
+      {
+        "timestamp": "2026-03-09T00:24:08.347247",
+        "key": "boostrix|fixes_issue|null"
+      },
+      {
+        "timestamp": "2026-03-09T00:24:08.347258",
+        "key": "boostrix|fixes_issue|null"
+      },
+      {
+        "timestamp": "2026-03-09T00:24:08.347270",
+        "key": "boostrix|fixes_issue|null"
+      },
+      {
+        "timestamp": "2026-03-09T00:24:08.347281",
+        "key": "auto_gpt|depends_on|pr__757"
+      },
+      {
+        "timestamp": "2026-03-09T00:24:08.347304",
+        "key": "filippoispanico|authored|null"
+      },
+      {
+        "timestamp": "2026-03-09T00:24:08.347315",
+        "key": "filippoispanico|authored|null"
+      },
+      {
+        "timestamp": "2026-03-09T00:24:08.347326",
+        "key": "filippoispanico|authored|null"
+      },
+      {
+        "timestamp": "2026-03-09T00:24:08.347337",
+        "key": "filippoispanico|authored|null"
+      },
+      {
+        "timestamp": "2026-03-09T00:24:08.347348",
+        "key": "filippoispanico|authored|null"
+      },
+      {
+        "timestamp": "2026-03-09T00:24:08.347359",
+        "key": "filippoispanico|authored|null"
+      },
+      {
+        "timestamp": "2026-03-09T00:24:08.347371",
+        "key": "filippoispanico|authored|null"
+      },
+      {
+        "timestamp": "2026-03-09T00:24:08.347383",
+        "key": "filippoispanico|authored|null"
+      },
+      {
+        "timestamp": "2026-03-09T00:24:08.347394",
+        "key": "filippoispanico|authored|null"
+      },
+      {
+        "timestamp": "2026-03-09T00:24:08.347406",
+        "key": "filippoispanico|authored|null"
+      },
+      {
+        "timestamp": "2026-03-09T00:24:08.347417",
+        "key": "filippoispanico|authored|null"
+      },
+      {
+        "timestamp": "2026-03-09T00:24:08.347430",
+        "key": "auto_gpt|depends_on|significant_gravitas_auto_gpt"
+      },
+      {
+        "timestamp": "2026-03-09T00:24:08.347506",
+        "key": "zylerkade|authored|auto_gpt"
+      },
+      {
+        "timestamp": "2026-03-09T00:24:08.347518",
+        "key": "zylerkade|authored|auto_gpt"
+      },
+      {
+        "timestamp": "2026-03-09T00:24:08.347529",
+        "key": "zylerkade|authored|auto_gpt"
+      },
+      {
+        "timestamp": "2026-03-09T00:24:08.347540",
+        "key": "zylerkade|authored|auto_gpt"
+      },
+      {
+        "timestamp": "2026-03-09T00:24:08.347612",
+        "key": "auto_gpt|fixes_issue|null"
+      },
+      {
+        "timestamp": "2026-03-09T00:24:08.347624",
+        "key": "auto_gpt|suggests_change|null"
+      },
+      {
+        "timestamp": "2026-03-09T00:24:08.347655",
+        "key": "auto_gpt|fixes_issue|null"
+      },
+      {
+        "timestamp": "2026-03-09T00:24:08.347667",
+        "key": "auto_gpt|fixes_issue|null"
+      },
+      {
+        "timestamp": "2026-03-09T00:24:08.347677",
+        "key": "auto_gpt|fixes_issue|null"
+      },
+      {
+        "timestamp": "2026-03-09T00:24:08.347698",
+        "key": "auto_gpt|fixes_issue|null"
+      },
+      {
+        "timestamp": "2026-03-09T00:24:08.347709",
+        "key": "auto_gpt|fixes_issue|null"
+      },
+      {
+        "timestamp": "2026-03-09T00:24:08.347721",
+        "key": "auto_gpt|fixes_issue|null"
+      },
+      {
+        "timestamp": "2026-03-09T00:24:08.347756",
+        "key": "gpt_4|depends_on|chatgpt4_plus"
+      },
+      {
+        "timestamp": "2026-03-09T00:24:08.347768",
+        "key": "gpt_4|depends_on|chatgpt4_plus"
+      },
+      {
+        "timestamp": "2026-03-09T00:24:08.347992",
+        "key": "typeerror|depends_on|run_sh"
+      },
+      {
+        "timestamp": "2026-03-09T00:24:08.348086",
+        "key": "autogpt|depends_on|continuous_mode"
+      },
+      {
+        "timestamp": "2026-03-09T00:24:08.348118",
+        "key": "mikeliao89|authored|null"
+      },
+      {
+        "timestamp": "2026-03-09T00:24:08.348130",
+        "key": "mikeliao89|authored|null"
+      },
+      {
+        "timestamp": "2026-03-09T00:24:08.348141",
+        "key": "mikeliao89|authored|null"
+      },
+      {
+        "timestamp": "2026-03-09T00:24:08.348243",
+        "key": "auto_gpt|fixes_issue|null"
+      },
+      {
+        "timestamp": "2026-03-09T00:24:08.348353",
+        "key": "rihp|suggests_change|null"
+      },
+      {
+        "timestamp": "2026-03-09T00:24:08.348366",
+        "key": "rihp|suggests_change|null"
+      },
+      {
+        "timestamp": "2026-03-09T00:24:08.348378",
+        "key": "rihp|suggests_change|null"
+      },
+      {
+        "timestamp": "2026-03-09T00:24:08.348389",
+        "key": "auto_gpt|depends_on|significant_gravitas_auto_gpt"
+      },
+      {
+        "timestamp": "2026-03-09T00:24:08.348401",
+        "key": "auto_gpt|depends_on|wiki_page_on_contributing"
+      },
+      {
+        "timestamp": "2026-03-09T00:24:08.348413",
+        "key": "significant_gravitas_auto_gpt|depends_on|wiki_page_on_contributing"
+      },
+      {
+        "timestamp": "2026-03-09T00:24:08.348575",
+        "key": "auto_gpt|fixes_issue|command"
+      },
+      {
+        "timestamp": "2026-03-09T00:24:08.348607",
+        "key": "auto_gpt|fixes_issue|command"
+      },
+      {
+        "timestamp": "2026-03-09T00:24:08.348624",
+        "key": "auto_gpt|fixes_issue|command"
+      },
+      {
+        "timestamp": "2026-03-09T00:24:08.348694",
+        "key": "google|depends_on|command"
+      },
+      {
+        "timestamp": "2026-03-09T00:24:08.348733",
+        "key": "k_boikov|authored|docker_compose"
+      },
+      {
+        "timestamp": "2026-03-09T00:24:08.348867",
+        "key": "docker_compose_yml|depends_on|docker"
       }
     ]
   }

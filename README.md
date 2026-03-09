@@ -70,7 +70,7 @@ docker run \
   --name layer10-neo4j \
   -p 7474:7474 -p 7687:7687 \
   -e NEO4J_AUTH=neo4j/password \
-  -d neo4j:5
+  -d neo4j:5.14.0
 ```
 
 - **Bolt endpoint:** bolt://localhost:7687  
